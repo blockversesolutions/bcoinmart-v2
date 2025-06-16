@@ -1,0 +1,2678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bcoinmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative z-2">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#"
+                          ><span>English (us)</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>France</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>Espen</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>Bangla</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>Arabic</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>Italy</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><span>Portugal</span
+                          ><span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i></span
+                        ></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div
+              class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
+              id="navbarText"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/icon/languages.png"
+                          alt="icon"
+                        />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#"
+                            ><span>English (us)</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>France</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>Espen</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>Bangla</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>Arabic</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>Italy</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><span>Portugal</span
+                            ><span class="float-end icon-check"
+                              ><i
+                                class="fa-solid fa-circle-check fs-6"
+                              ></i></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span
+              class="icon-bar btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              ><i class="fa-solid fa-xmark"></i
+            ></span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div
+                class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+              >
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="input-shadow"
+                />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Buy Crypto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-shadow"
+                  />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+    <!-- Hero Start-->
+    <section class="hero-section position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-7 col-lg-6">
+            <div class="common-heading-section text-center text-lg-start">
+              <h1 class="text-primary">Build Wealth with Crypto</h1>
+              <p>
+                Join the growing community on Bcoinmart — the trusted
+                destination for effortless crypto investing and trading.
+              </p>
+            </div>
+            <div
+              class="sign-up-box-cover d-flex align-items-center g-20 justify-content-center justify-content-lg-start flex-wrap"
+            >
+              <div
+                class="sign-up-box border-1 d-flex align-items-center justify-content-between"
+              >
+                <div class="input-group w-auto">
+                  <input
+                    type="text"
+                    class="bg-transparent border-0 w-100"
+                    placeholder="Email/Phone number"
+                  />
+                </div>
+                <button type="submit" class="primary-btn-sm pointer">
+                  Sign Up
+                </button>
+              </div>
+              <p>or</p>
+              <div class="border-1 auto-signup">
+                <ul class="d-flex align-items-center g-15">
+                  <li>
+                    <a href="#"
+                      ><img src="assets/images/icon/google.png" alt="google"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="assets/images/icon/apple.png" alt="apple"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-circle-area">
+        <img src="assets/images/thumbnails/1.png" alt="img" />
+        <!-- item -->
+        <div class="crypto-card-sm crypto-card-1">
+          <div
+            class="crypto-card-header d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center g-10">
+              <div class="coin-icon">
+                <img src="assets/images/icon/bitcoin.png" alt="icon" />
+              </div>
+              <div class="coin-title">
+                <h6>Bitcoin</h6>
+                <p>BTC</p>
+              </div>
+            </div>
+            <span class="value-up"><i class="fas fa-caret-up"></i></span>
+          </div>
+          <div
+            class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+          >
+            <div class="crypto-price">
+              <h5>$52,291</h5>
+              <p class="value-up">+0.25%</p>
+            </div>
+            <div class="graph">
+              <img src="assets/images/graph/up-graph.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="crypto-card-sm crypto-card-2">
+          <div
+            class="crypto-card-header d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center g-10">
+              <div class="coin-icon">
+                <img src="assets/images/icon/litecoin.png" alt="icon" />
+              </div>
+              <div class="coin-title">
+                <h6>Litecoin</h6>
+                <p>ITC</p>
+              </div>
+            </div>
+            <span class="value-up"><i class="fas fa-caret-up"></i></span>
+          </div>
+          <div
+            class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+          >
+            <div class="crypto-price">
+              <h5>$8,291</h5>
+              <p class="value-up">+0.25%</p>
+            </div>
+            <div class="graph">
+              <img src="assets/images/graph/up-graph.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="crypto-card-sm crypto-card-3">
+          <div
+            class="crypto-card-header d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center g-10">
+              <div class="coin-icon">
+                <img src="assets/images/icon/litecoin.png" alt="icon" />
+              </div>
+              <div class="coin-title">
+                <h6>Litecoin</h6>
+                <p>ITC</p>
+              </div>
+            </div>
+            <span class="value-up"><i class="fas fa-caret-up"></i></span>
+          </div>
+          <div
+            class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+          >
+            <div class="crypto-price">
+              <h5>$8,291</h5>
+              <p class="value-up">+0.25%</p>
+            </div>
+            <div class="graph">
+              <img src="assets/images/graph/up-graph.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="crypto-card-sm crypto-card-4">
+          <div
+            class="crypto-card-header d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center g-10">
+              <div class="coin-icon">
+                <img src="assets/images/icon/litecoin.png" alt="icon" />
+              </div>
+              <div class="coin-title">
+                <h6>Litecoin</h6>
+                <p>ITC</p>
+              </div>
+            </div>
+            <span class="value-up"><i class="fas fa-caret-up"></i></span>
+          </div>
+          <div
+            class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+          >
+            <div class="crypto-price">
+              <h5>$8,291</h5>
+              <p class="value-up">+0.25%</p>
+            </div>
+            <div class="graph">
+              <img src="assets/images/graph/up-graph.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="crypto-card-sm crypto-card-5">
+          <div
+            class="crypto-card-header d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center g-10">
+              <div class="coin-icon">
+                <img src="assets/images/icon/litecoin.png" alt="icon" />
+              </div>
+              <div class="coin-title">
+                <h6>Litecoin</h6>
+                <p>ITC</p>
+              </div>
+            </div>
+            <span class="value-up"><i class="fas fa-caret-up"></i></span>
+          </div>
+          <div
+            class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+          >
+            <div class="crypto-price">
+              <h5>$8,291</h5>
+              <p class="value-up">+0.25%</p>
+            </div>
+            <div class="graph">
+              <img src="assets/images/graph/up-graph.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+     <div class="buy-sel-section">
+      <div class="container"> 
+        <div class="main-action-tabs">
+          <ul class="nav nav-tabs actionTab" id="actionTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="buy-sell-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#buy-sell"
+                type="button"
+                role="tab"
+              >
+                Buy & Sell
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="limit-buy-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#limit-buy"
+                type="button"
+                role="tab"
+              >
+                Limit Buy
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="recurring-buy-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#recurring-buy"
+                type="button"
+                role="tab"
+              >
+                Recurring Buy
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="deposit-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#deposit"
+                type="button"
+                role="tab"
+              >
+                Deposit
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="withdraw-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#withdraw"
+                type="button"
+                role="tab"
+              >
+                Withdraw
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="buy-ecm-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#buy-ecm"
+                type="button"
+                role="tab"
+              >
+                Buy ECM
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="actionTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="buy-sell"
+              role="tabpanel"
+              aria-labelledby="buy-sell-tab"
+            >
+              <div class="buy-sel-tabs">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" id="buySellTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="buy-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#buy"
+                      type="button"
+                      role="tab"
+                    >
+                      Buy
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="sell-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#sell"
+                      type="button"
+                      role="tab"
+                    >
+                      Sell
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="buySellTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="buy"
+                    role="tabpanel"
+                    aria-labelledby="buy-tab"
+                  >
+                    <!-- Spend -->
+                    <div class="form-block dropdown-custom">
+                      <label class="form-label">Spend</label>
+                      <div
+                        class="d-flex justify-content-between align-items-center gap-2"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter Amount"
+                        />
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/usdt.png" alt="USDT" />
+                            <span>USDT</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="USDT"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> USDT</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="USDC"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> USDC</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="BUSD"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> BUSD</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Receive -->
+                    <div class="form-block dropdown-custom">
+                      <label class="form-label">Receive</label>
+                      <div
+                        class="d-flex justify-content-between align-items-center gap-2"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter Amount"
+                        />
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/bnb.png" alt="BTC" />
+                            <span>BTC</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="BTC"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> BTC</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="ETH"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> ETH</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="SOL"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> SOL</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="payment dropdown-custom">
+                      <div class="payment">
+                        <label class="form-label mb-20">Payment Method</label>
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token payment-select"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/master.png" alt="Card" />
+                            <span>Card (5362-XXX-XXX-XX58)</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (5362-XXX-XXX-XX58)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (5362-XXX-XXX-XX58)</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (017XXXXXXXX)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (017XXXXXXXX)</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (018XXXXXXXX)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (018XXXXXXXX)</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reference -->
+                    <div class="reference-text">
+                      Reference Price: 1 USDT ≈ 1.05 USD
+                    </div>
+
+                    <!-- Buy Button -->
+                    <button class="primary-btn w-100 justify-content-center">Buy BTC</button>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="sell"
+                    role="tabpanel"
+                    aria-labelledby="sell-tab"
+                  >
+                    <!-- Spend -->
+                    <div class="form-block  dropdown-custom">
+                      <label class="form-label">Spend</label>
+                      <div
+                        class="d-flex justify-content-between align-items-center gap-2"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter Amount"
+                        />
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/usdt.png" alt="USDT" />
+                            <span>USDT</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="USDT"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> USDT</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="USDC"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> USDC</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="BUSD"
+                                data-image="assets/images/buy/usdt.png"
+                                ><img src="assets/images/buy/usdt.png" /> BUSD</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Receive -->
+                    <div class="form-block dropdown-custom">
+                      <label class="form-label">Receive</label>
+                      <div
+                        class="d-flex justify-content-between align-items-center gap-2"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter Amount"
+                        />
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/bnb.png" alt="BTC" />
+                            <span>BTC</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="BTC"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> BTC</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="ETH"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> ETH</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="SOL"
+                                data-image="assets/images/buy/bnb.png"
+                                ><img src="assets/images/buy/bnb.png" /> SOL</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="payment dropdown-custom">
+                      <div class="payment">
+                        <label class="form-label mb-20">Payment Method</label>
+                        <div class="dropdown">
+                          <button
+                            class="btn custom-select-token dropdown-toggle select-token payment-select"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="assets/images/buy/master.png" alt="Card" />
+                            <span>Card (5362-XXX-XXX-XX58)</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (5362-XXX-XXX-XX58)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (5362-XXX-XXX-XX58)</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (017XXXXXXXX)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (017XXXXXXXX)</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-value="Card (018XXXXXXXX)"
+                                data-image="assets/images/buy/master.png"
+                                ><img src="assets/images/buy/master.png" /> Card
+                                (018XXXXXXXX)</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reference -->
+                    <div class="reference-text">
+                      Reference Price: 1 USDT ≈ 1.05 USD
+                    </div>
+
+                    <!-- Buy Button -->
+                    <button class="buy-btn">Buy BTC</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bitcoin-markets mt-5">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="bitcoin-market-chart-title">
+                      <ul>
+                        <li>
+                          <h5>BTC/USD</h5>
+                          <h5>$ 104,705.35</h5>
+                        </li>
+                        <li>
+                          <div class="bitcoin-market-logo">
+                            <img src="assets/images/buy/btc.png" alt="btc" />
+                            <img src="assets/images/buy/usd.png" alt="usd" />
+                          </div>
+                          <span class="text-red">-0.79%</span>
+                        </li>
+                      </ul>
+                      <div class="chart">
+                        <ul
+                          class="nav nav-tabs mb-3 chart-tabs justify-content-end"
+                          id="chartTab"
+                          role="tablist"
+                        >
+                          <li class="nav-item">
+                            <button class="nav-link active" data-range="1d">
+                              1D
+                            </button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" data-range="7d">7D</button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" data-range="1m">1M</button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" data-range="3m">3M</button>
+                          </li>
+                          <li class="nav-item">
+                            <button class="nav-link" data-range="1y">1Y</button>
+                          </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="chart-box-bitcoin">
+                          <canvas id="cryptoChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="bitcoin-markets-card">
+                      <div class="bitcoin-market" id="scroll-box">
+                        <div class="bitcoin-card">
+                          <h4 class="title-h4">Markets</h4>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Popularity
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>#1</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Market Cap
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$2,080.98B</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Volume <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$40.92B</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Circulation Supply
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>19.87M</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <p class="bitcoin-p">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electroni c typesetting, remaining essentially
+                            unchanged
+                          </p>
+                        </div>
+                        <div class="bitcoin-card">
+                          <h4 class="title-h4">Markets</h4>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Popularity
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>#1</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Market Cap
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$2,080.98B</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Volume <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$40.92B</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Circulation Supply
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>19.87M</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <p class="bitcoin-p">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electroni c typesetting, remaining essentially
+                            unchanged
+                          </p>
+                        </div>
+                        <div class="bitcoin-card">
+                          <h4 class="title-h4">Markets</h4>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Popularity
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>#1</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Market Cap
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$2,080.98B</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Volume <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$40.92B</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Circulation Supply
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>19.87M</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <p class="bitcoin-p">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electroni c typesetting, remaining essentially
+                            unchanged
+                          </p>
+                        </div>
+                        <div class="bitcoin-card">
+                          <h4 class="title-h4">Markets</h4>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Popularity
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>#1</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Market Cap
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$2,080.98B</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="markets-item">
+                            <ul>
+                              <li>
+                                <p>
+                                  Volume <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>$40.92B</h5>
+                              </li>
+                              <li>
+                                <p>
+                                  Circulation Supply
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </p>
+                                <h5>19.87M</h5>
+                              </li>
+                            </ul>
+                          </div>
+                          <p class="bitcoin-p">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electroni c typesetting, remaining essentially
+                            unchanged
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="how-buy-crypto"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="limit-buy"
+              role="tabpanel"
+              aria-labelledby="limit-buy-tab"
+            >
+              Limit Buy content goes here
+            </div>
+            <div
+              class="tab-pane fade"
+              id="recurring-buy"
+              role="tabpanel"
+              aria-labelledby="recurring-buy-tab"
+            >
+              Recurring Buy content goes here
+            </div>
+            <div
+              class="tab-pane fade"
+              id="deposit"
+              role="tabpanel"
+              aria-labelledby="deposit-tab"
+            >
+              Deposit content goes here
+            </div>
+            <div
+              class="tab-pane fade"
+              id="withdraw"
+              role="tabpanel"
+              aria-labelledby="withdraw-tab"
+            >
+              Withdraw content goes here
+            </div>
+            <div
+              class="tab-pane fade"
+              id="buy-ecm"
+              role="tabpanel"
+              aria-labelledby="buy-ecm-tab"
+            >
+              Buy ECM content goes here
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    <!-- Tranding Token Start -->
+    <section class="tranding-token-section mt-120">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-7">
+            <div class="common-heading-section text-center text-md-start">
+              <h2 class="text-primary">Most Trending Tokens</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5 text-md-end text-center">
+            <div class="d-inline-block market-overview">
+              <a href="#" class="secondary-btn"
+                >Market Overview <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row gy-4 mt-5">
+          <div class="col-lg-8">
+            <div class="card-1 h-100"> 
+
+                <ul class="nav nav-tabs actionTab" id="actionTab2" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="hot-derivatives" data-bs-toggle="tab" data-bs-target="#hot-derivatives" type="button" role="tab">Hot Derivatives </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hot-coins" data-bs-toggle="tab" data-bs-target="#hot-coins" type="button" role="tab">Hot Coins</button>
+                  </li> 
+                </ul>
+
+                <div class="tab-content" id="actionTabContent2">
+                  <div class="tab-pane fade show active" id="hot-derivatives" role="tabpanel" aria-labelledby="hot-derivatives">
+                       <table class="coin-info-table w-100">
+                            <thead>
+                              <tr>
+                                <th>Trading Pairs</th>
+                                <th>Last Traded Price</th>
+                                <th>24H Change</th>
+                                <th>Charts</th>
+                                <th>Trade</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/1.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>103,800.1</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-up">+0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/up-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/2.png" alt="icon" /><span
+                                      >ETHUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/3.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/4.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/5.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/6.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-up">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/up-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                      </table>
+                  </div>
+                  <div class="tab-pane fade" id="hot-coins" role="tabpanel" aria-labelledby="hot-coins">
+                   <table class="coin-info-table w-100">
+                            <thead>
+                              <tr>
+                                <th>Trading Pairs</th>
+                                <th>Last Traded Price</th>
+                                <th>24H Change</th>
+                                <th>Charts</th>
+                                <th>Trade</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/1.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>103,800.1</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-up">+0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/up-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/2.png" alt="icon" /><span
+                                      >ETHUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/3.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/4.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/5.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-down">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/down-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="coin-info d-flex align-items-center g-5">
+                                    <img src="assets/images/coin/6.png" alt="icon" /><span
+                                      >BTCUSDT</span
+                                    >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span>2,483</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="coin-info">
+                                    <span class="value-up">-0.32%</span>
+                                  </div>
+                                </td>
+
+                                <td>
+                                  <div class="graph">
+                                    <img
+                                      src="assets/images/graph/up-graph.png"
+                                      alt="icon"
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="d-inline-block">
+                                    <a href="#" class="primary-btn-xm">Trade</a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                      </table>
+                  </div> 
+                </div>
+ 
+
+              
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card-1 h-100">
+              <table class="coin-info-table w-100">
+                <caption class="caption-top">
+                  Top Gainers
+                </caption>
+
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/1.png" alt="icon" /><span
+                        >BTCUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>103,800.1</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-up">+0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img src="assets/images/graph/up-graph.png" alt="icon" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/2.png" alt="icon" /><span
+                        >ETHUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>2,483</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-down">-0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img
+                        src="assets/images/graph/down-graph.png"
+                        alt="icon"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/3.png" alt="icon" /><span
+                        >BTCUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>2,483</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-down">-0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img
+                        src="assets/images/graph/down-graph.png"
+                        alt="icon"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table class="coin-info-table w-100">
+                <caption class="caption-top">
+                  New Listings
+                </caption>
+
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/1.png" alt="icon" /><span
+                        >BTCUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>103,800.1</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-up">+0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img src="assets/images/graph/up-graph.png" alt="icon" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/2.png" alt="icon" /><span
+                        >ETHUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>2,483</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-down">-0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img
+                        src="assets/images/graph/down-graph.png"
+                        alt="icon"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/3.png" alt="icon" /><span
+                        >BTCUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>2,483</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-down">-0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img
+                        src="assets/images/graph/down-graph.png"
+                        alt="icon"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="coin-info d-flex align-items-center g-5">
+                      <img src="assets/images/coin/4.png" alt="icon" /><span
+                        >BTCUSDT</span
+                      >
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span>2,483</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="coin-info">
+                      <span class="value-down">-0.32%</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="graph">
+                      <img
+                        src="assets/images/graph/down-graph.png"
+                        alt="icon"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tranding Token End -->
+    <!-- Connected Start -->
+    <section class="connected-section mt-120 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="common-heading-section text-center text-md-start">
+              <h2 class="text-white">
+                Stay connected. Trade wherever you are.
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center gy-4 mt-5">
+          <div class="col-lg-6">
+            <div class="connected-area">
+              <div class="qr-code-area d-flex align-items-center g-20">
+                <div class="qr-code card-1 border-1">
+                  <img
+                    src="assets/images/thumbnails/qr-code.png"
+                    alt="qr-code"
+                    class="w-100"
+                  />
+                </div>
+                <div class="qr-code-text">
+                  <p>Scan to Download App</p>
+                  <h5><u>iOS</u> & <u>Android</u></h5>
+                </div>
+              </div>
+              <div class="system-info">
+                <ul class="d-flex align-items-center">
+                  <li class="text-center">
+                    <img src="assets/images/icon/apple-2.png" alt="icon" />
+                    <p class="mt-3">MacOS</p>
+                  </li>
+                  <li class="text-center">
+                    <img src="assets/images/icon/windows.png" alt="icon" />
+                    <p class="mt-3">Windows</p>
+                  </li>
+                  <li class="text-center">
+                    <img src="assets/images/icon/linux.png" alt="icon" />
+                    <p class="mt-3">Linux</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card-1 border-1">
+              <div
+                class="video-thumbnails d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="assets/images/thumbnails/video.png"
+                  alt="img"
+                  class="w-100"
+                />
+                <a
+                  id="play-video"
+                  class="video-play-button"
+                  href="#"
+                  data-video-url="https://www.youtube.com/embed/wih7coKNL4Q?autoplay=1"
+                >
+                  <span></span>
+                </a>
+
+                <!-- Example with local video -->
+                <!--
+                <a
+                  id="play-video"
+                  class="video-play-button"
+                  href="#"
+                  data-video-url="assets/videos/sample.mp4"
+                >
+                  <span></span>
+                </a>
+                -->
+
+                <div id="video-overlay" class="video-overlay">
+                  <a class="video-overlay-close">&times;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Connected End -->
+    <section class="embark-section">
+      <div class="container">
+        <div class="embark-text">
+          <!-- Default gradient borders -->
+          <div class="text-center row">
+            <div class="col-md-8 offset-md-2">
+              <h2>Embark on Your Crypto Journey Today!</h2>
+              <p>
+                Start your crypto journey with BCoinMart today! Access powerful
+                tools, secure trading, and real-time updates—all at your
+                fingertips.
+              </p>
+              <a href="#">Sign Up Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">
+          Frequently Ask
+          <span class="highlight">Questions</span>
+        </h2>
+        <div class="row align-items-start">
+          <div class="col-lg-7 col-md-12">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading01">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse01"
+                    aria-expanded="true"
+                    aria-controls="collapse01"
+                  >
+                    <span class="accordion-number">01</span>
+                    <span class="flex-grow-1 accordion-title">
+                      Lorem ipsum dolor sit amet consectetur. Sagittis id.
+                    </span>
+                    <span class="accordion-icon">
+                      <img
+                        class="addition-icon"
+                        src="assets/images/home/adition.svg"
+                        alt="photos"
+                      />
+                      <img
+                        class="subtraction-icon"
+                        src="assets/images/home/subtraction.svg"
+                        alt="photos"
+                      />
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapse01"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="heading01"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. In augue ipsum
+                    tellus ultrices. Ac pharetra ultrices consectetur consequat
+                    tellus massa. Nec aliquam cras sagittis duis sed euismod
+                    arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu
+                    lacus imperdiet urna amet congue adipiscing. Faucibus magna
+                    nisl ullamcorper in facilisis consequat aliquam.
+                    <br />
+                    Id placerat dui habitasse quisque nisl tincidunt facilisi mi
+                    id. Dictum elit velit.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading02">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse02"
+                    aria-expanded="false"
+                    aria-controls="collapse02"
+                  >
+                    <span class="accordion-number">02</span>
+                    <span class="flex-grow-1 accordion-title"
+                      >Lorem ipsum dolor sit amet consectetur.</span
+                    >
+                    <span class="accordion-icon">
+                      <img
+                        class="addition-icon"
+                        src="assets/images/home/adition.svg"
+                        alt="photos"
+                      />
+                      <img
+                        class="subtraction-icon"
+                        src="assets/images/home/subtraction.svg"
+                        alt="photos"
+                      />
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapse02"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading02"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                    mollis dignissim et pharetra elementum consequatur porttitor
+                    ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                    sed bibendum consequat elit varius.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading03">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse03"
+                    aria-expanded="false"
+                    aria-controls="collapse03"
+                  >
+                    <span class="accordion-number">03</span>
+                    <span class="flex-grow-1 accordion-title"
+                      >Lorem ipsum dolor sit amet consectetur.</span
+                    >
+                    <span class="accordion-icon">
+                      <img
+                        class="addition-icon"
+                        src="assets/images/home/adition.svg"
+                        alt="photos"
+                      />
+                      <img
+                        class="subtraction-icon"
+                        src="assets/images/home/subtraction.svg"
+                        alt="photos"
+                      />
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapse03"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading03"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                    mollis dignissim et pharetra elementum consequatur porttitor
+                    ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                    sed bibendum consequat elit varius.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading04">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse04"
+                    aria-expanded="false"
+                    aria-controls="collapse04"
+                  >
+                    <span class="accordion-number">04</span>
+                    <span class="flex-grow-1 accordion-title"
+                      >Lorem ipsum dolor sit amet consectetur.</span
+                    >
+                    <span class="accordion-icon">
+                      <img
+                        class="addition-icon"
+                        src="assets/images/home/adition.svg"
+                        alt="photos"
+                      />
+                      <img
+                        class="subtraction-icon"
+                        src="assets/images/home/subtraction.svg"
+                        alt="photos"
+                      />
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapse04"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading04"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                    mollis dignissim et pharetra elementum consequatur porttitor
+                    ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                    sed bibendum consequat elit varius.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading05">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse05"
+                    aria-expanded="false"
+                    aria-controls="collapse05"
+                  >
+                    <span class="accordion-number">05</span>
+                    <span class="flex-grow-1 accordion-title"
+                      >Lorem ipsum dolor sit amet consectetur.</span
+                    >
+                    <span class="accordion-icon">
+                      <img
+                        class="addition-icon"
+                        src="assets/images/home/adition.svg"
+                        alt="photos"
+                      />
+                      <img
+                        class="subtraction-icon"
+                        src="assets/images/home/subtraction.svg"
+                        alt="photos"
+                      />
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="collapse05"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading05"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                    mollis dignissim et pharetra elementum consequatur porttitor
+                    ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                    sed bibendum consequat elit varius.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12">
+            <div class="faq-image">
+              <img src="assets/images/home/accordion.png" alt="photos" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo">
+                <a href="index.html"
+                  ><img
+                    class="footer-img"
+                    src="assets/images/logo.png"
+                    alt="logo"
+                /></a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user
+                  experience with fast transactions and top-notch security for
+                  your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">About</h3>
+                <ul>
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">Services</h3>
+                <ul>
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">Platforms</h3>
+                <ul>
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">Product</h3>
+                <ul>
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title">Follow Us</h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-solid fa-location-arrow"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer">
+                Disclaimer: Bcoinmart provides general information only and does
+                not offer financial or investment advice. Trading cryptoassets
+                involves significant risk and can result in loss of funds. You
+                are responsible for your own tax obligations and should seek
+                independent advice.Some products may be unregulated or
+                restricted in certain regions. Bcoinmart’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      const cards = document.querySelectorAll(".crypto-card-sm");
+      let index = 0;
+      function loopZoom() {
+        cards.forEach((card, i) => {
+          card.classList.remove("zoomed");
+        });
+
+        cards[index].classList.add("zoomed");
+
+        index = (index + 1) % cards.length;
+
+        setTimeout(loopZoom, 1000); // 1 second interval between cards
+      }
+      loopZoom(); // start the animation
+    </script>
+    <!-- Token Selection Script -->
+    <script>
+      document.querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item").forEach(item => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const image = this.dataset.image;
+          const value = this.dataset.value;
+
+          const dropdown = this.closest(".dropdown");
+          const button = dropdown.querySelector(".select-token");
+
+          // Just update button content
+          button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          
+        });
+      });
+
+
+      const ctx = document.getElementById("cryptoChart").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+      gradient.addColorStop(0, "rgba(255,0,0,0.3)");
+      gradient.addColorStop(1, "rgba(255,0,0,0)");
+
+      const dataSet = {
+        labels: ["6:00 PM", "12:00 AM", "3:00 AM", "6:00 AM", "12:00 PM"],
+        datasets: [
+          {
+            label: "Price",
+            data: [61850, 61900, 61830, 61980, 61870],
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: "#FF4D4D",
+            tension: 0.4,
+            pointBackgroundColor: "#fff",
+            pointBorderColor: "#FF4D4D",
+            pointRadius: 4,
+            pointHoverRadius: 6,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: dataSet,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              position: "right",
+              ticks: {
+                color: "#aaa",
+                padding: 4,
+                callback: (value) =>
+                  value.toLocaleString("en-US", { minimumFractionDigits: 0 }) +
+                  "K",
+              },
+              grid: {
+                display: true,
+                color: "#222",
+              },
+            },
+            x: {
+              ticks: {
+                color: "#aaa",
+              },
+              grid: {
+                display: false,
+                color: "#222",
+              },
+            },
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              mode: "index",
+              intersect: false,
+              backgroundColor: "#1A1D29",
+              borderColor: "#FF4D4D",
+              borderWidth: 1,
+            },
+          },
+          interaction: {
+            mode: "index",
+            intersect: false,
+          },
+        },
+      };
+
+      const myChart = new Chart(ctx, config);
+
+      // Tab switching (you can load dynamic data per tab)
+      document.querySelectorAll("[data-range]").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+
+          // Fake data change
+          const newData = Array.from(
+            { length: 5 },
+            () => 61500 + Math.random() * 500
+          );
+          myChart.data.datasets[0].data = newData;
+          myChart.update();
+        });
+      });
+
+      // auto scroll bitcoin
+
+      const scrollBox = document.getElementById("scroll-box");
+      let scrollStep = 350; // px per scroll step
+      let scrollDelay = 2000; // delay before scroll (ms)
+      let scrollSpeed = 1000; // smooth scroll duration (ms)
+
+      let scrollInterval = null;
+      let isPaused = false;
+
+      function autoScroll() {
+        if (isPaused) return;
+
+        let maxScrollTop = scrollBox.scrollHeight - scrollBox.clientHeight;
+
+        if (scrollBox.scrollTop + scrollStep < maxScrollTop) {
+          scrollSmoothBy(scrollBox, scrollStep, scrollSpeed);
+        } else {
+          scrollSmoothTo(scrollBox, 0, scrollSpeed);
+        }
+      }
+
+      function scrollSmoothBy(element, distance, duration) {
+        const start = element.scrollTop;
+        const end = start + distance;
+        animateScroll(element, start, end, duration);
+      }
+
+      function scrollSmoothTo(element, target, duration) {
+        const start = element.scrollTop;
+        animateScroll(element, start, target, duration);
+      }
+
+      function animateScroll(element, from, to, duration) {
+        const startTime = performance.now();
+
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = easeInOutQuad(progress);
+          element.scrollTop = from + (to - from) * ease;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      function startScrolling() {
+        if (!scrollInterval) {
+          scrollInterval = setInterval(autoScroll, scrollDelay + scrollSpeed);
+        }
+      }
+
+      function stopScrolling() {
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+        }
+      }
+
+      scrollBox.addEventListener("mouseenter", () => {
+        isPaused = true;
+        stopScrolling();
+      });
+
+      scrollBox.addEventListener("mouseleave", () => {
+        isPaused = false;
+        startScrolling();
+      });
+
+      // Start auto scroll initially
+      startScrolling();
+    </script>
+    <script src="assets/js/play.js"></script>
+  </body>
+</html>
