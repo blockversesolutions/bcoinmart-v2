@@ -176,9 +176,7 @@ p {
   fill: #101115;
   stroke: #101115;
 }
-
 button:focus:not(:focus-visible) {
-  color: inherit !important;
   box-shadow: 0 0 0 rgba(13, 109, 253, 0);
 }
 .mt-120{
@@ -1586,6 +1584,9 @@ span.close-mark {
       border-bottom: 1px solid #FFBE38;
       padding-bottom: 8px;
     }
+    .nav-link.active:focus{
+      color:#FFBE38 !important;
+    }
     .chart-tabs {
       border: none;  
       gap: 32px;
@@ -1705,3 +1706,85 @@ span.close-mark {
     }
 
 /* shaki css end */
+.company-slider {
+  padding: 33px 0;
+  background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
+}
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track {
+  display: flex;
+  width: calc(20 * 100px); 
+   
+  animation: infiniteScroll 25s linear infinite;
+  gap: 60px;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+}
+
+.scroll-item {
+  flex-shrink: 0;
+  width: 80px;
+  height: 60px;
+  background: linear-gradient(135deg, #4a4a4a, #2a2a2a);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid #555;
+  position: relative;
+  overflow: hidden;
+}
+.scroll-item img {
+  max-width: 85px;
+}
+
+.scroll-item:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/ Gradient fade edges */
+.scroll-container::before,
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(90deg, #2a2a2a, transparent);
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(270deg, #2a2a2a, transparent);
+}
+
+.demo-info {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
