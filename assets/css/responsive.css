@@ -35,7 +35,6 @@
     display: none;
   }
   .card-1 {
-   
     padding: 10px;
   }
   .faq-image {
@@ -50,7 +49,7 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .process-card{
+  .process-card {
     padding: 30px 15px;
   }
   .footer-text {
@@ -101,5 +100,12 @@
   .search-icon span {
     height: 40px;
     width: 40px;
+  }
+  .coin-pair-info p,
+  .coin-pair-info ul li {
+    font-size: 15px;
+  }
+  .pair-icon ul li img {
+    width: 30px;
   }
 }

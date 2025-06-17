@@ -1069,7 +1069,10 @@
                   </div>
                   <div class="col-md-6">
                     <div class="bitcoin-markets-card">
-                      <div class="bitcoin-market" id="scroll-box">
+                      <div class="bitcoin-market" data-simplebar
+                      style="max-height: 460px;position: static;"
+                      data-bs-popper="static"
+                      id="scrollbar">
                         <div class="bitcoin-card">
                           <h4 class="title-h4">Markets</h4>
                           <div class="markets-item">
@@ -1099,7 +1102,7 @@
                                 <h5>$40.92B</h5>
                               </li>
                               <li>
-                                <p>
+                                <p class="d-flex align-items-center g">
                                   Circulation Supply
                                   <i class="fa-solid fa-circle-info"></i>
                                 </p>
