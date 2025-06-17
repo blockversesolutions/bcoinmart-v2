@@ -50,6 +50,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .process-card{
+    padding: 30px 15px;
+  }
   .footer-text {
     font-size: 16px;
     padding-top: 20px;
