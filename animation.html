@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GSAP ScrollTrigger Image Sequence</title>
+  <style>
+    .animation-img {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      margin: auto;
+    }
+    .animation-img img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-section" style="height: 150vh; padding-top: 100px;">
+  <div class="container" style="display: flex; max-width: 900px; margin: auto;">
+    <div class="col-md-6" style="flex:1;">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        corrupti inventore soluta expedita, modi porro dolorem, eum fugiat
+        voluptate cum quod sed, corporis facilis veniam illum tenetur
+        aspernatur reiciendis delectus.
+      </p>
+    </div>
+    <div class="col-md-6" style="flex:1;">
+      <div class="animation-img">
+        <img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+        <img id="img2" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <img id="img3" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="service-section" style="background-color: gray; height: 100vh; padding: 50px;">
+  <div class="container" style="max-width: 900px; margin: auto;">
+    <div class="row" style="display: flex; gap: 20px;">
+      <div class="col-4" style="flex:1;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+      <div class="col-4" style="flex:1;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+      <div class="col-4" style="flex:1;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const images = gsap.utils.toArray(".animation-img img");
+  const container = document.querySelector(".animation-img");
+
+  // প্রথম ছবিকে opacity 1 করে রাখি যাতে প্রথমেই দেখা যায়
+  gsap.set(images[0], {opacity: 1});
+
+  ScrollTrigger.create({
+    trigger: container,
+    start: "top center",
+    end: "bottom center",
+    scrub: 1,  // smooth scrub
+    onUpdate: (self) => {
+      const progress = self.progress;
+
+      if (progress < 0.33) {
+        // প্রথম ছবি দেখা যাবে, বাকি ২ টা hide
+        gsap.to(images[0], {opacity: 1, duration: 0.3});
+        gsap.to(images[1], {opacity: 0, duration: 0.3});
+        gsap.to(images[2], {opacity: 0, duration: 0.3});
+      } else if (progress >= 0.33 && progress < 0.66) {
+        // দ্বিতীয় ছবি দেখান
+        gsap.to(images[0], {opacity: 0, duration: 0.3});
+        gsap.to(images[1], {opacity: 1, duration: 0.3});
+        gsap.to(images[2], {opacity: 0, duration: 0.3});
+      } else {
+        // তৃতীয় ছবি দেখান
+        gsap.to(images[0], {opacity: 0, duration: 0.3});
+        gsap.to(images[1], {opacity: 0, duration: 0.3});
+        gsap.to(images[2], {opacity: 1, duration: 0.3});
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

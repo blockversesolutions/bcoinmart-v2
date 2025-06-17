@@ -29,8 +29,17 @@
     padding-right: 15px;
     padding-left: 5px;
   }
+  .hero-section {
+    padding-bottom: 130px;
+  }
 }
 @media screen and (max-width: 991px) {
+  .mb-120{
+    margin-bottom: 90px;
+  }
+  .mt-120 {
+    margin-top: 90px;
+}
   .crypto-card-sm {
     display: none;
   }
@@ -47,10 +56,66 @@
     width: 65px !important;
     flex: 0 0 65px !important;
   }
+  .payment-select span {
+    font-size: 12px;
+  }
+  #buySellTabContent {
+    padding: 25px 20px;
+  }
+  .custom-card {
+    flex: 0 0 45%;
+    margin-left: 0 !important;
+  }
+  .faq-section {
+    padding-bottom: 96px;
+    padding-top: 151px;
+  }
+  .common-heading-section h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .footer-logo{
+    margin-bottom: 40px;
+  }
+  .system-info ul {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .qr-code {
+    max-width: 125px;
+  }
+   .common-heading-section h2 {
+    font-size:28px;
+    line-height: 38px;
+    }
   .process-card {
     padding: 30px 15px;
+  }
+  .buy-sel-tabs {
+    margin: 40px auto 0 auto;
+  }
+  .bitcoin-market-chart-title h5 {
+    font-size: 20px;
+  }
+  .bitcoin-market-chart-title span {
+    font-size: 20px;
+  }
+  .bitcoin-market-chart-title > ul {
+    gap: 8px;
+  }
+  .bitcoin-markets-card {
+    margin-top: 30px;
+  }
+  .bitcoin-market-logo img {
+    width: 22px;
+  }
+  .payment-select span {
+    font-size: 14px;
+  }
+  .instant-crypto-support {
+    justify-content: center;
   }
   .footer-text {
     font-size: 16px;
@@ -86,7 +151,7 @@
     display: none;
   }
   .hero-section {
-    padding-bottom: 100px;
+    padding-bottom:40px;
   }
   .coin-info-table tr td {
     padding: 8px 6px;
@@ -94,6 +159,78 @@
   }
   .coin-info-table .graph img {
     width: 38px;
+  }
+  .custom-card {
+    flex: 0 0 100%;
+    margin-left: 0 !important;
+  }
+  .clip-card-2 {
+    padding-left: 85px;
+  }
+  .custom-card h5 {
+    margin-bottom: 20px;
+  }
+  .icon img {
+    max-width: 45px;
+  }
+  .shape-section {
+    padding-top: 66px;
+  }
+  .shape-header {
+    padding-bottom: 42px;
+  }
+  .shape-main .common-heading-section {
+    padding-bottom: 45px;
+  }
+  .faq-image img {
+    width: 100%;
+    max-height: 600px;
+    background-size: cover;
+  }
+  .accordion-number {
+    display: none;
+  }
+  .accordion-button {
+    padding-left: 12px;
+    font-size: 20px;
+    height: 100px;
+  }
+  .accordion-icon {
+    width: 54px !important;
+    flex: 0 0 54px !important;
+  }
+  .accordion-body {
+    padding: 15px 24px 24px 24px !important;
+  }
+  .subtraction-icon,
+  .addition-icon {
+    width: 16px;
+  }
+  .faq-section {
+    padding-bottom: 56px;
+    padding-top: 121px;
+  }
+  .shape-main {
+    padding: 60px 0 91px 0;
+    clip-path: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer-menu-title::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 13px;
+  }
+  .footer-menu-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .social-icon-main {
+    justify-content: center;
+  }
+  .footer-privacy {
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 480px) {
@@ -107,5 +244,8 @@
   }
   .pair-icon ul li img {
     width: 30px;
+  }
+  .clip-card-2 {
+    padding-left: 65px;
   }
 }

@@ -265,8 +265,7 @@ button:focus:not(:focus-visible) {
   position: sticky !important;
   backdrop-filter: blur(20px);
   top: 0px;
-  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px,
-    rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
+  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px, rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
     rgba(198, 200, 202, 0.35) 0px -2px 6px 0px inset;
 }
 .mobile-language-view {
@@ -312,7 +311,7 @@ button:focus:not(:focus-visible) {
 
 .candle {
   width: 10px;
-  background: #00ff90;
+  background: #FFBE39;
   position: relative;
   animation: grow-shrink 1s ease-in-out infinite;
 }
@@ -324,7 +323,7 @@ button:focus:not(:focus-visible) {
   bottom: -10px;
   left: 50%;
   width: 2px;
-  background: #00ff90;
+  background: #FFBE39;
   transform: translateX(-50%);
 }
 
@@ -396,6 +395,7 @@ button:focus:not(:focus-visible) {
 .header-area {
   background: #0f131d80;
   backdrop-filter: blur(2px);
+  padding:10px 0;
 }
 .nav-link {
   color: #fdfdfd;
@@ -509,10 +509,8 @@ span.close-mark {
 
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px,
-    rgba(255, 255, 255, 0.12) 0px -12px 30px,
-    rgba(255, 255, 255, 0.12) 0px 4px 6px,
-    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px,
     rgba(255, 255, 255, 0.09) 0px -3px 5px;
 }
 .dropdown-item:hover {
@@ -764,6 +762,17 @@ span.close-mark {
   gap: 60px;
   margin-top: 60px;
 }
+.system-info ul li{
+  padding: 20px; 
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.navbar-toggler.icon{
+  margin-bottom: 0;
+}
+.system-info ul li:hover{
+  background-color: #1E2329;
+}
 .connected-section::after {
   content: "";
   position: absolute;
@@ -791,18 +800,17 @@ span.close-mark {
 }
 
 /* End Connected css */
-/* rakib css start */
-
+.tranding-token-section {
+  overflow: hidden;
+}
 .embark-section {
-  background: url("../images/home/network-bg.png") no-repeat scroll center
-    center / cover;
+  background: url("../images/home/network-bg.png") no-repeat scroll center center / cover;
   padding: 22px 0;
   color: #fff;
 }
 
 .embark-text {
-  background: url("../images/home/embark-dots.png") no-repeat scroll center
-    center / cover;
+  background: url("../images/home/embark-dots.png") no-repeat scroll center center / cover;
   padding: 40px 0;
   transform: translateY(80px);
   position: relative;
@@ -949,7 +957,7 @@ span.close-mark {
   align-items: center;
   font-weight: 400;
   font-size: 24px;
-  height: 80px;
+  height: 75px;
   line-height: 32px;
 }
 .accordion-button:not(.collapsed) {
@@ -1021,7 +1029,6 @@ span.close-mark {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
 }
 
 .accordion-collapse {
@@ -1046,7 +1053,7 @@ span.close-mark {
   padding-top: 60px;
 }
 .footer-top-main {
-  border-bottom: 2px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
 }
 .footer-top {
   padding-bottom: 45px;
@@ -1116,8 +1123,8 @@ span.close-mark {
   padding-bottom: 20px;
 }
 .social-icon {
-  width: 52px;
-  height: 52px;
+  width:40px;
+  height:40px;
   display: inline-block;
   border-radius: 50%;
   border: 1px solid #4a4a4a;
@@ -1131,7 +1138,7 @@ span.close-mark {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   background: #4a4a4a86;
-  font-size: 28px;
+  font-size: 20px;
 }
 .social-icon:hover {
   color: #ffffff !important;
@@ -1197,6 +1204,7 @@ span.close-mark {
 /*===========================  End Footer Section  ===========================*/
 
 /* rakib css end */
+
 /* shaki css start */
 .buy-sel-tabs {
   padding-top: 70px;
@@ -1221,15 +1229,7 @@ span.close-mark {
   width: 100%;
 }
 #sell-tab {
-  clip-path: polygon(
-    43% 0,
-    100% 0,
-    100% 9%,
-    100% 57%,
-    100% 100%,
-    18% 100%,
-    0 0
-  );
+  clip-path: polygon(43% 0, 100% 0, 100% 9%, 100% 57%, 100% 100%, 18% 100%, 0 0);
 }
 #buy-tab {
   clip-path: polygon(43% 0, 100% 0, 80% 100%, 0 100%, 0 0);
@@ -1248,7 +1248,7 @@ span.close-mark {
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 9999;
+  z-index: 1;
   top: 0;
 }
 
@@ -1331,7 +1331,7 @@ span.close-mark {
   height: 20px;
   margin-right: 6px;
 }
-
+/* 
 .dropdown-custom .dropdown-menu {
   background-color: #2a2d3e;
   border: none;
@@ -1343,27 +1343,27 @@ span.close-mark {
   display: block !important;
   visibility: hidden;
   pointer-events: none;
-}
+} */
 
 .payment-select:focus,
 .payment-select:hover {
   background-color: #2a2d3e;
 }
 
-.dropdown-custom .dropdown-menu.show {
+/* .dropdown-custom .dropdown-menu.show {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   top: 0 !important;
   inset: 0 auto auto -19px !important;
-}
+} */
 
-.payment.dropdown-custom .dropdown-menu.show {
+/* .payment.dropdown-custom .dropdown-menu.show {
   top: 0 !important;
   inset: 0 auto auto 0 !important;
-}
+} */
 
-.dropdown-custom .dropdown-item {
+/* .dropdown-custom .dropdown-item {
   color: #fff;
   display: flex;
   align-items: center;
@@ -1377,7 +1377,7 @@ span.close-mark {
 
 .dropdown-custom .dropdown-item:hover {
   background-color: #444;
-}
+} */
 
 .payment-select {
   background-color: #2a2d3e;
@@ -1394,13 +1394,13 @@ span.close-mark {
 .payment-select.select-token::before {
   right: 18px !important;
 }
-.dropdown-custom .dropdown-menu.show {
+/* .dropdown-custom .dropdown-menu.show {
   width: 100%;
 }
 .dropdown-custom .dropdown-item:hover {
   background-color: #444;
   color: #fff;
-}
+} */
 
 .payment-select i {
   margin-right: 10px;
@@ -1469,7 +1469,7 @@ span.close-mark {
 }
 
 .payment {
-  margin: 60px 0 40px 0;
+  margin: 40px 0 40px 0;
 }
 
 .mb-20 {
@@ -1652,7 +1652,217 @@ span.close-mark {
   z-index: 9;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+
+.chartTab .nav-link.active:focus {
+  color: #fff !important;
+}
+.chart-tabs .nav-link.active:focus {
+  color: #fff !important;
+}
+
+.dropdown-buy-sell .custom-select-token {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.dropdown-buy-sell .custom-select-token img {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-buy-sell .dropdown-menu {
+  min-width: 100%;
+  padding: 6px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform-origin: top;
+  display: none; /* default hidden */
+  opacity: 0;
+  transform: translateY(0) !important;
+  position: absolute;
+  z-index: 1000;
+}
+
+.dropdown-buy-sell .dropdown-menu.show {
+  background: #1a1d29;
+}
+
+.dropdown-buy-sell .dropdown-menu.show a {
+  color: #fff;
+}
+
+.dropdown-buy-sell .dropdown-menu.show a:hover {
+  color: #000;
+}
+
+.dropdown-buy-sell {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 116px;
+}
+
+.dropdown-buy-sell .dropdown-menu {
+  position: absolute !important;
+  bottom: -114px !important;
+  right: 0 !important;
+  z-index: 1000;
+  inset: inherit !important;
+}
+
+.dropdown-buy-sell .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+.dropdown-buy-sell .dropdown-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.dropdown-buy-sell .dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-buy-sell .dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.payment-dropdown-select .dropdown-menu.show {
+  background: #1a1d29;
+  width: 100%;
+  bottom: -118px;
+}
+
+.payment-dropdown-select {
+  display: block;
+  max-width: 100% !important;
+}
+
+.payment-dropdown-select .payment-select {
+  padding: 24px 15px;
+  background: #2c2f40;
+  margin-bottom: 0;
+}
+
+.payment-dropdown-select .select-token::before {
+  transform: translateY(-50%) rotate(-45deg);
+  top: 35px;
+}
+
+.buy-sel-tabs {
+  margin: 0 0 0 auto;
+}
+
+.crypto-purchase-table {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bitcoin-markets-card::after {
+  border-radius: 12px;
+}
+
+.markets-item li {
+  flex: 0 0 27%;
+}
+
+.crypto-shape img {
+  width: 98%;
+}
+.crypto-shape {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  z-index: -1;
+  opacity: 0.1;
+  text-align: right;
+}
+
+.actionTab .nav-link,
+.actionTab .nav-link {
+  margin: 0;
+}
+
+.actionTab {
+  gap: 24px;
+}
+
+.most-trending-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.coin-info img {
+  width: 22px;
+}
+.chart-tabs .nav-link,
+.chart-tabs .nav-link {
+  padding: 0 !important;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
+}
+
+.how-to-buy-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+/* tab content  */
+
+.withdraw-content .faq-section { 
+	padding-top: 60px;
+}
+
+.withdraw-content .buy-sel-tabs {
+	margin: 0 auto; 
+	padding-top: 0 !important;
+}
+
+.withdraw-content .withdraw-form { 
+  padding: 36px 36px 46px 36px ;
+}
+
+.online-text { 
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
+	color: #FFFFFF99;
+}
+
+.buy-sel-tabs { 
+	background-color: #1E2329; 	
+}
+ 
+
 /* shaki css end */
+
 .company-slider {
   padding: 33px 0;
   background: linear-gradient(
@@ -1810,11 +2020,17 @@ span.close-mark {
   padding: 20px;
   position: relative;
   overflow: hidden;
+  transition: 0.3s ease-in-out;
 }
+.coin-pair-card:hover {
+  border: 1px solid #ffbe38;
+}
+
 .pair-icon ul li img {
   width: 40px;
   transition: 0.5s;
 }
+
 .coin-pair-info p {
   color: #fdfdfd99;
   font-size: 18px;
@@ -1827,5 +2043,218 @@ span.close-mark {
   font-size: 22px;
   color: #fff;
 }
+.coin-pair-card:hover .coin-pair-info ul li {
+  color: #ffbe38;
+}
 
 /* coin pair css end*/
+
+/* Start shape section css start  */
+.shape-section {
+  padding-top: 120px;
+}
+.shape-header {
+  padding-bottom: 60px;
+}
+
+.shape-main {
+  background: url("../images/bg/sharemarket.png") no-repeat scroll center center/ cover;
+  position: relative;
+  background-attachment: fixed;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 79.81% 100%, 77.13% 93.51%, 0% 93.51%);
+  padding: 60px 0 128px 0;
+  background-size:100% 100%;
+}
+.shape-main .common-heading-section {
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 9;
+}
+.shape-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, #1e232972, #2a2f3675);
+  opacity: 0.8;
+}
+
+.shape-bcoinmart {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-card {
+  background: linear-gradient(145deg, #1e2329, #2a2f36);
+  padding: 30px;
+  color: #fff;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 33%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.custom-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #fd9e04, #ffffff, #fd9e04, #fcfcfc, #fd9e04, #ffffff);
+  background-size: 400% 400%;
+  z-index: -2;
+  transition: all 0.4s ease;
+  animation: gradientShift 6s ease infinite;
+  border-radius: 8px;
+}
+
+.custom-card::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(145deg, #1e2329, #2a2f36);
+  z-index: -1;
+  transition: all 0.4s ease;
+  border-radius: 6px;
+}
+.shap-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.shap-content {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.shap-content:hover {
+  color: #fff;
+}
+.clip-card::before {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+}
+
+.clip-card::after {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+}
+
+.clip-card {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  padding-right: 60px;
+}
+
+.clip-card-2::before {
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 62%, 8% 51%);
+}
+
+.clip-card-2::after {
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 62%, 8% 51%);
+}
+
+.clip-card-2 {
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 62%, 8% 51%);
+  margin-left: -34px;
+  padding-left: 59px;
+}
+.custom-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card:hover::before {
+  animation-duration: 2s;
+}
+
+.custom-card:hover::after {
+  background: linear-gradient(145deg, #252b32, #2f3540);
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.custom-card:hover::before {
+  box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+}
+
+.custom-card h5 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.custom-card p {
+  font-size: 16px;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  margin-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon img {
+  max-width: 50px;
+  height: auto;
+  max-height: 50px;
+  transition: all 0.3s ease;
+  transition: 0.3s;
+  filter: grayscale(100%);
+}
+.custom-card:hover .icon img {
+  filter: grayscale(0%);
+  margin-left: 7px;
+  scale: 1.1;
+}
+.custom-card:hover .shap-title {
+  color: #ffbe38;
+}
+.custom-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.custom-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.custom-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.custom-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Start shape section css End  */

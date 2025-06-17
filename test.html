@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Trigger Text Animation</title>
+  <style>
+    .scroll-wrapper {
+      overflow: hidden;
+    }
+    .scroll-text {
+      white-space: nowrap;
+      font-size: 24px;
+      padding-left: 100%;
+      color: #00ffe1;
+    }
+  </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+     <div class="fade-text">
+    👋 Hello there! I will fade in when you scroll to me, and fade out when I leave.
+  </div>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+  <div class="scroll-wrapper">
+    <div class="scroll-text">
+      📰 Latest updates are scrolling here when you scroll the page down or up 🔄
+    </div>
+  </div>
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem velit aspernatur amet nesciunt non quia ad, aliquid pariatur laborum expedita ipsam deserunt laudantium hic? Autem laborum delectus iste facilis.</h1>
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const text = document.querySelector(".scroll-text");
+    const textWidth = text.offsetWidth;
+
+    gsap.to(".scroll-text", {
+      x: -textWidth,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".scroll-wrapper",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1, // animation tied to scroll
+        markers: false // set true to debug
+      }
+    });
+  </script>
+
+</body>
+</html>

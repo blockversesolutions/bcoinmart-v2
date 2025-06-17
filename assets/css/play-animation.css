@@ -139,9 +139,29 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  /* width: 90%; */
-  /* height: auto; */
+  width: 850px;
+  height: 550px;
+  border: 10px solid #f1ad34;
+  border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.75);
+}
+@media all and (max-width:855px){
+  
+.video-overlay iframe {
+  
+  width:95%;
+  height:400px;
+ 
+}
+}
+@media all and (max-width:480px){
+  
+.video-overlay iframe {
+  
+  width: 370px;
+  height:200px;
+ 
+}
 }
 
 /* ENTRANCE ANIMATION OF THE PLAY BUTTON */
