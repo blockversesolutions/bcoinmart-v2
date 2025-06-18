@@ -555,22 +555,23 @@ span.close-mark {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: zoomBg 7s ease-in-out forwards;
+  animation: zoomBg 22s ease-in-out infinite;
   transform-origin: center;
 }
 
-/* Zoom Animation */
+/* Continuous Zoom Animation */
 @keyframes zoomBg {
   0% {
+    transform: scale(1);
+  }
+  50% {
     transform: scale(1.5);
   }
-  /* 50% {
-    transform: scale(1.15);
-  } */
   100% {
     transform: scale(1);
   }
 }
+
 @keyframes opacity {
   0% {
     opacity: 0.7;
@@ -1211,6 +1212,7 @@ span.close-mark {
 /* shaki css start */
 .buy-sel-tabs {
   padding-top: 70px;
+  position: relative;
   max-width: 474px;
   margin: 0 auto;
   background-color: #1a1d29;
@@ -1218,14 +1220,14 @@ span.close-mark {
   position: relative;
   box-shadow: 0px 4px 4px 0px #00000040;
   border: 2px solid transparent; /* Important: transparent base */
-  border-image: linear-gradient(
+  /* border-image: linear-gradient(
       -45deg,
       rgba(255, 255, 255, 0.6) -8.42%,
       rgba(255, 255, 255, 0) 31.52%,
       rgba(255, 255, 255, 0) 71.6%,
       rgba(255, 255, 255, 0.6) 113.2%
     )
-    1;
+    1; */
 }
 
 .buy-sel-tabs .nav-tabs .nav-link {
@@ -1861,6 +1863,78 @@ span.close-mark {
 
 .buy-sel-tabs { 
 	background-color: #1E2329; 	
+}
+
+
+.how-to-buy-shape.deposit-shape-one {
+	top: 8%;
+}
+
+.deposit-shape-two {
+	position: absolute;
+	top: 164px;
+	right: 32px;
+}
+
+.faq-shape,
+.process-shape-3,
+.process-shape-2,
+.deposit-shape-two ,
+.most-trending-shape,
+.how-to-buy-shape,
+.crypto-shape { 
+  animation: float 3s ease-in-out infinite; 
+  z-index: -1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px); /* moves up */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Sparkline Chart  */
+.graph .sparkline {
+  width: 100% !important;
+}
+
+.process-shape-2 {
+	position: absolute;
+	bottom: -270px;
+	right: 32px;
+}
+
+.process-shape-3 {
+	position: absolute;
+	bottom: -144px;
+	left: 21%;
+}
+
+.faq-shape {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.buy-sel-tabs::after  {
+	content: "";
+	position: absolute;
+	left: -4px;
+	z-index: -2;
+	right: -3px;
+	bottom: -3px;
+	top: -4px;
+	background: linear-gradient(180deg, #4a4a4a 0%, rgba(74, 74, 74, 0) 100%);
+	padding: 2px;
+	border-radius: 16px;
+	height: 100%;
+	width: 101.8%;
 }
  
 
