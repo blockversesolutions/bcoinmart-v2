@@ -127,12 +127,10 @@
   cursor: pointer;
   transition: all 200ms;
 }
-
 .video-overlay-close:hover {
   color: #ff4c60;
   transform: scale(1.5);
 }
-
 .video-overlay iframe {
   position: absolute;
   top: 50%;
@@ -145,18 +143,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.75);
 }
 @media all and (max-width:855px){
-  
 .video-overlay iframe {
-  
+  border-width:2px;
   width:95%;
   height:400px;
- 
 }
 }
 @media all and (max-width:480px){
-  
 .video-overlay iframe {
-  
   width: 370px;
   height:200px;
  

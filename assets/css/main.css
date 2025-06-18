@@ -14,6 +14,11 @@ h5,
 h6 {
   font-weight: 700;
 }
+body,
+html {
+  overflow-x: hidden;
+}
+
 button {
   background-color: transparent;
   outline: none;
@@ -507,7 +512,6 @@ span.close-mark {
 .dropdown-menu {
   display: block;
   opacity: 0;
-
   visibility: hidden;
   transition: all 0.3s ease;
   box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px,
@@ -546,7 +550,6 @@ span.close-mark {
   overflow: hidden;
   z-index: 1;
 }
-
 .hero-section::before {
   content: "";
   position: absolute;
@@ -586,7 +589,6 @@ span.close-mark {
     opacity: 0.7;
   }
 }
-
 .hero-circle-area {
   text-align: right;
 }
@@ -617,7 +619,6 @@ span.close-mark {
 .auto-signup ul li img:hover {
   transform: scale(1.1);
 }
-
 .coin-icon {
   background: #31353f;
   border-radius: 10px;
