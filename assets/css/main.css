@@ -265,7 +265,8 @@ button:focus:not(:focus-visible) {
   position: sticky !important;
   backdrop-filter: blur(20px);
   top: 0px;
-  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px, rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
+  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px,
+    rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
     rgba(198, 200, 202, 0.35) 0px -2px 6px 0px inset;
 }
 .mobile-language-view {
@@ -311,7 +312,7 @@ button:focus:not(:focus-visible) {
 
 .candle {
   width: 10px;
-  background: #FFBE39;
+  background: #ffbe39;
   position: relative;
   animation: grow-shrink 1s ease-in-out infinite;
 }
@@ -323,7 +324,7 @@ button:focus:not(:focus-visible) {
   bottom: -10px;
   left: 50%;
   width: 2px;
-  background: #FFBE39;
+  background: #ffbe39;
   transform: translateX(-50%);
 }
 
@@ -395,7 +396,7 @@ button:focus:not(:focus-visible) {
 .header-area {
   background: #0f131d80;
   backdrop-filter: blur(2px);
-  padding:10px 0;
+  padding: 10px 0;
 }
 .nav-link {
   color: #fdfdfd;
@@ -421,6 +422,7 @@ button:focus:not(:focus-visible) {
   width: 300px !important;
   background-color: #131720;
   padding-right: 30px;
+  
 }
 
 .simplebar-track.simplebar-vertical {
@@ -509,8 +511,10 @@ span.close-mark {
 
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px,
-    rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px,
+  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
     rgba(255, 255, 255, 0.09) 0px -3px 5px;
 }
 .dropdown-item:hover {
@@ -731,10 +735,10 @@ span.close-mark {
   font-size: 14px;
   font-weight: 600;
 }
-.coin-info-table .graph img{
+.coin-info-table .graph img {
   width: 46px;
 }
-.graph canvas{
+.graph canvas {
   width: 46px !important;
 }
 .coin-info span {
@@ -755,27 +759,37 @@ span.close-mark {
   font-size: 16px;
   line-height: 24px;
 }
-.qr-code-text h5 {
+.qr-code-text h5,.qr-code-text a {
   color: #e0e0e0;
   font-weight: 600;
   margin-top: 20px;
   font-size: 24px;
   line-height: 32px;
+  transition: 0.5s;
+}
+.qr-code-text a{
+  text-decoration: underline;
+}
+.qr-code-text a:hover{
+  color: #ffbe38;
 }
 .system-info ul {
   gap: 60px;
   margin-top: 60px;
 }
-.system-info ul li{
-  padding: 20px; 
+.system-info ul li {
+  padding: 20px;
   transition: 0.5s;
   border-radius: 10px;
 }
-.navbar-toggler.icon{
+.navbar-toggler.icon {
   margin-bottom: 0;
 }
-.system-info ul li:hover{
-  background-color: #1E2329;
+.system-info ul li:hover {
+  background-color: #1e2329;
+}
+.system-info ul li a{
+  display: block;
 }
 .connected-section::after {
   content: "";
@@ -808,13 +822,15 @@ span.close-mark {
   overflow: hidden;
 }
 .embark-section {
-  background: url("../images/home/network-bg.png") no-repeat scroll center center / cover;
+  background: url("../images/home/network-bg.png") no-repeat scroll center
+    center / cover;
   padding: 22px 0;
   color: #fff;
 }
 
 .embark-text {
-  background: url("../images/home/embark-dots.png") no-repeat scroll center center / cover;
+  background: url("../images/home/embark-dots.png") no-repeat scroll center
+    center / cover;
   padding: 40px 0;
   transform: translateY(80px);
   position: relative;
@@ -1127,8 +1143,8 @@ span.close-mark {
   padding-bottom: 20px;
 }
 .social-icon {
-  width:40px;
-  height:40px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   border-radius: 50%;
   border: 1px solid #4a4a4a;
@@ -1234,7 +1250,15 @@ span.close-mark {
   width: 100%;
 }
 #sell-tab {
-  clip-path: polygon(43% 0, 100% 0, 100% 9%, 100% 57%, 100% 100%, 18% 100%, 0 0);
+  clip-path: polygon(
+    43% 0,
+    100% 0,
+    100% 9%,
+    100% 57%,
+    100% 100%,
+    18% 100%,
+    0 0
+  );
 }
 #buy-tab {
   clip-path: polygon(43% 0, 100% 0, 80% 100%, 0 100%, 0 0);
@@ -1837,53 +1861,51 @@ span.close-mark {
   z-index: -1;
 }
 
-
 /* tab content  */
 
-.withdraw-content .faq-section { 
-	padding-top: 60px;
+.withdraw-content .faq-section {
+  padding-top: 60px;
 }
 
 .withdraw-content .buy-sel-tabs {
-	margin: 0 auto; 
-	padding-top: 0 !important;
+  margin: 0 auto;
+  padding-top: 0 !important;
 }
 
-.withdraw-content .withdraw-form { 
-  padding: 36px 36px 46px 36px ;
+.withdraw-content .withdraw-form {
+  padding: 36px 36px 46px 36px;
 }
 
-.online-text { 
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0%;
-	color: #FFFFFF99;
+.online-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #ffffff99;
 }
 
-.buy-sel-tabs { 
-	background-color: #1E2329; 	
+.buy-sel-tabs {
+  background-color: #1e2329;
 }
-
 
 .how-to-buy-shape.deposit-shape-one {
-	top: 8%;
+  top: 8%;
 }
 
 .deposit-shape-two {
-	position: absolute;
-	top: 164px;
-	right: 32px;
+  position: absolute;
+  top: 164px;
+  right: 32px;
 }
 
 .faq-shape,
 .process-shape-3,
 .process-shape-2,
-.deposit-shape-two ,
+.deposit-shape-two,
 .most-trending-shape,
 .how-to-buy-shape,
-.crypto-shape { 
-  animation: float 3s ease-in-out infinite; 
+.crypto-shape {
+  animation: float 3s ease-in-out infinite;
   z-index: -1;
 }
 
@@ -1905,38 +1927,37 @@ span.close-mark {
 }
 
 .process-shape-2 {
-	position: absolute;
-	bottom: -270px;
-	right: 32px;
+  position: absolute;
+  bottom: -270px;
+  right: 32px;
 }
 
 .process-shape-3 {
-	position: absolute;
-	bottom: -144px;
-	left: 21%;
+  position: absolute;
+  bottom: -144px;
+  left: 21%;
 }
 
 .faq-shape {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.buy-sel-tabs::after  {
-	content: "";
-	position: absolute;
-	left: -4px;
-	z-index: -2;
-	right: -3px;
-	bottom: -3px;
-	top: -4px;
-	background: linear-gradient(180deg, #4a4a4a 0%, rgba(74, 74, 74, 0) 100%);
-	padding: 2px;
-	border-radius: 16px;
-	height: 100%;
-	width: 101.8%;
+.buy-sel-tabs::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  z-index: -2;
+  right: -3px;
+  bottom: -3px;
+  top: -4px;
+  background: linear-gradient(180deg, #4a4a4a 0%, rgba(74, 74, 74, 0) 100%);
+  padding: 2px;
+  border-radius: 16px;
+  height: 100%;
+  width: 101.8%;
 }
- 
 
 /* shaki css end */
 
@@ -2135,12 +2156,20 @@ span.close-mark {
 }
 
 .shape-main {
-  background: url("../images/bg/sharemarket.png") no-repeat scroll center center/ cover;
+  background: url("../images/bg/sharemarket.png") no-repeat scroll center
+    center/ cover;
   position: relative;
   background-attachment: fixed;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 79.81% 100%, 77.13% 93.51%, 0% 93.51%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    79.81% 100%,
+    77.13% 93.51%,
+    0% 93.51%
+  );
   padding: 60px 0 128px 0;
-  background-size:100% 100%;
+  background-size: 100% 100%;
 }
 .shape-main .common-heading-section {
   padding-bottom: 60px;
@@ -2187,7 +2216,15 @@ span.close-mark {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, #fd9e04, #ffffff, #fd9e04, #fcfcfc, #fd9e04, #ffffff);
+  background: linear-gradient(
+    45deg,
+    #fd9e04,
+    #ffffff,
+    #fd9e04,
+    #fcfcfc,
+    #fd9e04,
+    #ffffff
+  );
   background-size: 400% 400%;
   z-index: -2;
   transition: all 0.4s ease;
@@ -2224,15 +2261,39 @@ span.close-mark {
   color: #fff;
 }
 .clip-card::before {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
 }
 
 .clip-card::after {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
 }
 
 .clip-card {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
   padding-right: 60px;
 }
 
