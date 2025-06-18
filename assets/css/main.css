@@ -730,8 +730,11 @@ span.close-mark {
   font-size: 14px;
   font-weight: 600;
 }
-.coin-info-table .graph img {
+.coin-info-table .graph img{
   width: 46px;
+}
+.graph canvas{
+  width: 46px !important;
 }
 .coin-info span {
   font-size: 14px;
