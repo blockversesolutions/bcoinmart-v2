@@ -234,6 +234,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .sign-up-box .primary-btn-sm{
+    padding: 10px 15px;
+  }
   .search-icon span {
     height: 40px;
     width: 40px;

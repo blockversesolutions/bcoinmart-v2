@@ -422,7 +422,6 @@ button:focus:not(:focus-visible) {
   width: 300px !important;
   background-color: #131720;
   padding-right: 30px;
-  
 }
 
 .simplebar-track.simplebar-vertical {
@@ -727,11 +726,16 @@ span.close-mark {
 }
 .coin-info-table tr th {
   padding: 14px 10px;
+  background-color: transparent;
   color: #e0e0e0;
+  white-space: nowrap;
+  border: none;
 }
 .coin-info-table tr td {
   padding: 10px 10px;
+  background-color: transparent;
   color: #fdfdfd;
+  border: none;
   font-size: 14px;
   font-weight: 600;
 }
@@ -759,7 +763,8 @@ span.close-mark {
   font-size: 16px;
   line-height: 24px;
 }
-.qr-code-text h5,.qr-code-text a {
+.qr-code-text h5,
+.qr-code-text a {
   color: #e0e0e0;
   font-weight: 600;
   margin-top: 20px;
@@ -767,10 +772,10 @@ span.close-mark {
   line-height: 32px;
   transition: 0.5s;
 }
-.qr-code-text a{
+.qr-code-text a {
   text-decoration: underline;
 }
-.qr-code-text a:hover{
+.qr-code-text a:hover {
   color: #ffbe38;
 }
 .system-info ul {
@@ -788,7 +793,7 @@ span.close-mark {
 .system-info ul li:hover {
   background-color: #1e2329;
 }
-.system-info ul li a{
+.system-info ul li a {
   display: block;
 }
 .connected-section::after {
