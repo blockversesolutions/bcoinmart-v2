@@ -165,7 +165,7 @@ p {
 }
 .primary-btn:hover,
 .primary-btn-sm:hover {
-  background: #fdfdfd;
+  background:#ffbe38bd;
   color: #1c1c1e;
   box-shadow: 1px 6px 15px 0px #fcfcfc2a;
 }
@@ -267,9 +267,10 @@ button:focus:not(:focus-visible) {
   color: #fff;
 }
 .menu-bg {
-  position: sticky !important;
+  position: fixed !important;
   backdrop-filter: blur(20px);
   top: 0px;
+  width: 100%;
   box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px,
     rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
     rgba(198, 200, 202, 0.35) 0px -2px 6px 0px inset;
@@ -592,16 +593,17 @@ span.close-mark {
 .hero-circle-area {
   text-align: right;
 }
-.hero-circle-area img {
+.hero-circle-area > img {
   animation: opacity 2s ease-in-out infinite;
   width: 90%;
+  position: relative;
+  z-index: -2;
 }
 .hero-circle-area {
   max-width: 735px;
   position: absolute;
   right: 0;
   top: 0px;
-  z-index: -2;
   width: 100%;
 }
 .sign-up-box-cover {
@@ -664,6 +666,11 @@ span.close-mark {
   box-shadow: 0px 4px 4px 0px #00000040;
   transition: transform 0.6s ease-in-out;
   transform-origin: center;
+  cursor: pointer;
+ 
+}
+.crypto-card-sm:hover{
+  transform: scale(1);
 }
 .zoomed {
   transform: scale(1) !important;
@@ -1049,11 +1056,9 @@ span.close-mark {
   background: transparent !important;
   color: #e0e0e0 !important;
   padding: 20px 37px 24px 86px !important;
-  line-height: 1.6;
-  font-size: 0.95rem;
   border-top: none !important;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
 }
 
@@ -1251,7 +1256,6 @@ span.close-mark {
     )
     1; */
 }
-
 .buy-sel-tabs .nav-tabs .nav-link {
   width: 100%;
 }
@@ -1265,6 +1269,9 @@ span.close-mark {
     18% 100%,
     0 0
   );
+}
+.buy-sel-tabs .nav-link.active:focus{
+  color: #fff !important;
 }
 #buy-tab {
   clip-path: polygon(43% 0, 100% 0, 80% 100%, 0 100%, 0 0);
@@ -1299,14 +1306,15 @@ span.close-mark {
 
 .buy-sel-tabs .nav-tabs .nav-link.active {
   color: #fff;
-  background: #1a1d29 !important;
+  background: #1e2329 !important;
 }
 .buy-sel-tabs .nav-tabs .nav-link {
   color: #fff !important;
   font-weight: 500;
   font-size: 14px;
   padding: 20px 0 !important;
-  background: #1e2329 !important;
+  background: #1a1d29 !important;
+  
 }
 
 .form-block {
@@ -2222,6 +2230,16 @@ span.close-mark {
   left: 0;
   right: 0;
   bottom: 0;
+  background: linear-gradient(248.69deg, rgba(255, 255, 255, 0.6) -13.5%, rgba(255, 255, 255, 0) 31.74%, rgba(255, 255, 255, 0) 77.15%, rgba(255, 255, 255, 0.6) 124.27%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  background-size: 400% 400%;
+  z-index: -2;
+  transition: all 0.4s ease;
+  animation: gradientShift 6s ease infinite;
+  border-radius: 8px;
+}
+.custom-card:hover:before {
+  
   background: linear-gradient(
     45deg,
     #fd9e04,
@@ -2231,11 +2249,7 @@ span.close-mark {
     #fd9e04,
     #ffffff
   );
-  background-size: 400% 400%;
-  z-index: -2;
-  transition: all 0.4s ease;
-  animation: gradientShift 6s ease infinite;
-  border-radius: 8px;
+  
 }
 
 .custom-card::after {
