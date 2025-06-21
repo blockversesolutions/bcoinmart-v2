@@ -35,7 +35,6 @@ function handleResize() {
     }
   });
 }
-
 // Run handleResize on page load and attach it to the resize event
 handleResize();
 window.addEventListener("resize", handleResize);
