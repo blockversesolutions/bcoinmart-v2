@@ -1385,7 +1385,7 @@ span.close-mark {
 
 .buy-sel-tabs .nav-tabs .nav-link.active {
   color: #fff;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   
   background-color: transparent !important;
 }
