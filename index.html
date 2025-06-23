@@ -428,9 +428,9 @@
         </div>
         <div class="hero-circle-area">
           <img src="assets/images/thumbnails/1.png" alt="img" />
-          <div class="hero-circle-area__anim-container" id="anim-container">
+          <!-- <div class="hero-circle-area__anim-container" id="anim-container">
             <svg class="hero-circle-area__svg" id="anim-svg"></svg>
-          </div>
+          </div> -->
           <!-- item -->
           <div class="crypto-card-sm crypto-card-1">
             <div
@@ -2086,9 +2086,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
 
     <script src="assets/js/main.js"></script>
     <!-- <script>
@@ -2457,84 +2454,7 @@
       );
 
 
-
-      // globe animation 
-        
-  gsap.registerPlugin(MotionPathPlugin);
-
-  const container = document.getElementById('anim-container');
-  const svg = document.getElementById('anim-svg');
-
-  function drawHexGridNetwork(cols = 8, rows = 5, connectionsPerDot = 3) {
-    container.querySelectorAll('.dot, .pulse').forEach(el => el.remove());
-    svg.innerHTML = "";
-
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    const padding = 20;
-
-    const horizontalGap = (width - 2 * padding) / (cols - 1);
-    const verticalGap = (height - 2 * padding) / (rows - 1);
-
-    const dots = [];
-
-    // Create hexagonal pattern dots
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        // offset every other row for hex pattern
-        const offsetX = (row % 2) * (horizontalGap / 2);
-        const x = padding + col * horizontalGap + offsetX;
-        const y = padding + row * verticalGap;
-
-        const dot = document.createElement("div");
-        dot.className = "dot";
-        dot.style.left = `${x}px`;
-        dot.style.top = `${y}px`;
-        container.appendChild(dot);
-
-        dots.push({ x, y });
-      }
-    }
-
-    // Connect dots with curved lines and animate pulses
-    dots.forEach((fromDot, i) => {
-      const connected = new Set();
-
-      while (connected.size < connectionsPerDot) {
-        const j = Math.floor(Math.random() * dots.length);
-        if (j !== i && !connected.has(j)) {
-          connected.add(j);
-          const toDot = dots[j];
-          const cx = (fromDot.x + toDot.x) / 2;
-          const cy = (fromDot.y + toDot.y) / 2 - 30;
-
-          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          path.setAttribute("d", `M${fromDot.x},${fromDot.y} Q${cx},${cy} ${toDot.x},${toDot.y}`);
-          svg.appendChild(path);
-
-          const pulse = document.createElement("div");
-          pulse.className = "pulse";
-          container.appendChild(pulse);
-
-          gsap.to(pulse, {
-            motionPath: {
-              path: path,
-              align: path,
-              autoRotate: false
-            },
-            // duration: 6 + Math.random() * 3,
-            duration: 15 + Math.random() * 5, 
-            repeat: -1,
-            ease: "sine.inOut",
-            delay: Math.random() * 3
-          });
-        }
-      }
-    });
-  }
-
-  drawHexGridNetwork(4, 5, 3);
-  window.addEventListener("resize", () => drawHexGridNetwork(2, 5, 3));
+ 
     </script>
   </body>
 </html>

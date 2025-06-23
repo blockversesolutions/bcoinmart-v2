@@ -1399,8 +1399,7 @@ span.close-mark {
 
 .buy-sel-tabs .nav-tabs .nav-link.active {
   color: #fff;
-  margin-top: 5px;
-  margin-left: 30px;
+ 
   background-color: transparent !important;
 }
 .form-block {
@@ -1993,19 +1992,7 @@ span.close-mark {
 
 /* hero animation  */
 
-    /* Image */ 
-    /* Animation container */
-    .hero-circle-area__anim-container {
-      /* position: relative; */
-      width: 85%;
-      height: 400px;
-      border-radius: 12px;
-      overflow: visible;
-      position: absolute;
-      top: 232px;
-      right: -125px;
-      z-index: 9;
-    }
+
     /* SVG inside animation container */
     .hero-circle-area__svg {
       position: absolute;
