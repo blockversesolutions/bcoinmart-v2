@@ -1,12 +1,15 @@
 jQuery(document).ready(function ($) {
   // menu bg add
   function checkScroll() {
-    if ($(window).scrollTop() > 50) {
+    if ($(window).scrollTop() > 80) {
       $(".header-area").addClass("menu-bg");
     } else {
       $(".header-area").removeClass("menu-bg");
     }
   }
+$(document).on("click", ".search-icon", function () {
+  $('body').addClass('no-padding');
+});
   $(document).on("click", function (event) {
     const $div = $("#outside-click");
     const $navbarText = $("#navbarText");
