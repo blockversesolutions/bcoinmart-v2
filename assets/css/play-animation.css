@@ -1,5 +1,3 @@
- 
-
 /* ROJO POGI PLAY BUTTON */
 
 .video-play-button {
@@ -37,7 +35,7 @@
   display: block;
   width: 80px;
   height: 80px;
-  background: #FFBE38;
+  background: #ffbe38;
   border-radius: 50%;
   transition: all 200ms;
 }
@@ -55,11 +53,10 @@
   display: block;
   width: 80px;
   height: 80px;
-  background: #FFBE38;
+  background: #ffbe38;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
-
 .video-play-button img {
   position: relative;
   z-index: 3;
@@ -67,7 +64,6 @@
   width: auto;
   height: auto;
 }
-
 .video-play-button span {
   display: block;
   position: relative;
@@ -75,8 +71,8 @@
   width: 0;
   height: 0;
   border-left: 32px solid #fff;
-	border-top: 22px solid transparent;
-	border-bottom: 22px solid transparent;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
 }
 
 @keyframes pulse-border {
@@ -90,8 +86,6 @@
   }
 }
 
-
-
 .video-overlay {
   position: fixed;
   z-index: -1;
@@ -99,10 +93,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.80);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: all ease 500ms;
-      backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .video-overlay.open {
@@ -136,39 +130,38 @@
   height: 550px;
   border: 10px solid #f1ad34;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.75);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
-@media all and (max-width:855px){
-.video-overlay iframe {
-  border-width:2px;
-  width:95%;
-  height:400px;
+@media all and (max-width: 855px) {
+  .video-overlay iframe {
+    border-width: 2px;
+    width: 95%;
+    height: 400px;
+  }
 }
-}
-@media all and (max-width:480px){
-.video-overlay iframe {
-  width: 370px;
-  height:200px;
- 
-}
+@media all and (max-width: 480px) {
+  .video-overlay iframe {
+    width: 370px;
+    height: 200px;
+  }
 }
 
 /* ENTRANCE ANIMATION OF THE PLAY BUTTON */
 
 .video-play-button {
-	-webkit-animation: scale-up-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-	        animation: scale-up-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+  -webkit-animation: scale-up-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    both;
+  animation: scale-up-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 }
 
- 
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 /* ENTRANCE ANIMATION OF THE PLAY BUTTON */
@@ -176,14 +169,12 @@
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
-
 
 /* ROJO POGI PLAY BUTTON */
