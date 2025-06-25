@@ -1,4 +1,12 @@
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1400PX) { 
+      .puzzle-design-card svg { 
+        height: 290px; 
+      }
+      .puzzle-text { 
+        top: -25px;
+        left: 0;
+        padding: 55px;
+      }
 }
 @media screen and (max-width: 1199px) {
   .mobile-search-view,
@@ -42,12 +50,38 @@
     margin-top: 00px;
   }
 }
+
+@media all and (max-width: 1024px){
+  .puzzle-design-card p { 
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 991px) {
   .mb-120 {
     margin-bottom: 90px;
   }
   .mt-120 {
     margin-top: 90px;
+  }
+  .puzzle-design-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .puzzle-design-card {
+    width: 100%;
+  }
+
+  .puzzle-design-card svg {
+    width: 100%;
+    height: 300px;
+  }
+
+  .puzzle-design-shape-2 {
+    transform: translateX(0);
+  } 
+  .puzzle-design-shape-2 .puzzle-text {
+    padding-left: 166px;
   }
   .crypto-card-sm {
     display: none;
@@ -85,12 +119,18 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .hero-section{
-    padding-top: 175px;
-  }
   .footer-logo {
     margin-bottom: 40px;
   }
+  .hero-section { 
+    padding-top: 190px; 
+  }
+  .puzzle-text {  
+    padding-left: 35PX;
+  }
+  .shape-main { 
+      background-size: cover;
+    }
   .system-info ul {
     gap: 30px;
     margin-top: 20px;
@@ -229,6 +269,24 @@
     right: 0;
     margin: 0 auto;
     bottom: 13px;
+  } 
+  .puzzle-design-shape-2 .puzzle-text {
+    padding-left: 100px;
+  }
+  .puzzle-design-buy .puzzle-text {
+    top: -36px;
+  }
+  .shap-title { 
+    font-size: 18px; 
+  }
+  .puzzle-design-card h5 { 
+    margin-bottom: 5px; 
+  }
+  .shap-content { 
+    line-height: 24px;
+  }
+  .puzzle-design-shape-2 .puzzle-text {
+    padding-left: 83px;
   }
   .footer-menu-title {
     padding-top: 20px;
@@ -279,8 +337,9 @@
     font-size: 12px;
     margin-bottom: 7px;
   }
+  .secondary-btn,
   .primary-btn {
-    padding: 9px 10px;
+    padding: 10px;
     font-size: 14px;
     border-radius: 5px;
   }
