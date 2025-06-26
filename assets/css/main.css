@@ -312,7 +312,7 @@ button:focus:not(:focus-visible) {
   width: 10px;
   background: #ffbe39;
   position: relative;
-  animation: grow-shrink 1s ease-in-out infinite;
+  animation: grow-shrink 2s ease-in-out infinite;
 }
 
 .candle:before {
@@ -353,6 +353,28 @@ button:focus:not(:focus-visible) {
 .candle:nth-child(5) {
   animation-delay: 0.8s;
 }
+@keyframes grow-shrink {
+  0%, 100% {
+    height: 20px;
+    width: 10px;
+    opacity: 0.6;
+  }
+  50% {
+    height: 80px;
+    width: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 /* searching box */
 .searching-box input {
   min-width: 350px;
