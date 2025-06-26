@@ -1,0 +1,65 @@
+🔶 Project Name: Bcoinmart
+🎨 Color Theme
+Background Color: #181a20
+
+Primary Color: #ffbe38
+
+Secondary Color (Text/Elements): #ffffff
+
+🖼️ Section & Asset Specifications
+🏠 Hero Section
+Background Image Size: 1920 x 849 px
+
+Background Opacity: Low (use rgba or overlay to maintain readability)
+
+🛡️ Key Features Section (Security, Speed, Support)
+Section Background Size: 1920 x 600 px
+
+Background Opacity: Low
+
+Icon Size (Each): 50 x 50 px
+
+Icons: Must be colorful (no grayscale/monotone)
+
+📱 Trade on Any Device Section
+Video Thumbnail Size: 594 x 334 px
+
+OS Icons:
+
+Size: 43 x 50 px
+
+Requirement: Colorful with maintained aspect ratio
+
+Platforms: macOS, Windows, Linux
+
+🚀 Quick Start Guide Section
+Steps:
+
+Create Account
+
+Make Deposit
+
+Start Trading
+
+Icon Size: 70 x 70 px
+
+Requirement: Maintain aspect ratio
+
+📣 Call-to-Action (CTA) Section
+Background Size: 1920 x 518 px
+
+❓ Frequently Asked Questions (FAQ)
+Thumbnail Size: 474 x 730 px
+
+💸 How to Buy Crypto (Step Icons)
+Steps:
+
+Enter Amount & Select Payment
+
+Review & Confirm Your Order
+
+Receive Your Crypto
+
+Icon Size (Each): 50 x 50 px
+
+Requirement: Colorful icons

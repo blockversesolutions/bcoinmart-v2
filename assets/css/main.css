@@ -707,7 +707,6 @@ tbody tr:hover {
 	background: #181A208C; 
   border-radius: 5px;
 }
-
 .crypto-card-2 {
   position: absolute;
   left: 50%;
@@ -1004,7 +1003,6 @@ tbody tr:hover {
   padding-bottom: 120px;
   padding-top: 160px;
 }
-
 /* Custom Bootstrap Accordion Styling */
 .accordion {
   --bs-accordion-bg: transparent;
@@ -1014,14 +1012,12 @@ tbody tr:hover {
   display: flex;
   flex-direction: column;
 }
-
 .accordion-item {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 8px !important;
   margin-bottom: 8px;
 }
-
 .accordion-button {
   background: transparent !important;
   color: #fdfdfd !important;
@@ -1068,11 +1064,9 @@ tbody tr:hover {
 .accordion-button:hover .accordion-number {
   color: #ffbe38 !important;
 }
-
 .accordion-button::after {
   display: none;
 }
-
 .accordion-number {
   color: #fdfdfd;
   font-weight: 600;
@@ -1105,7 +1099,6 @@ tbody tr:hover {
   font-size: 16px;
   line-height: 24px;
 }
-
 .accordion-collapse {
   border-top: none !important;
 }
@@ -1121,6 +1114,7 @@ tbody tr:hover {
 .faq-image img {
   width: 100%;
 }
+
 /*===========================  Start Footer Section  ===========================*/
 
 .footer-main {
@@ -1219,7 +1213,7 @@ tbody tr:hover {
   box-shadow: #ffbe38 0px 1px 12px;
   background-color: transparent;
 }
-.footer-privacy {
+.footer-privacy { 
   gap: 45px;
 }
 .footer-privacy li {
@@ -1292,7 +1286,6 @@ tbody tr:hover {
 .active.buy-sel-tabs {
   background: url("../images/shape2.svg") no-repeat scroll 100% 100% / contain;
 }
-
 #sell-tab {
   background: url("../images/button.svg") no-repeat scroll 100% 100% / contain;
   transform: translate(-3.1px, 0px);
@@ -1305,7 +1298,7 @@ tbody tr:hover {
   position: relative;
   z-index: 1;
 }
-/* withdraw and deposit bg update  */
+/* withdraw and deposit bg update */
 .buy-sel-tabs.withdraw-deposit {
   position: relative;
   border-radius: 12px;
@@ -1364,7 +1357,6 @@ tbody tr:hover {
   background-clip: padding-box;
   border: 2px solid transparent;
 }
-
 .buy-sel-tabs.withdraw-deposit-alt::before {
   content: "";
   position: absolute;
@@ -1383,7 +1375,6 @@ tbody tr:hover {
     rgba(255, 255, 255, 0.6) 113.2%
   );
 }
-
 /* End withdraw and deposit bg update  */
 
 .active#sell-tab {
@@ -1416,7 +1407,6 @@ tbody tr:hover {
   z-index: 1;
   top: 0;
 }
-
 #buySellTab li {
   flex: 0 0 50%;
 }
