@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bcoinmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">
+                          <span>English (us)</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>France</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Espen</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Bangla</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Arabic</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Italy</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Portugal</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div
+              class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
+              id="navbarText"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="buy.html">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="markets.html">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/icon/languages.png"
+                          alt="icon"
+                        />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">
+                            <span>English (us)</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>France</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Espen</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Bangla</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Arabic</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Italy</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Portugal</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span
+              class="icon-bar btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div
+                class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+              >
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="input-shadow"
+                />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="buy.html">Buy Crypto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-shadow"
+                  />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+     
+    <main class="main-area"> 
+      <!-- Hero Start-->
+      <section class="hero-section position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-xxl-7 col-lg-6">
+              <div class="common-heading-section text-center text-lg-start">
+                <h1
+                  class="text-primary"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
+                  Build Wealth with Crypto
+                </h1>
+                <p>
+                  Join the growing community on Bcoinmart — the trusted
+                  destination for effortless crypto investing and trading.
+                </p>
+              </div>
+              <div
+                class="sign-up-box-cover d-flex align-items-center g-20 justify-content-center justify-content-lg-start flex-wrap" data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-duration="700"
+              >
+                <div
+                  class="sign-up-box border-1 d-flex align-items-center justify-content-between"
+                  
+                >
+                  <div class="input-group w-auto">
+                    <input
+                      type="text"
+                      class="bg-transparent border-0 w-100"
+                      placeholder="Email/Phone number"
+                    />
+                  </div>
+                  <button type="submit" class="primary-btn-sm pointer">
+                    Sign Up
+                  </button>
+                </div>
+                <p>or</p>
+                <div class="border-1 auto-signup">
+                  <ul class="d-flex align-items-center g-15">
+                    <li>
+                      <a href="#"
+                        ><img src="assets/images/icon/google.png" alt="google"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="assets/images/icon/apple.png" alt="apple"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-circle-area">
+          <img src="assets/images/thumbnails/1.png" alt="img" />
+          <!-- <div class="hero-circle-area__anim-container" id="anim-container">
+            <svg class="hero-circle-area__svg" id="anim-svg"></svg>
+          </div> -->
+          <!-- item -->
+          <div class="crypto-card-sm crypto-card-1">
+            <div
+              class="crypto-card-header d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center g-10">
+                <div class="coin-icon">
+                  <img src="assets/images/icon/bitcoin.png" alt="icon" />
+                </div>
+                <div class="coin-title">
+                  <h6>Bitcoin</h6>
+                  <p>BTC</p>
+                </div>
+              </div>
+              <span class="value-up"><i class="fas fa-caret-up"></i></span>
+            </div>
+            <div
+              class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+            >
+              <div class="crypto-price">
+                <h5>$52,291</h5>
+                <p class="value-up">+0.25%</p>
+              </div>
+              <div class="graph">
+                <canvas class="sparkline" id="spark-chart1"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="crypto-card-sm crypto-card-2">
+            <div
+              class="crypto-card-header d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center g-10">
+                <div class="coin-icon">
+                  <img src="assets/images/icon/litecoin.png" alt="icon" />
+                </div>
+                <div class="coin-title">
+                  <h6>Litecoin</h6>
+                  <p>ITC</p>
+                </div>
+              </div>
+              <span class="value-up"><i class="fas fa-caret-up"></i></span>
+            </div>
+            <div
+              class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+            >
+              <div class="crypto-price">
+                <h5>$8,291</h5>
+                <p class="value-up">+0.25%</p>
+              </div>
+              <div class="graph">
+                <canvas class="sparkline" id="spark-chart2"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="crypto-card-sm crypto-card-3">
+            <div
+              class="crypto-card-header d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center g-10">
+                <div class="coin-icon">
+                  <img src="assets/images/icon/litecoin.png" alt="icon" />
+                </div>
+                <div class="coin-title">
+                  <h6>Litecoin</h6>
+                  <p>ITC</p>
+                </div>
+              </div>
+              <span class="value-up"><i class="fas fa-caret-up"></i></span>
+            </div>
+            <div
+              class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+            >
+              <div class="crypto-price">
+                <h5>$8,291</h5>
+                <p class="value-up">+0.25%</p>
+              </div>
+              <div class="graph">
+                <canvas class="sparkline" id="spark-chart3"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="crypto-card-sm crypto-card-4">
+            <div
+              class="crypto-card-header d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center g-10">
+                <div class="coin-icon">
+                  <img src="assets/images/icon/litecoin.png" alt="icon" />
+                </div>
+                <div class="coin-title">
+                  <h6>Litecoin</h6>
+                  <p>ITC</p>
+                </div>
+              </div>
+              <span class="value-up"><i class="fas fa-caret-up"></i></span>
+            </div>
+            <div
+              class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+            >
+              <div class="crypto-price">
+                <h5>$8,291</h5>
+                <p class="value-up">+0.25%</p>
+              </div>
+              <div class="graph">
+                <canvas class="sparkline" id="spark-chart4"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="crypto-card-sm crypto-card-5">
+            <div
+              class="crypto-card-header d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center g-10">
+                <div class="coin-icon">
+                  <img src="assets/images/icon/litecoin.png" alt="icon" />
+                </div>
+                <div class="coin-title">
+                  <h6>Litecoin</h6>
+                  <p>ITC</p>
+                </div>
+              </div>
+              <span class="value-up"><i class="fas fa-caret-up"></i></span>
+            </div>
+            <div
+              class="crypto-card-body mt-4 d-flex align-items-center justify-content-between g-10"
+            >
+              <div class="crypto-price">
+                <h5>$8,291</h5>
+                <p class="value-up">+0.25%</p>
+              </div>
+              <div class="graph">
+                <canvas class="sparkline" id="spark-chart5"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero End -->
+
+      <!-- Tranding Token Start -->
+      <section class="tranding-token-section mt-120">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-md-7">
+              <div class="common-heading-section text-center text-md-start">
+                <h2 class="text-primary">Most Trending Tokens</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard
+                </p>
+              </div>
+            </div>
+            <div class="col-md-5 text-md-end text-center">
+              <div class="d-inline-block market-overview">
+                <a
+                  href="#"
+                  class="secondary-btn"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                >
+                  Market Overview
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4 mt-5">
+            <div class="col-lg-7">
+              <div
+                class="card-1 h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="500"
+              >
+                <ul class="nav nav-tabs actionTab" id="actionTab2" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="hot-derivatives-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hot-derivatives-pane"
+                      type="button"
+                      role="tab"
+                    >
+                      Hot Derivatives
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="hot-coins-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hot-coins-pane"
+                      type="button"
+                      role="tab"
+                    >
+                      Hot Coins
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="actionTabContent2">
+                  <div
+                    class="tab-pane fade show active"
+                    id="hot-derivatives-pane"
+                    role="tabpanel"
+                    aria-labelledby="hot-derivatives-tab"
+                  >
+                    <div class="table-responsive">
+                      <table class="coin-info-table w-100 table">
+                        <thead>
+                          <tr>
+                            <th>Trading Pairs</th>
+                            <th>Last Traded Price</th>
+                            <th>24H Change</th>
+                            <th>Charts</th>
+                            <th class="text-center">Trade</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/1.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>103,800.1</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-up">+0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart6"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block" >
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/2.png" alt="icon" />
+                                <span>ETHUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart7"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/3.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart8"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/4.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart9"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/5.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart10"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/6.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-up">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart11"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td class="td-align-end">
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="hot-coins-pane"
+                    role="tabpanel"
+                    aria-labelledby="hot-coins-tab"
+                  >
+                    <div class="table-responsive">
+                      <table class="coin-info-table w-100 table">
+                        <thead>
+                          <tr>
+                            <th>Trading Pairs</th>
+                            <th>Last Traded Price</th>
+                            <th>24H Change</th>
+                            <th>Charts</th>
+                            <th>Trade</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/2.png" alt="icon" />
+                                <span>ETHUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart19"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/3.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart20"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/4.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart21"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="coin-info d-flex align-items-center g-5"
+                              >
+                                <img src="assets/images/coin/5.png" alt="icon" />
+                                <span>BTCUSDT</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span>2,483</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="coin-info">
+                                <span class="value-down">-0.32%</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="graph">
+                                <canvas
+                                  class="sparkline2"
+                                  id="spark-chart22"
+                                ></canvas>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-inline-block">
+                                <a href="#" class="primary-btn-xm">Trade</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div
+                class="card-1 h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="500"
+              >
+                <table class="coin-info-table w-100">
+                  <caption class="caption-top">
+                    Top Gainers
+                  </caption>
+
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/1.png" alt="icon" />
+                        <span>BTCUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>103,800.1</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-up">+0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart12"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/2.png" alt="icon" />
+                        <span>ETHUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>2,483</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-down">-0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart13"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/3.png" alt="icon" />
+                        <span>BTCUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>2,483</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-down">-0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart14"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <table class="coin-info-table w-100">
+                  <caption class="caption-top mt-2">
+                    New Listings
+                  </caption>
+
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/1.png" alt="icon" />
+                        <span>BTCUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>103,800.1</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-up">+0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart15"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/2.png" alt="icon" />
+                        <span>ETHUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>2,483</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-down">-0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart16"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/3.png" alt="icon" />
+                        <span>BTCUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>2,483</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-down">-0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart17"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="coin-info d-flex align-items-center g-5">
+                        <img src="assets/images/coin/4.png" alt="icon" />
+                        <span>BTCUSDT</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span>2,483</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="coin-info">
+                        <span class="value-down">-0.32%</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="graph">
+                        <canvas class="sparkline2" id="spark-chart18"></canvas>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tranding Token End -->
+      <!-- shape start  -->
+      <section class="shape-section">
+        <div class="container">
+          <div class="row align-items-center gy-4 shape-header">
+            <div class="col-md-7">
+              <div class="common-heading-section text-center text-md-start">
+                <h2 class="text-primary">Catch the Next Major Market Move</h2>
+                <p>
+                  Unlock new opportunities with BCoinMart. Stay informed, track
+                  market trends, and make your next big trade with confidence and
+                  ease.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-5 text-md-end text-center">
+              <div class="d-inline-block market-overview">
+                <a
+                  href="#"
+                  class="secondary-btn"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                >
+                  Get Started
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="common-heading-section text-center text-md-center">
+                  <h2 class="text-white">
+                    Stay connected. Trade wherever you are.
+                  </h2>
+                </div>
+              </div>
+            </div>  
+            
+ 
+            <!-- <div
+              class="puzzle-wrapper"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="500"
+            >
+              <div class="puzzle-card puzzle-shape-1">
+                <div class="icon">
+                  <img src="./assets/images/icon/check.png" alt="Step 1" />
+                </div>
+                <h5 class="shap-title">Security</h5>
+                <p class="shap-content">
+                  Your assets are protected with bank-level encryption and
+                  two-factor authentication for safe and secure trading.
+                </p>  
+              </div>
+              <div class="puzzle-card puzzle-shape-2">
+                <div class="icon">
+                  <img src="./assets/images/icon/speed.png" alt="Step 2" />
+                </div>
+                <h5 class="shap-title">Speed</h5>
+                <p class="shap-content">
+                  Instant trades, fast deposits & withdrawals.
+                </p>
+              </div>
+              <div class="puzzle-card puzzle-shape-3">
+                <div class="icon">
+                  <img src="./assets/images/icon/headphone.png" alt="Step 3" />
+                </div>
+                <h5 class="shap-title">Support</h5>
+                <p class="shap-content">
+                  24/7 expert support to help you anytime, anywhere.
+                </p>
+              </div>
+            </div> -->
+            
+            <div class="puzzle-design-wrapper" data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="500">
+              <div class="puzzle-design-card puzzle-design-shape-1">
+                <svg preserveAspectRatio="none" viewBox="0 0 599 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_384_336)">
+                    <path d="M4 12C4 5.37258 9.37258 0 16 0H583C589.627 0 595 5.37258 595 12V170.816C595 174.696 593.124 178.337 589.963 180.589L560.037 201.911C556.876 204.163 555 207.804 555 211.684V342C555 348.627 549.627 354 543 354H16C9.37258 354 4 348.627 4 342V12Z" fill="#1E2329"/>
+                    <path d="M16 1H583C589.075 1 594 5.92487 594 12V170.815C594 174.372 592.28 177.71 589.383 179.774L559.456 201.097C556.032 203.536 554 207.481 554 211.685V342C554 348.075 549.075 353 543 353H16C9.92487 353 5 348.075 5 342V12C5 5.92487 9.92487 1 16 1Z" stroke="url(#paint0_linear_384_336)" stroke-opacity="0.6" stroke-width="2"/>
+                    <path d="M16 1H583C589.075 1 594 5.92487 594 12V170.815C594 174.372 592.28 177.71 589.383 179.774L559.456 201.097C556.032 203.536 554 207.481 554 211.685V342C554 348.075 549.075 353 543 353H16C9.92487 353 5 348.075 5 342V12C5 5.92487 9.92487 1 16 1Z" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_384_336" x="0" y="0" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="2"/>
+                      <feComposite in2="hardAlpha" operator="out"/>
+                      <feColorMatrix type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_384_336"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_384_336" result="shape"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_384_336" x1="781" y1="-136.5" x2="-129" y2="456" gradientUnits="userSpaceOnUse">
+                      <stop offset="0.126517" stop-color="white"/>
+                      <stop offset="0.41336" stop-color="white" stop-opacity="0"/>
+                      <stop offset="0.701226" stop-color="white" stop-opacity="0"/>
+                      <stop offset="1" stop-color="white"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="puzzle-text">
+                  <div class="icon">
+                    <img src="./assets/images/icon/check.png" alt="Step 1" />
+                  </div>
+                  <h5 class="shap-title">Security</h5>
+                  <p class="shap-content">
+                    Your assets are protected with bank-level encryption and
+                    two-factor authentication for safe and secure trading.
+                  </p>  
+                </div>
+              </div>
+
+              <div class="puzzle-design-card puzzle-design-shape-2">
+                <svg  preserveAspectRatio="none" viewBox="0 0 371 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_384_337)">
+                    <path d="M44 12C44 5.37259 49.3726 0 56 0H355C361.627 0 367 5.37258 367 12V342C367 348.627 361.627 354 355 354H16C9.37259 354 4 348.627 4 342V221.684C4 217.804 5.8764 214.163 9.0367 211.911L38.9633 190.589C42.1236 188.337 44 184.696 44 180.816V12Z" fill="#1E2329"/>
+                    <path d="M56 1H355C361.075 1 366 5.92487 366 12V342C366 348.075 361.075 353 355 353H16C9.92487 353 5 348.075 5 342V221.685C5 218.128 6.72025 214.79 9.61719 212.726L39.5439 191.403C42.9675 188.964 45 185.019 45 180.815V12C45 5.92487 49.9249 1 56 1Z" stroke="url(#paint0_linear_384_337)" stroke-opacity="0.6" stroke-width="2"/>
+                    <path d="M56 1H355C361.075 1 366 5.92487 366 12V342C366 348.075 361.075 353 355 353H16C9.92487 353 5 348.075 5 342V221.685C5 218.128 6.72025 214.79 9.61719 212.726L39.5439 191.403C42.9675 188.964 45 185.019 45 180.815V12C45 5.92487 49.9249 1 56 1Z" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_384_337" x="0" y="0"   filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="2"/>
+                      <feComposite in2="hardAlpha" operator="out"/>
+                      <feColorMatrix type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_384_337"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_384_337" result="shape"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_384_337" x1="-94.4734" y1="-119.717" x2="179.926" y2="566.43" gradientUnits="userSpaceOnUse">
+                      <stop offset="0.126517" stop-color="white"/>
+                      <stop offset="0.41336" stop-color="white" stop-opacity="0"/>
+                      <stop offset="0.701226" stop-color="white" stop-opacity="0"/>
+                      <stop offset="1" stop-color="white"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                <div class="puzzle-text">
+                  <div class="icon">
+                    <img src="./assets/images/icon/speed.png" alt="Step 2" />
+                  </div>
+                  <h5 class="shap-title">Speed</h5>
+                  <p class="shap-content">
+                    Instant trades, fast deposits & withdrawals.
+                  </p>
+                </div>
+              </div>
+
+              <div class="puzzle-design-card puzzle-design-shape-3">
+                <svg preserveAspectRatio="none" viewBox="0 0 373 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_384_338)">
+                  <rect x="4" width="365" height="354" rx="12" fill="#1E2329"/>
+                  <rect x="5" y="1" width="363" height="352" rx="11" stroke="url(#paint0_linear_384_338)" stroke-opacity="0.6" stroke-width="2"/>
+                  <rect x="5" y="1" width="363" height="352" rx="11" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_384_338" x="0" y="0"  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_384_338"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_384_338" result="shape"/>
+                  </filter>
+                  <linearGradient id="paint0_linear_384_338" x1="502.003" y1="-118.545" x2="-203.421" y2="202.899" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.126517" stop-color="white"/>
+                  <stop offset="0.41336" stop-color="white" stop-opacity="0"/>
+                  <stop offset="0.701226" stop-color="white" stop-opacity="0"/>
+                  <stop offset="1" stop-color="white"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+
+                <div class="puzzle-text">
+                  <div class="icon">
+                    <img src="./assets/images/icon/headphone.png" alt="Step 3" />
+                  </div>
+                  <h5 class="shap-title">Support</h5>
+                  <p class="shap-content">
+                    24/7 expert support to help you anytime, anywhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div
+              class="shape-bcoinmart mt-3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="500"
+            >
+              <div class="custom-card clip-card">
+                <div class="icon">
+                  <img src="./assets/images/icon/check.png" alt="Step 1" />
+                </div>
+                <h5 class="shap-title">Security</h5>
+                <p class="shap-content">
+                  Your assets are protected with bank-level encryption and
+                  two-factor authentication for safe and secure trading.
+                </p> 
+              </div>
+              <div class="custom-card clip-card-2">
+                <div class="icon">
+                  <img src="./assets/images/icon/speed.png" alt="Step 2" />
+                </div>
+                <h5 class="shap-title">Speed</h5>
+                <p class="shap-content">
+                  Instant trades, fast deposits & withdrawals.
+                </p>
+              </div>
+              <div class="custom-card">
+                <div class="icon">
+                  <img src="./assets/images/icon/headphone.png" alt="Step 3" />
+                </div>
+                <h5 class="shap-title">Support</h5>
+                <p class="shap-content">
+                  24/7 expert support to help you anytime, anywhere.
+                </p>
+              </div>
+            </div> -->
+
+
+          </div>
+        </div>
+      </section>
+      <!-- shape End  -->
+      <!-- Connected Start -->
+      <section class="connected-section mt-120 position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="common-heading-section text-center text-lg-start">
+                <h2 class="text-white">
+                  Stay connected. Trade wherever you are.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center gy-4 mt-5">
+            <div class="col-lg-6">
+              <div class="connected-area">
+                <div
+                  class="qr-code-area d-flex align-items-center g-20 justify-content-center justify-content-lg-start"
+                >
+                  <div class="qr-code card-1 border-1">
+                    <img
+                      src="assets/images/thumbnails/qr-code.png"
+                      alt="qr-code"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="qr-code-text">
+                    <p>Scan to Download App</p>
+                    <h5>
+                      <a href="#">iOS</a>
+                      &
+                      <a href="#">Android</a>
+                    </h5>
+                  </div>
+                </div>
+                <div class="system-info">
+                  <ul
+                    class="d-flex align-items-center justify-content-center justify-content-lg-start"
+                  >
+                    <li
+                      class="text-center"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                      data-aos-duration="500"
+                    >
+                      <a href="#"
+                        ><img src="assets/images/icon/apple-2.png" alt="icon" />
+                        <p class="mt-3">MacOS</p></a
+                      >
+                    </li>
+                    <li
+                      class="text-center"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                      data-aos-duration="800"
+                    >
+                      <a href="#">
+                        <img src="assets/images/icon/windows.png" alt="icon" />
+                        <p class="mt-3">Windows</p>
+                      </a>
+                    </li> 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-1 border-1">
+                <div
+                  class="video-thumbnails d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="assets/images/thumbnails/video.png"
+                    alt="img"
+                    class="w-100"
+                  />
+                  <a
+                    id="play-video"
+                    class="video-play-button"
+                    href="#"
+                    data-video-url="https://www.youtube.com/embed/wih7coKNL4Q?autoplay=1"
+                    data-aos="zoom-out-up"
+                    data-aos-delay="1000"
+                    data-aos-duration="1500"
+                  >
+                    <span></span>
+                  </a>
+
+                  <!-- Example with local video -->
+                  <!--
+                  <a
+                    id="play-video"
+                    class="video-play-button"
+                    href="#"
+                    data-video-url="assets/videos/sample.mp4"
+                  >
+                    <span></span>
+                  </a>
+                  -->
+                  <div id="video-overlay" class="video-overlay">
+                    <a class="video-overlay-close">&times;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="how-to-buy-shape">
+          <img src="assets/images/buy/buy-crypto/shape.png" alt="" />
+        </div>
+      </section>
+      <!-- Connected End -->
+      <!-- Start Process Start -->
+      <section class="start-process-section mt-120 position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="offset-md-2 col-md-8">
+              <div class="common-heading-section text-center">
+                <h2 class="text-primary">Start Now in Just 30 Seconds!</h2>
+                <p>
+                  Create your account and begin trading in under 30
+                  seconds—simple, fast, and hassle-free. Your crypto journey
+                  starts here!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4 mt-5">
+            <div class="col-xl-4 col-md-6">
+              <div
+                class="card-gradient-border h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="300"
+              >
+                <div
+                  class="process-card d-flex flex-column justify-content-between"
+                >
+                  <div class="process-card-content text-center">
+                    <h4
+                      class="d-flex align-items-center g-15 text-white justify-content-center"
+                    >
+                      <img src="assets/images/icon/create.png" alt="icon" />
+                      Create Account
+                    </h4>
+                    <p>
+                      Enter your email address and check your inbox for a 6-digit
+                      verification code. Once you receive it, enter the code on
+                      the verification page to finish signing up.
+                    </p>
+                  </div>
+                  <div class="text-center mt-5">
+                    <a href="#" class="primary-btn d-inline-block">Sign Up Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div
+                class="card-gradient-border h-100"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="500"
+              >
+                <div
+                  class="process-card d-flex flex-column justify-content-between h-100"
+                >
+                  <div class="process-card-content text-center">
+                    <h4
+                      class="d-flex align-items-center g-15 text-white justify-content-center"
+                    >
+                      <img src="assets/images/icon/deposit.png" alt="icon" />
+                      Make Deposit
+                    </h4>
+                    <p>
+                      Fund you account with multiple deposit options with various
+                      payment gateways, integrated in our platform.
+                    </p>
+                  </div>
+                  <div class="text-center mt-5">
+                    <a href="#" class="primary-btn d-inline-block">Deposit Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div
+                class="card-gradient-border h-100"
+                data-aos="fade-up"
+                data-aos-delay="700"
+                data-aos-duration="700"
+              >
+                <div
+                  class="process-card d-flex flex-column justify-content-between h-100"
+                >
+                  <div class="process-card-content text-center">
+                    <h4
+                      class="d-flex align-items-center g-15 text-white justify-content-center"
+                    >
+                      <img src="assets/images/icon/trading.png" alt="icon" />
+                      Start Trading
+                    </h4>
+                    <p>
+                      Trade the next big wave and achieve financial freedom by
+                      investing in the world of cryptocurrencies.
+                    </p>
+                  </div>
+                  <div class="text-center mt-5">
+                    <a href="#" class="primary-btn d-inline-block">Trade Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="most-trending-shape">
+          <img src="assets/images/buy/bitcoin/bticoin.png" alt="" />
+        </div>
+        <div class="process-shape-2">
+          <img src="assets/images/buy/withdraw/2.png" alt="" />
+        </div>
+        <div class="process-shape-3">
+          <img src="assets/images/buy/withdraw/3.png" alt="" />
+        </div>
+      </section>
+      <!-- Start Process  End -->
+      <section class="embark-section mt-120">
+        <div class="container">
+          <div class="embark-text">
+            <!-- Default gradient borders -->
+            <div class="text-center row">
+              <div class="col-md-8 offset-md-2">
+                <div
+                  class="common-heading-section"
+                >
+                  <h2 class="text-primary">
+                    Embark on Your Crypto Journey Today!
+                  </h2>
+                  <p>
+                    Start your crypto journey with BCoinMart today! Access
+                    powerful tools, secure trading, and real-time updates—all at
+                    your fingertips.
+                  </p>
+                  <div class="d-inline-block mt-5">
+                    <a
+                      href="#"
+                      class="primary-btn"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                      data-aos-duration="600"
+                    >
+                      Sign Up Now
+                      <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section position-relative">
+        <div class="container">
+          <div class="common-heading-section text-center">
+            <h2 class="text-white">
+              Frequently Ask
+              <span class="text-primary">Questions</span>
+            </h2>
+          </div>
+          <div class="row align-items-start mt-5 gy-4">
+            <div class="col-lg-7 col-md-12">
+              <div class="accordion" id="faqAccordion" 
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  data-aos-duration="1400">
+                <div
+                  class="accordion-item" 
+                >
+                  <h2 class="accordion-header" id="heading01">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse01"
+                      aria-expanded="true"
+                      aria-controls="collapse01"
+                    >
+                      <span class="accordion-number">01</span>
+                      <span class="flex-grow-1 accordion-title">
+                        Lorem ipsum dolor sit amet consectetur. Sagittis id.
+                      </span>
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse01"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="heading01"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In augue ipsum
+                      tellus ultrices. Ac pharetra ultrices consectetur consequat
+                      tellus massa. Nec aliquam cras sagittis duis sed euismod
+                      arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu
+                      lacus imperdiet urna amet congue adipiscing.  
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item" 
+                >
+                  <h2 class="accordion-header" id="heading02">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse02"
+                      aria-expanded="false"
+                      aria-controls="collapse02"
+                    >
+                      <span class="accordion-number">02</span>
+                      <span class="flex-grow-1 accordion-title"
+                        >Lorem ipsum dolor sit amet consectetur.</span
+                      >
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse02"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading02"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                      mollis dignissim et pharetra elementum consequatur porttitor
+                      ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                      sed bibendum consequat elit varius.
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item" 
+                >
+                  <h2 class="accordion-header" id="heading03">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse03"
+                      aria-expanded="false"
+                      aria-controls="collapse03"
+                    >
+                      <span class="accordion-number">03</span>
+                      <span class="flex-grow-1 accordion-title"
+                        >Lorem ipsum dolor sit amet consectetur.</span
+                      >
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse03"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading03"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                      mollis dignissim et pharetra elementum consequatur porttitor
+                      ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                      sed bibendum consequat elit varius.
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item" 
+                >
+                  <h2 class="accordion-header" id="heading04">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse04"
+                      aria-expanded="false"
+                      aria-controls="collapse04"
+                    >
+                      <span class="accordion-number">04</span>
+                      <span class="flex-grow-1 accordion-title"
+                        >Lorem ipsum dolor sit amet consectetur.</span
+                      >
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse04"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading04"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                      mollis dignissim et pharetra elementum consequatur porttitor
+                      ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                      sed bibendum consequat elit varius.
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item"
+                >
+                  <h2 class="accordion-header" id="heading05">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse05"
+                      aria-expanded="false"
+                      aria-controls="collapse05"
+                    >
+                      <span class="accordion-number">05</span>
+                      <span class="flex-grow-1 accordion-title"
+                        >Lorem ipsum dolor sit amet consectetur.</span
+                      >
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse05"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading05"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                      mollis dignissim et pharetra elementum consequatur porttitor
+                      ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                      sed bibendum consequat elit varius.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="accordion-item"
+                >
+                  <h2 class="accordion-header" id="heading06">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse06"
+                      aria-expanded="false"
+                      aria-controls="collapse06"
+                    >
+                      <span class="accordion-number">06</span>
+                      <span class="flex-grow-1 accordion-title"
+                        >Lorem ipsum dolor sit amet consectetur.</span
+                      >
+                      <span class="accordion-icon">
+                        <img
+                          class="addition-icon"
+                          src="assets/images/home/adition.svg"
+                          alt="photos"
+                        />
+                        <img
+                          class="subtraction-icon"
+                          src="assets/images/home/subtraction.svg"
+                          alt="photos"
+                        />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse06"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading05"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur. In dignissim mauris
+                      mollis dignissim et pharetra elementum consequatur porttitor
+                      ut sed nibh volutpat lorem dapibus nunc mauris in ut nullam
+                      sed bibendum consequat elit varius.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offset-md-2 offset-lg-0 col-md-8 col-lg-5">
+              <div class="faq-image">
+                <img src="assets/images/home/accordion.png" alt="photos" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-shape">
+          <img src="assets/images/buy/withdraw/4.png" alt="" />
+        </div>
+      </section>
+      <div class="company-slider">
+        <div class="scroll-container">
+          <div class="scroll-track">
+            <!-- First set of 14 company logos -->
+            <div class="scroll-item" data-company="Apple">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Google">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Microsoft">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Amazon">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Meta">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Netflix">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Tesla">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Adobe">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Spotify">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Airbnb">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Uber">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Apple">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Google">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Microsoft">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Amazon">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Meta">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Netflix">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Tesla">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Adobe">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Spotify">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Airbnb">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Uber">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Apple">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Google">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Microsoft">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Amazon">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Meta">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Netflix">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Tesla">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Adobe">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Spotify">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Airbnb">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+            <div class="scroll-item" data-company="Uber">
+              <img src="assets/images/slider/company.png" alt="photos" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo text-center text-sm-start">
+                <a href="index.html">
+                  <img
+                    class="footer-img"
+                    src="assets/images/logo.png"
+                    alt="logo"
+                  />
+                </a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user
+                  experience with fast transactions and top-notch security for
+                  your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  About
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Services
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Platforms
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Product
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row gy-3 align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title text-center text-sm-start">
+                  Follow Us
+                </h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-solid fa-location-arrow"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer text-center text-sm-start">
+                Disclaimer: Bcoinmart provides general information only and does
+                not offer financial or investment advice. Trading cryptoassets
+                involves significant risk and can result in loss of funds. You
+                are responsible for your own tax obligations and should seek
+                independent advice.Some products may be unregulated or
+                restricted in certain regions. Bcoinmart’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <!-- <script>
+      const cards = document.querySelectorAll(".crypto-card-sm");
+      let index = 0;
+      function loopZoom() {
+        cards.forEach((card, i) => {
+          card.classList.remove("zoomed");
+        });
+
+        cards[index].classList.add("zoomed");
+
+        index = (index + 1) % cards.length;
+
+        setTimeout(loopZoom, 1000);  
+      }
+      loopZoom();  
+    </script> -->
+    <!-- Token Selection Script -->
+    <script>
+      document
+        .querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item")
+        .forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const image = this.dataset.image;
+            const value = this.dataset.value;
+
+            const dropdown = this.closest(".dropdown");
+            const button = dropdown.querySelector(".select-token");
+
+            // Just update button content
+            button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          });
+        });
+
+      const ctx = document.getElementById("cryptoChart").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+      gradient.addColorStop(0, "rgba(255,0,0,0.3)");
+      gradient.addColorStop(1, "rgba(255,0,0,0)");
+
+      const dataSet = {
+        labels: ["6:00 PM", "12:00 AM", "3:00 AM", "6:00 AM", "12:00 PM"],
+        datasets: [
+          {
+            label: "Price",
+            data: [61850, 61900, 61830, 61980, 61870],
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: "#FF4D4D",
+            tension: 0.4,
+            pointBackgroundColor: "#fff",
+            pointBorderColor: "#FF4D4D",
+            pointRadius: 4,
+            pointHoverRadius: 6,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: dataSet,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              position: "right",
+              ticks: {
+                color: "#aaa",
+                padding: 4,
+                callback: (value) =>
+                  value.toLocaleString("en-US", { minimumFractionDigits: 0 }) +
+                  "K",
+              },
+              grid: {
+                display: true,
+                color: "#222",
+              },
+            },
+            x: {
+              ticks: {
+                color: "#aaa",
+              },
+              grid: {
+                display: false,
+                color: "#222",
+              },
+            },
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              mode: "index",
+              intersect: false,
+              backgroundColor: "#1A1D29",
+              borderColor: "#FF4D4D",
+              borderWidth: 1,
+            },
+          },
+          interaction: {
+            mode: "index",
+            intersect: false,
+          },
+        },
+      };
+
+      const myChart = new Chart(ctx, config);
+
+      // Tab switching (you can load dynamic data per tab)
+      document.querySelectorAll("[data-range]").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+
+          // Fake data change
+          const newData = Array.from(
+            { length: 5 },
+            () => 61500 + Math.random() * 500
+          );
+          myChart.data.datasets[0].data = newData;
+          myChart.update();
+        });
+      });
+
+      // auto scroll bitcoin
+
+      const scrollBox = document.getElementById("scroll-box");
+      let scrollStep = 350; // px per scroll step
+      let scrollDelay = 2000; // delay before scroll (ms)
+      let scrollSpeed = 1000; // smooth scroll duration (ms)
+
+      let scrollInterval = null;
+      let isPaused = false;
+
+      function autoScroll() {
+        if (isPaused) return;
+
+        let maxScrollTop = scrollBox.scrollHeight - scrollBox.clientHeight;
+
+        if (scrollBox.scrollTop + scrollStep < maxScrollTop) {
+          scrollSmoothBy(scrollBox, scrollStep, scrollSpeed);
+        } else {
+          scrollSmoothTo(scrollBox, 0, scrollSpeed);
+        }
+      }
+
+      function scrollSmoothBy(element, distance, duration) {
+        const start = element.scrollTop;
+        const end = start + distance;
+        animateScroll(element, start, end, duration);
+      }
+
+      function scrollSmoothTo(element, target, duration) {
+        const start = element.scrollTop;
+        animateScroll(element, start, target, duration);
+      }
+
+      function animateScroll(element, from, to, duration) {
+        const startTime = performance.now();
+
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = easeInOutQuad(progress);
+          element.scrollTop = from + (to - from) * ease;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      function startScrolling() {
+        if (!scrollInterval) {
+          scrollInterval = setInterval(autoScroll, scrollDelay + scrollSpeed);
+        }
+      }
+
+      function stopScrolling() {
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+        }
+      }
+      scrollBox.addEventListener("mouseenter", () => {
+        isPaused = true;
+        stopScrolling();
+      });
+
+      scrollBox.addEventListener("mouseleave", () => {
+        isPaused = false;
+        startScrolling();
+      });
+
+      // Start auto scroll initially
+      startScrolling();
+    </script>
+    <script>
+      // Additional smooth scrolling enhancements
+      const scrollTrack = document.querySelector(".scroll-track");
+      const scrollContainer = document.querySelector(".scroll-container");
+
+      // Pause animation on hover over the entire container
+      scrollContainer.addEventListener("mouseenter", () => {
+        scrollTrack.style.animationPlayState = "paused";
+      });
+
+      scrollContainer.addEventListener("mouseleave", () => {
+        scrollTrack.style.animationPlayState = "running";
+      });
+
+      AOS.init();
+    </script>
+    <script src="assets/js/play.js"></script>
+
+    <!-- here is sparkline chart js  -->
+    <script>
+      function renderSparkline(id, data, color = "lime") {
+        new Chart(document.getElementById(id), {
+          type: "line",
+          data: {
+            labels: data.map((_, i) => i),
+            datasets: [
+              {
+                data: data,
+                borderColor: color,
+                borderWidth: 1.5,
+                pointRadius: 0,
+                fill: false,
+                tension: 0.3,
+              },
+            ],
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            responsive: false,
+            scales: {
+              x: { display: false },
+              y: { display: false },
+            },
+            elements: {
+              line: { tension: 0.3 },
+            },
+          },
+        });
+      }
+      renderSparkline(
+        "spark-chart1",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart2",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart3",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart4",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart5",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart6",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart7",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart8",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart9",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart10",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart11",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart12",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart13",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart14",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart15",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart16",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart17",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart18",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart19",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart20",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart21",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+      renderSparkline(
+        "spark-chart22",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#FF4D4F"
+      );
+
+
+ 
+    </script>
+  </body>
+</html>

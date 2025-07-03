@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bcoinmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">
+                          <span>English (us)</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>France</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Espen</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Bangla</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Arabic</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Italy</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Portugal</span>
+                          <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"><i class="fa fa-bars" aria-hidden="true"></i></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div class="collapse navbar-collapse d-none d-xl-flex justify-content-between" id="navbarText">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="buy.html">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="markets.html">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="assets/images/icon/languages.png" alt="icon" />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">
+                            <span>English (us)</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>France</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Espen</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Bangla</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Arabic</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Italy</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Portugal</span>
+                            <span class="float-end icon-check"><i class="fa-solid fa-circle-check fs-6"></i></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span class="icon-bar btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap">
+                <input type="text" placeholder="Search..." class="input-shadow" />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="buy.html">Buy Crypto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Earn</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input type="text" placeholder="Search..." class="input-shadow" />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <main class="opportunities-main">
+      <div class="container">
+        <div class="opportunities-card-main">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="opportunity-card">
+                <div class="card-header">
+                  <div class="user-info">
+                    <div class="avatar">
+                      <img src="assets/images/profile/1.png" alt="image" />
+                    </div>
+                    <div class="user-details">
+                      <h4 class="user-details-name">Lorem Ipsum</h4>
+                      <div class="user-stats">
+                        <span class="stat-badge">
+                          <img src="assets/images/profile/user.svg" alt="img" />
+                          52/600
+                        </span>
+                        <span class="stat-badge">API</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="star-icon">★</div>
+                </div>
+
+                <div class="roi-and-chart">
+                  <div class="roi-section">
+                    <div class="roi-label">
+                      <p>
+                        ROI
+                        <span>+70.98%</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="chart-line">
+                    <div class="graph">
+                      <canvas class="sparkline2" id="spark-chart1"></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-item">
+                    <span class="stat-label">30 Days PNL</span>
+                    <p class="stat-value profit-value">+712,167.92</p>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">AUM</span>
+                    <p class="stat-value">1,341,381.50</p>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">30 Days MDD</span>
+                    <p class="stat-value">83.10%</p>
+                  </div>
+                </div>
+
+                <div class="opportunities-btn-row">
+                  <a href="#" class="secondary-btn">Sign In</a>
+                  <a href="#" class="primary-btn">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo text-center text-sm-start">
+                <a href="index.html">
+                  <img class="footer-img" src="assets/images/logo.png" alt="logo" />
+                </a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user experience with fast transactions and
+                  top-notch security for your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">About</h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">Services</h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">Platforms</h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">Product</h3>
+                <ul class="text-center text-sm-start">
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row gy-3 align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title text-center text-sm-start">Follow Us</h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="social-icon"><i class="fa-solid fa-location-arrow"></i></a>
+                  <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer text-center text-sm-start">
+                Disclaimer: Bcoinmart provides general information only and does not offer financial or investment
+                advice. Trading cryptoassets involves significant risk and can result in loss of funds. You are
+                responsible for your own tax obligations and should seek independent advice.Some products may be
+                unregulated or restricted in certain regions. Bcoinmart’s services and protections vary by jurisdiction.
+                Always understand the risks before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <!-- <script>
+      const cards = document.querySelectorAll(".crypto-card-sm");
+      let index = 0;
+      function loopZoom() {
+        cards.forEach((card, i) => {
+          card.classList.remove("zoomed");
+        });
+
+        cards[index].classList.add("zoomed");
+
+        index = (index + 1) % cards.length;
+
+        setTimeout(loopZoom, 1000);  
+      }
+      loopZoom();  
+    </script> -->
+    <!-- Token Selection Script -->
+    <script>
+      document.querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item").forEach((item) => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const image = this.dataset.image;
+          const value = this.dataset.value;
+
+          const dropdown = this.closest(".dropdown");
+          const button = dropdown.querySelector(".select-token");
+
+          // Just update button content
+          button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+        });
+      });
+
+      const ctx = document.getElementById("cryptoChart").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+      gradient.addColorStop(0, "rgba(255,0,0,0.3)");
+      gradient.addColorStop(1, "rgba(255,0,0,0)");
+
+      const dataSet = {
+        labels: ["6:00 PM", "12:00 AM", "3:00 AM", "6:00 AM", "12:00 PM"],
+        datasets: [
+          {
+            label: "Price",
+            data: [61850, 61900, 61830, 61980, 61870],
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: "#FF4D4D",
+            tension: 0.4,
+            pointBackgroundColor: "#fff",
+            pointBorderColor: "#FF4D4D",
+            pointRadius: 4,
+            pointHoverRadius: 6,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: dataSet,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              position: "right",
+              ticks: {
+                color: "#aaa",
+                padding: 4,
+                callback: (value) => value.toLocaleString("en-US", {minimumFractionDigits: 0}) + "K",
+              },
+              grid: {
+                display: true,
+                color: "#222",
+              },
+            },
+            x: {
+              ticks: {
+                color: "#aaa",
+              },
+              grid: {
+                display: false,
+                color: "#222",
+              },
+            },
+          },
+          plugins: {
+            legend: {display: false},
+            tooltip: {
+              mode: "index",
+              intersect: false,
+              backgroundColor: "#1A1D29",
+              borderColor: "#FF4D4D",
+              borderWidth: 1,
+            },
+          },
+          interaction: {
+            mode: "index",
+            intersect: false,
+          },
+        },
+      };
+
+      const myChart = new Chart(ctx, config);
+
+      // Tab switching (you can load dynamic data per tab)
+      document.querySelectorAll("[data-range]").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document.querySelectorAll(".nav-link").forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+
+          // Fake data change
+          const newData = Array.from({length: 5}, () => 61500 + Math.random() * 500);
+          myChart.data.datasets[0].data = newData;
+          myChart.update();
+        });
+      });
+
+      // auto scroll bitcoin
+
+      const scrollBox = document.getElementById("scroll-box");
+      let scrollStep = 350; // px per scroll step
+      let scrollDelay = 2000; // delay before scroll (ms)
+      let scrollSpeed = 1000; // smooth scroll duration (ms)
+
+      let scrollInterval = null;
+      let isPaused = false;
+
+      function autoScroll() {
+        if (isPaused) return;
+
+        let maxScrollTop = scrollBox.scrollHeight - scrollBox.clientHeight;
+
+        if (scrollBox.scrollTop + scrollStep < maxScrollTop) {
+          scrollSmoothBy(scrollBox, scrollStep, scrollSpeed);
+        } else {
+          scrollSmoothTo(scrollBox, 0, scrollSpeed);
+        }
+      }
+
+      function scrollSmoothBy(element, distance, duration) {
+        const start = element.scrollTop;
+        const end = start + distance;
+        animateScroll(element, start, end, duration);
+      }
+
+      function scrollSmoothTo(element, target, duration) {
+        const start = element.scrollTop;
+        animateScroll(element, start, target, duration);
+      }
+
+      function animateScroll(element, from, to, duration) {
+        const startTime = performance.now();
+
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = easeInOutQuad(progress);
+          element.scrollTop = from + (to - from) * ease;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      function startScrolling() {
+        if (!scrollInterval) {
+          scrollInterval = setInterval(autoScroll, scrollDelay + scrollSpeed);
+        }
+      }
+
+      function stopScrolling() {
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+        }
+      }
+      scrollBox.addEventListener("mouseenter", () => {
+        isPaused = true;
+        stopScrolling();
+      });
+
+      scrollBox.addEventListener("mouseleave", () => {
+        isPaused = false;
+        startScrolling();
+      });
+
+      // Start auto scroll initially
+      startScrolling();
+    </script>
+    <script>
+      // Additional smooth scrolling enhancements
+      const scrollTrack = document.querySelector(".scroll-track");
+      const scrollContainer = document.querySelector(".scroll-container");
+
+      // Pause animation on hover over the entire container
+      scrollContainer.addEventListener("mouseenter", () => {
+        scrollTrack.style.animationPlayState = "paused";
+      });
+
+      scrollContainer.addEventListener("mouseleave", () => {
+        scrollTrack.style.animationPlayState = "running";
+      });
+
+      AOS.init();
+    </script>
+    <script src="assets/js/play.js"></script>
+
+    <!-- here is sparkline chart js  -->
+    <script>
+      function renderSparkline(id, data, color = "lime") {
+        new Chart(document.getElementById(id), {
+          type: "line",
+          data: {
+            labels: data.map((_, i) => i),
+            datasets: [
+              {
+                data: data,
+                borderColor: color,
+                borderWidth: 1.5,
+                pointRadius: 0,
+                fill: false,
+                tension: 0.3,
+              },
+            ],
+          },
+          options: {
+            plugins: {legend: {display: false}},
+            responsive: false,
+            scales: {
+              x: {display: false},
+              y: {display: false},
+            },
+            elements: {
+              line: {tension: 0.3},
+            },
+          },
+        });
+      }
+      renderSparkline("spark-chart1", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart2", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart3", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart4", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart5", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart6", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart7", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart8", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart9", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart10", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart11", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart12", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart13", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart14", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart15", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#1ECB4F");
+      renderSparkline("spark-chart16", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart17", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart18", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart19", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart20", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart21", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart22", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+      renderSparkline("spark-chart23", [2, 33, 22, 38, 60, 40, 45, 28, 55, 45], "#FF4D4F");
+    </script>
+  </body>
+</html>
