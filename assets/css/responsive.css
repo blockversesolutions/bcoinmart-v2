@@ -327,6 +327,7 @@
   .top-cryptos-card-main {
     margin: 0 auto;
   }
+  
 
   .form-input label {
     text-align: left;
@@ -633,6 +634,9 @@
     padding: 20px !important;
     line-height: 23px;
     font-weight: 400;
+  }
+  input::placeholder {
+      font-size: 10px !important;
   }
   .puzzle-design-card {
     flex: 0 0 100%;

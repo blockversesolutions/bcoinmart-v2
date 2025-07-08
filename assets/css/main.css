@@ -4499,7 +4499,7 @@ ul.dtr-details li {
 }
 
 .form-input input::placeholder {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .form-input.checkbox-input {
