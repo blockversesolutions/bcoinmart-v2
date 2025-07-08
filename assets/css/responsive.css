@@ -320,8 +320,9 @@
   .form-input.checkbox-input {
     margin: 15px 0 18px 0;
   }
-  .sign-up-area {
-    margin: 15px; 
+  .sign-up-area { 
+    padding: 25px;
+    background: url(../images/sign-up/signup.png) no-repeat scroll bottom left / cover ; 
   }
   .top-cryptos-card-main {
     margin: 0 auto;
