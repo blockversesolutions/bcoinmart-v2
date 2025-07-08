@@ -643,7 +643,10 @@
     font-size: 10px !important;
   }
   .form-input input::placeholder {
-    font-size: 10px;
+    font-size: 10px !important;
+  }
+  .sign-up-box-content { 
+    background: #181a20f5; 
   }
   .puzzle-design-card {
     flex: 0 0 100%;
