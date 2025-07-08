@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style> 
+      @keyframes rotate360 {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .rotating-positive-360 {
+        animation: rotate360 20s linear infinite;
+      }
+      @keyframes rotate-360 {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+      .rotating-negative-360 {
+        animation: rotate-360 20s linear infinite;
+      }
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(0.8);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(0.8);
+        }
+      }
+      .zooming-zooming-out {
+        animation: zoomInOut 2s ease-in-out infinite;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .header-logo img {
+        width: 177px;
+      }
+       
+      .maintenance-thumbnails-icon-1 {
+        position: absolute;
+        left: 20%;
+        width: 160px;
+        top: -10px;
+      }
+      .maintenance-thumbnails-icon-2 {
+        position: absolute;
+        right: 33%;
+        width: 120px;
+        top: -10px;
+      }
+      .maintenance-thumbnails-icon-3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+        bottom: 30px;
+      }
+      .maintenance-section:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url("assets/images/bg/maintenance.png");
+        background-size: cover;
+        background-position: center center;
+        z-index: -2;
+      }
+      .payment-method li a img {
+        max-height: 28px;
+        width: auto;
+      }
+      .common-heading-area p {
+        font-size: 18px;
+        line-height: 30px;
+        color: #04151f;
+      }
+      .social-menu ul li a {
+        background-color: #ffffff1a;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        transition: 0.5s;
+        border-radius: 50%;
+      }
+      .social-menu ul {
+        gap: 14px;
+      }
+       
+      .social-menu ul li a i {
+        font-size: 20px;
+        width: 20px;
+        color: #fff;
+      }
+      .maintenance-thumbnails-icon-2 {
+        position: absolute;
+        right: 33%;
+        width: 120px;
+        top: -10px;
+      }
+      .maintenance-thumbnails-icon-1 {
+        position: absolute;
+        left: 20%;
+        width: 160px;
+        top: -10px;
+      }
+      .maintenance-thumbnails-icon-3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+        bottom: 30px;
+      }
+      .social-menu ul li a:hover {
+        transform: translateY(-5px);
+        background-color: #f5c448;
+        box-shadow: rgba(233, 199, 9, 0.25) 0px 20px 55px,
+          rgba(228, 155, 19, 0.12) 0px -12px 30px,
+          rgba(202, 206, 5, 0.12) 0px 4px 6px,
+          rgba(229, 233, 11, 0.17) 0px 12px 13px,
+          rgba(230, 178, 8, 0.6) 0px -3px 5px;
+      }
+
+      .maintenance-thumbnails {
+            height: 100vh; 
+        }
+
+       
+    </style>
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div> 
+
+    <div class="maintenance-header text-center py-3 bg-black position-fixed top-0 start-0 w-100 z-3"> 
+        <a href="#"><img src="assets/images/logo.png" alt=""></a>
+    </div>
+
+
+    <main class="main-area">  
+
+        <div class="connected-section maintenance-area position-relative"> 
+            
+          <div class="maintenance-left">
+            <div class="container"> 
+                <div class="maintenance-body mt-100">
+                  <div class="row gy-5 align-items-center">
+                    <div class="col-lg-7">
+                      <div class="common-heading-area text-white text-center text-lg-start maintenance-heading">
+                        <h1>
+                          Website Under Maintenance
+                        </h1>
+                        <p class="text-white">
+                          Scheduled maintenance is in progress to enhance your experience. We’ll be back shortly. We appreciate your patience.
+                        </p>
+                      </div>
+                      <div class="countdown-area mt-50 text-center text-lg-start">
+                        <h5>
+                          Estimated Downtime
+                        </h5>
+                        <ul id="countdown"
+                          class="d-flex align-items-center  mt-3 mt-md-5 justify-content-center justify-content-lg-start countdown-box"
+                        >
+                            <li><span id="days">00D</span></li>
+                            <li><p>:</p></li>
+                            <li><span id="hours">00H</span></li>
+                            <li><p>:</p></li>
+                            <li><span id="minutes">00M</span></li>
+                            <li><p>:</p></li>
+                            <li><span id="seconds">00S</span></li>
+                           
+                        </ul>
+                      </div>
+                      <div class="maintenance-button">
+                        <a href="#" class="primary-btn d-inline-block"><i class="fa-solid fa-arrow-left"></i> &nbsp; Back To Home</a>
+                      </div>
+                      <div
+                        class="d-flex flex-wrap align-items-center g-20 mt-40 justify-content-center justify-content-lg-start"
+                      >
+                        <div class="social-menu ">
+                          <ul class="d-flex align-items-center">
+                            <li>
+                              <a href="https://www.facebook.com/AndroMarkets/"
+                                ><i class="fa fab fa-facebook"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://x.com/i/flow/login?redirect_after_login=%2Fandro_markets"
+                              >
+                                <i class="fa-brands fa-x-twitter"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://t.me/AndroMarkets">
+                                <i class="fa-brands fa-telegram"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.instagram.com/andromarkets/"
+                                ><i class="fa-brands fa-instagram"></i
+                              ></a>
+                            </li> 
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 offset-md-2 offset-lg-0 col-md-8">
+                      
+                    </div>
+                  </div>  
+              </div> 
+            </div>
+          </div>
+          <div class="maintenance-right">
+            <div class="row">
+              <div class="col-lg-5"></div>
+              <div class="col-lg-7">
+                <div class="maintenance-thumbnails position-relative"> 
+                    <img src="assets/images/maintenance/maintenance.png" class="w-100" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="most-trending-shape">
+            <img src="assets/images/buy/bitcoin/bticoin.png" alt="">
+        </div>
+        <div class="how-to-buy-shape">
+            <img src="assets/images/buy/buy-crypto/shape.png" alt="">
+        </div>
+
+
+        </div>
+
+    </main>
+ 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script> 
+    <script>
+      document
+        .querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item")
+        .forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const image = this.dataset.image;
+            const value = this.dataset.value;
+
+            const dropdown = this.closest(".dropdown");
+            const button = dropdown.querySelector(".select-token");
+
+            // Just update button content
+            button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          });
+        });  
+
+        
+      // Set the countdown target time (15 minutes from now)  
+      const targetDate = new Date("2025-07-28T00:00:00").getTime();
+
+      const countdown = () => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          document.getElementById("countdown").innerHTML = "<li>Maintenance Done</li>";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = (days < 10 ? "0" : "") + days + "D";
+        document.getElementById("hours").textContent = (hours < 10 ? "0" : "") + hours + "H";
+        document.getElementById("minutes").textContent = (minutes < 10 ? "0" : "") + minutes + "M";
+        document.getElementById("seconds").textContent = (seconds < 10 ? "0" : "") + seconds + "S";
+      };
+
+      // Initial run
+      countdown();
+
+      // Update every second
+      setInterval(countdown, 1000); 
+
+    </script>
+     
+  </body>
+</html>
