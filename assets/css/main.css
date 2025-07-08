@@ -4457,7 +4457,7 @@ ul.dtr-details li {
     font-weight: 600; 
     font-size: 28px; 
     line-height: 32px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: #fff;
     margin: 20px 0 45px 0;
 }
@@ -4498,9 +4498,7 @@ ul.dtr-details li {
   color: #FFBE38;
 }
 
-.form-input input::placeholder {
-  font-size: 10px;
-}
+
 
 .form-input.checkbox-input {
     display: flex;
