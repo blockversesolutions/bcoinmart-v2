@@ -1,0 +1,3745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+    <!-- datatable cdn  --> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">
+                          <span>English (us)</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>France</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Espen</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Bangla</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Arabic</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Italy</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Portugal</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div
+              class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
+              id="navbarText"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="buy.html">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link active" href="markets.html">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                 <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
+                 
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/icon/languages.png"
+                          alt="icon"
+                        />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">
+                            <span>English (us)</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>France</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Espen</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Bangla</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Arabic</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Italy</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Portugal</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span
+              class="icon-bar btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div
+                class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+              >
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="input-shadow"
+                />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="buy.html">Buy Crypto</a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="markets.html">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+               <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-shadow"
+                  />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+     
+    <main class="main-area">  
+        <!-- start market marquee -->  
+         <section class="market-marquee">
+            <div class="marquee-wrapper" id="marquee">
+                <ul class="marquee-content"> 
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                </ul>
+            </div>
+         </section>
+        <!-- end market marquee  -->
+
+        <!-- start market pages area  -->
+        <section class="market-page-area mt-60 mb-60  ">
+            <div class="container">
+                <div class="market-tabs">
+                    <ul class="tabs-slide owl-carousel owl-theme">
+                        <li><a href="markets.html" class="active">Markets Overview</a></li>
+                        <li><a href="trading.html">Trading DataX</a></li>
+                        <li><a href="opportunity.html">Opportunity</a></li>
+                        <li><a href="#">Token Unlock</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </section>
+        <!-- end market pages area  -->
+
+        <!-- start market overview Card  -->
+        <section class="connected-section market-overview-area mb-60 position-relative">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4"> 
+                      <div class="border-gradient-2 m-0">
+                        <div class="single-market-card">
+                          <div class="market-overview-title">
+                              <h3>Hot Coins</h3>
+                              <a href="#">More <i class="fa-solid fa-angle-right"></i></a>
+                          </div>
+                          <table class="market-overview-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="market-logo-name"> <img src="assets/images/markets/1.png" alt="BTCUSDT"> BTCUSDT</td>
+                                      <td>$103,800.1</td>
+                                      <td class="red-market-text">-0.32%</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="market-logo-name"> <img src="assets/images/markets/2.png" alt="BTCUSDT">   BTCUSDT</td>
+                                      <td>$103,800.1</td>
+                                      <td class="red-market-text">-0.32%</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="market-logo-name">  <img src="assets/images/markets/3.png" alt="BTCUSDT">  BTCUSDT</td>
+                                      <td>$103,800.1</td>
+                                      <td class="red-market-text">-0.32%</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                        </div>  
+                      </div>
+                    </div>
+                    <div class="col-md-4"> 
+                      <div class="border-gradient-2 m-0">
+                        <div class="single-market-card">
+                            <div class="market-overview-title">
+                                <h3>New Listing</h3>
+                                <a href="#">More <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                            <table class="market-overview-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="market-logo-name"> <img src="assets/images/markets/4.png" alt="BTCUSDT"> BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="market-logo-name"> <img src="assets/images/markets/5.png" alt="BTCUSDT">   BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="market-logo-name">  <img src="assets/images/markets/6.png" alt="BTCUSDT">  BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                      </div>
+                    </div>
+                    <div class="col-md-4"> 
+                      <div class="border-gradient-2 m-0">
+                        <div class="single-market-card">
+                            <div class="market-overview-title">
+                                <h3>Top Gainer Coin</h3>
+                                <a href="#">More <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                            <table class="market-overview-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="market-logo-name"> <img src="assets/images/markets/1.png" alt="BTCUSDT"> BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="market-logo-name"> <img src="assets/images/markets/7.png" alt="BTCUSDT">   BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="market-logo-name">  <img src="assets/images/markets/6.png" alt="BTCUSDT">  BTCUSDT</td>
+                                        <td>$103,800.1</td>
+                                        <td class="red-market-text">-0.32%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                      </div>
+                    </div>
+                </div>
+            </div>
+             <div class="how-to-buy-shape">
+              <img src="assets/images/buy/buy-crypto/shape.png" alt="">
+            </div>
+        </section>
+        <!-- end market overview Card  -->
+
+        <!-- start market crypto tabs area  -->
+        <section class="market-crypto-tab-area mb-120 position-relative">
+          <div class="container">
+             <div class="main-action-tabs"> 
+                <ul class="nav nav-tabs actionTab tabs-slide owl-carousel owl-theme" id="actionTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="buy-sell-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#buy-sell"
+                      type="button"
+                      role="tab"
+                    >
+                      Favorites
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="limit-buy-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#limit-buy"
+                      type="button"
+                      role="tab"
+                    >
+                      All Cryptos
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="recurring-buy-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#recurring-buy"
+                      type="button"
+                      role="tab"
+                    >
+                      Spot Market
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="deposit-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#deposit"
+                      type="button"
+                      role="tab"
+                    >
+                      Futures Markets
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="withdraw-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#withdraw"
+                      type="button"
+                      role="tab"
+                    >
+                      Alpha
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="buy-ecm-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#buy-ecm"
+                      type="button"
+                      role="tab"
+                    >
+                      New Listing Zone
+                    </button>
+                  </li>
+                </ul> 
+
+              <div class="tab-content" id="actionTabContent">
+                <div class="tab-pane fade " id="buy-sell" role="tabpanel" aria-labelledby="buy-sell-tab">  
+                    <p class="text-white">Another tab content 1</p>
+                </div>
+                <div class="tab-pane fade show active" id="limit-buy" role="tabpanel" aria-labelledby="limit-buy-tab"> 
+                  <div class="market-table-tabs mt-4"> 
+                    <div class="market-tabs-search d-flex justify-content-between align-items-center mb-60">
+                      <ul class="nav nav-tabs actionTab tabs-slide owl-carousel owl-theme" id="actionTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="market-all-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#market-all"
+                            type="button"
+                            role="tab"
+                          >
+                            All
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Solana-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Solana"
+                            type="button"
+                            role="tab"
+                          >
+                            Solana
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="RWA-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#RWA"
+                            type="button"
+                            role="tab"
+                          >
+                            RWA
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Meme-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Meme"
+                            type="button"
+                            role="tab"
+                          >
+                            Meme
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Alpha-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Alpha"
+                            type="button"
+                            role="tab"
+                          >
+                            Alpha
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Payments-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Payments"
+                            type="button"
+                            role="tab"
+                          >
+                            Payments
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="AI-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#AI"
+                            type="button"
+                            role="tab"
+                          >
+                            AI
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Layer-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Layer"
+                            type="button"
+                            role="tab"
+                          >
+                            Layer 1 / Layer 2
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Metaverse-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Metaverse"
+                            type="button"
+                            role="tab"
+                          >
+                            Metaverse
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Others-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Others"
+                            type="button"
+                            role="tab"
+                          >
+                            Others
+                          </button>
+                        </li>
+                      </ul> 
+                      <div class="market-search-box pointer d-flex g-5 align-items-center">
+                        <input type="search" name="market-search" id="market-search" placeholder="Search Coin Name">
+                        <span class="market-search-button"><i class="fas fa-search"></i></span>
+                      </div>
+                    </div>
+                    
+
+                    <div class="tab-content" id="actionTabContent">
+                      <div class="tab-pane fade show active" id="market-all" role="tabpanel" aria-labelledby="market-all-tab">  
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table> 
+                        </div>
+                      </div>
+                      <div class="tab-pane fade " id="Solana" role="tabpanel" aria-labelledby="Solana-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable2" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="RWA" role="tabpanel" aria-labelledby="RWA-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable3" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Meme" role="tabpanel" aria-labelledby="Meme-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable4" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Alpha" role="tabpanel" aria-labelledby="Alpha-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable5" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Payments" role="tabpanel" aria-labelledby="Payments-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable6" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="AI" role="tabpanel" aria-labelledby="AI-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable7" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Layer" role="tabpanel" aria-labelledby="Layer-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable8" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Metaverse" role="tabpanel" aria-labelledby="Metaverse-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable9" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="Others" role="tabpanel" aria-labelledby="Others-tab">
+                         <div class="market-datatable">
+                          <table id="cryptoTable10" class="display cryptoTable" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change (24h)</th>
+                                <th>24h Volume</th>
+                                <th>Market Cap</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="green-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/1.png" width="20"> BTC <span>Bitcoin</span></td>
+                                <td>$103,851.15</td>
+                                <td class="red-data-text">-1.21%</td>
+                                <td>$41.4B</td>
+                                <td>$2.09T</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/2.png" width="20"> ETH <span>Ripple</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/3.png" width="20"> XRP <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/4.png" width="20"> USDT <span>Tether</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/5.png" width="20"> SOL <span>Solana</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                      class=""
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Details">
+                                      <img src="assets/images/markets/tooltip.png" alt="">
+                                    </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/6.png" width="20"> ADA <span>Cardano</span></td>
+                                <td>$2,548.99</td>
+                                <td class="red-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><img src="assets/images/markets/7.png" width="20"> ETH <span>Ethereum</span></td>
+                                <td>$2,548.99</td>
+                                <td class="green-data-text">-2.88%</td>
+                                <td>$17.59B</td>
+                                <td>$316.55B</td>
+                                <td class="trade-child">  
+                                  <a href="#"
+                                    class=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Details">
+                                    <img src="assets/images/markets/tooltip.png" alt="">
+                                  </a>
+  
+                                  <a href="#" class="btn-trade">Trade</a>
+                                </td>
+                              </tr>
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>
+
+                        </div>
+                      </div>
+                    </div> 
+                  </div> 
+                </div>
+
+                <div class="tab-pane fade" id="recurring-buy" role="tabpanel" aria-labelledby="recurring-buy-tab">
+                  <div class="container">
+                    <p class="text-white">Another tab content 3</p>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
+                  
+                    <p class="text-white">Another tab content 4</p>
+                </div>
+                <div class="tab-pane fade" id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
+                  
+                    <p class="text-white">Another tab content 5</p>
+                </div>
+                <div class="tab-pane fade" id="buy-ecm" role="tabpanel" aria-labelledby="buy-ecm-tab">
+                  <div class="container">
+                    <p class="text-white">Another tab content 6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="most-trending-shape">
+            <img src="assets/images/buy/bitcoin/bticoin.png" alt="">
+          </div>
+          <div class="process-shape-2">
+            <img src="assets/images/buy/withdraw/2.png" alt="">
+          </div>
+        </section>
+        <!-- end market crypto tabs area  -->
+
+        <!-- start embark area  --> 
+        <section class="embark-section mt-120 mb-120">
+        <div class="container">
+          <div class="embark-text">
+            <!-- Default gradient borders -->
+            <div class="text-center row">
+              <div class="col-md-8 offset-md-2">
+                <div class="common-heading-section">
+                  <h2 class="text-primary">
+                    Embark on Your Crypto Journey Today!
+                  </h2>
+                  <p>
+                    Start your crypto journey with BCoinMart today! Access
+                    powerful tools, secure trading, and real-time updates—all at
+                    your fingertips.
+                  </p>
+                  <div class="d-inline-block mt-5">
+                    <a href="#" class="primary-btn aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+                      Sign Up Now
+                      <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section> 
+        <!-- end embark area  --> 
+
+    </main>
+
+
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo text-center text-sm-start">
+                <a href="index.html">
+                  <img
+                    class="footer-img"
+                    src="assets/images/logo.png"
+                    alt="logo"
+                  />
+                </a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user
+                  experience with fast transactions and top-notch security for
+                  your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  About
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Services
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Platforms
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Product
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row gy-3 align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title text-center text-sm-start">
+                  Follow Us
+                </h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-solid fa-location-arrow"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer text-center text-sm-start">
+                Disclaimer: Bcoinmart provides general information only and does
+                not offer financial or investment advice. Trading cryptoassets
+                involves significant risk and can result in loss of funds. You
+                are responsible for your own tax obligations and should seek
+                independent advice.Some products may be unregulated or
+                restricted in certain regions. Bcoinmart’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- datatable  -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script> 
+    <!-- owl carousel  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script> 
+
+    <script>
+
+ 
+
+
+      // Market search box js 
+      $(document).on('click', '.market-search-button', function (e) {
+        const $input = $(this).closest('.market-search-box').find('input[type="search"]');
+        $input.css('display', 'inline-block').focus();
+      });
+
+      // Hide input when clicking outside
+      $(document).on('click', function (e) {
+        const $target = $(e.target);
+        const isInside = $target.closest('.market-search-box').length > 0;
+
+        if (!isInside) {
+          $('.market-search-box input[type="search"]').css('display', 'none');
+        }
+      });
+
+
+
+      document
+        .querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item")
+        .forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const image = this.dataset.image;
+            const value = this.dataset.value;
+
+            const dropdown = this.closest(".dropdown");
+            const button = dropdown.querySelector(".select-token");
+
+            // Just update button content
+            button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          });
+        });
+
+       
+    </script>
+    <script>
+        
+        // market marquee headline js 
+
+        const marquee = document.getElementById("marquee");
+        const content = document.querySelector(".marquee-content");
+
+        marquee.addEventListener("mouseenter", () => {
+        content.style.animationPlayState = "paused";
+        });
+
+        marquee.addEventListener("mouseleave", () => {
+        content.style.animationPlayState = "running";
+        });
+
+         
+
+      AOS.init();  
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+          new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+
+
+
+  
+
+
+
+
+    </script>
+
+  </body>
+</html>

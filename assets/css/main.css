@@ -354,7 +354,8 @@ button:focus:not(:focus-visible) {
   animation-delay: 0.8s;
 }
 @keyframes grow-shrink {
-  0%, 100% {
+  0%,
+  100% {
     height: 20px;
     width: 10px;
     opacity: 0.6;
@@ -367,7 +368,8 @@ button:focus:not(:focus-visible) {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -420,16 +422,17 @@ button:focus:not(:focus-visible) {
   transition: all 0.3s ease;
   position: fixed !important;
   width: 100%;
-  z-index:99;
+  z-index: 99;
 }
 .menu-bg {
   position: fixed !important;
   backdrop-filter: blur(20px);
   top: 0px;
   width: 100%;
-  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px, rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
+  box-shadow: rgba(155, 155, 167, 0.25) 0px 50px 100px -20px,
+    rgba(172, 165, 165, 0.3) 0px 30px 60px -30px,
     rgba(198, 200, 202, 0.35) 0px -2px 6px 0px inset;
-  z-index:99;
+  z-index: 99;
 }
 .nav-link {
   color: #fdfdfd;
@@ -542,8 +545,10 @@ span.close-mark {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px,
-    rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px,
+  box-shadow: rgba(170, 126, 7, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
     rgba(255, 255, 255, 0.09) 0px -3px 5px;
 }
 .dropdown-item:hover {
@@ -573,7 +578,7 @@ span.close-mark {
   padding-right: 0 !important;
 }
 
-.buy-page-padding{
+.buy-page-padding {
   padding-top: 100px;
 }
 
@@ -715,25 +720,25 @@ span.close-mark {
 .crypto-card-1 {
   position: absolute;
   left: 100px;
-  top: 40%;   
+  top: 40%;
   transform: scale(0.9);
 }
 
 .crypto-card-1:hover {
-  transform:  scale(1); 
+  transform: scale(1);
 }
-tbody tr{
+tbody tr {
   transition: 0.3s;
 }
 tbody tr:hover {
-	background: #181A208C; 
+  background: #181a208c;
   border-radius: 5px;
 }
 .crypto-card-2 {
   position: absolute;
   left: 50%;
   transform: scale(0.8);
-  top: 15%;  
+  top: 15%;
 }
 .crypto-card-2:hover {
   transform: scale(1);
@@ -799,17 +804,17 @@ tbody tr:hover {
   border: none;
 }
 .coin-info-table tr td {
-	padding: 10px 10px;
-	background-color: transparent;
-	color: #fdfdfd;
-	border: none;
-	font-size: 14px;
-	font-weight: 600;
-	vertical-align: middle;
+  padding: 10px 10px;
+  background-color: transparent;
+  color: #fdfdfd;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  vertical-align: middle;
 }
 .td-align-end {
-    text-align: right;
-    width: 85px;
+  text-align: right;
+  width: 85px;
 }
 .coin-info-table .graph img {
   width: 46px;
@@ -855,10 +860,10 @@ tbody tr:hover {
   margin-top: 60px;
 }
 .system-info ul li {
-	padding: 20px 0;
-	transition: 0.5s;
-	border-radius: 10px;
-	min-width: 106px;
+  padding: 20px 0;
+  transition: 0.5s;
+  border-radius: 10px;
+  min-width: 106px;
 }
 .navbar-toggler.icon {
   margin-bottom: 0;
@@ -900,15 +905,17 @@ tbody tr:hover {
   overflow: hidden;
 }
 .embark-section {
-	background: url("../images/home/network-bg.png") no-repeat scroll center center / cover;
-	padding: 22px 0;
-	color: #fff;
-	position: relative;
-	z-index: 9;
+  background: url("../images/home/network-bg.png") no-repeat scroll center
+    center / cover;
+  padding: 22px 0;
+  color: #fff;
+  position: relative;
+  z-index: 9;
 }
 
 .embark-text {
-  background: url("../images/home/embark-dots.png") no-repeat scroll center center / cover;
+  background: url("../images/home/embark-dots.png") no-repeat scroll center
+    center / cover;
   padding: 40px 0;
   transform: translateY(80px);
   position: relative;
@@ -1086,7 +1093,7 @@ tbody tr:hover {
 .accordion-button:hover .accordion-number {
   color: #ffbe38 !important;
 }
-.accordion-button::after {
+.faq-section .accordion-button::after {
   display: none;
 }
 .accordion-number {
@@ -1235,7 +1242,7 @@ tbody tr:hover {
   box-shadow: #ffbe38 0px 1px 12px;
   background-color: transparent;
 }
-.footer-privacy { 
+.footer-privacy {
   gap: 45px;
 }
 .footer-privacy li {
@@ -1446,7 +1453,7 @@ tbody tr:hover {
 
 .buy-sel-tabs .nav-tabs .nav-link.active {
   color: #fff;
- 
+
   background-color: transparent !important;
 }
 .form-block {
@@ -2036,71 +2043,71 @@ tbody tr:hover {
   right: 0;
 }
 
-
 /* hero animation  */
 
-
-    /* SVG inside animation container */
-    .hero-circle-area__svg {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: visible;
-    }
-    /* Static dots */
-    .hero-circle-area__dot {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      /* background: #ffcc33; */
-      background: #ffcc3370;
-      border-radius: 50%;
-      filter: drop-shadow(0 0 5px #ffcc3370);
-      z-index: 2;
-    }
-    /* Animated pulse dot */
-    .hero-circle-area__pulse {
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      background: #ffcc3370;
-      border-radius: 50%;
-      filter: drop-shadow(0 0 7px #ffcc3370);
-      z-index: 3;
-      pointer-events: none;
-      will-change: transform;
-    }
-.crypto-card-sm { 
+/* SVG inside animation container */
+.hero-circle-area__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+/* Static dots */
+.hero-circle-area__dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  /* background: #ffcc33; */
+  background: #ffcc3370;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #ffcc3370);
+  z-index: 2;
+}
+/* Animated pulse dot */
+.hero-circle-area__pulse {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ffcc3370;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 7px #ffcc3370);
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+.crypto-card-sm {
   z-index: 99;
 }
- 
-    .dot {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: radial-gradient(circle, #ffeb80 0%, #ffcc3370 70%, #ffcc3370 100%);
-      border-radius: 50%;
-      box-shadow:
-        0 0 6px #ffcc3370,
-        0 0 12px #ffcc3370,
-        0 0 20px #ffcc3370;
-      z-index: 2;
-      pointer-events: none;
-    }
-    .pulse {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: radial-gradient(circle, #fff1b5 0%, #ffcc3370 60%, #b38600 100%);
-      border-radius: 50%;
-      filter:
-        drop-shadow(0 0 6px #ffcc3370);
-      z-index: 3;
-      pointer-events: none;
-    }
-    /* svg path {
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    #ffeb80 0%,
+    #ffcc3370 70%,
+    #ffcc3370 100%
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ffcc3370, 0 0 12px #ffcc3370, 0 0 20px #ffcc3370;
+  z-index: 2;
+  pointer-events: none;
+}
+.pulse {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff1b5 0%, #ffcc3370 60%, #b38600 100%);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px #ffcc3370);
+  z-index: 3;
+  pointer-events: none;
+}
+/* svg path {
       stroke: #ffcc3370;
       stroke-width: 1.2;
       fill: none;
@@ -2305,10 +2312,18 @@ tbody tr:hover {
 }
 
 .shape-main {
-  background: url("../images/bg/sharemarket.png") no-repeat scroll center center/ cover;
+  background: url("../images/bg/sharemarket.png") no-repeat scroll center
+    center/ cover;
   position: relative;
   background-attachment: fixed;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 79.81% 100%, 77.13% 93.51%, 0% 93.51%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    79.81% 100%,
+    77.13% 93.51%,
+    0% 93.51%
+  );
   padding: 60px 0 128px 0;
   background-size: 100% 100%;
 }
@@ -2336,7 +2351,7 @@ tbody tr:hover {
 }
 
 .custom-card {
-  background: linear-gradient(145deg, #1e2329, #2a2f36);
+  background: #1E2329;
   padding: 30px;
   color: #fff;
   min-height: 260px;
@@ -2349,44 +2364,13 @@ tbody tr:hover {
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
-}
-.custom-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-      248.69deg,
-      rgba(255, 255, 255, 0.6) -13.5%,
-      rgba(255, 255, 255, 0) 31.74%,
-      rgba(255, 255, 255, 0) 77.15%,
-      rgba(255, 255, 255, 0.6) 124.27%
-    ),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-  background-size: 400% 400%;
-  z-index: -2;
-  transition: all 0.4s ease;
-  animation: gradientShift 6s ease infinite;
-  border-radius: 8px;
-}
-.custom-card:hover:before {
-  background: linear-gradient(45deg, #fd9e04, #ffffff, #fd9e04, #fcfcfc, #fd9e04, #ffffff);
+  border: 1px solid transparent ;
 }
 
-.custom-card::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background: linear-gradient(145deg, #1e2329, #2a2f36);
-  z-index: -1;
-  transition: all 0.4s ease;
-  border-radius: 6px;
+.custom-card:hover {
+  border: 1px solid #ffbe38 ; 
 }
+
 .shap-title {
   font-weight: 600;
   font-size: 24px;
@@ -2404,19 +2388,43 @@ tbody tr:hover {
   color: #fff;
 }
 .clip-card::before {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
 }
 
 .clip-card::after {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
 }
 
 .clip-card {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.75%, 90.7% 59.13%, 90.7% 100%, 90.7% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 47.75%,
+    90.7% 59.13%,
+    90.7% 100%,
+    90.7% 100%,
+    0% 100%
+  );
   padding-right: 60px;
 }
 
-.custom-clip-1 { 
+.custom-clip-1 {
   -webkit-clip-path: url(#roundedShape);
   clip-path: url(#roundedShape);
 }
@@ -2437,55 +2445,73 @@ tbody tr:hover {
   clip-path: url(#roundedShape2);
 }
 
+.header-area .navbar-nav .nav-link.active, .header-area .navbar-nav .nav-link.show {
+    color: #ffbe38;
+}
+
+.trading-data-select.custom-select-wrapper { 
+    width: 118px;
+}
+
+.trading-data-select.custom-select-wrapper::after { 
+    right: 8px; 
+}
+
+.opportunity-card .graph canvas {
+    width: 71px !important;
+    height: 42px !important;
+}
+
 /* puzzle shape design  */
 
-
-  .puzzle-wrapper {
-    display: flex;
-    gap: 0;
-    justify-content: space-between;
-  }
+.puzzle-wrapper {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+}
 
 .puzzle-card {
-	width: 33.33%;
-	height: 300px;
-	flex-shrink: 0;
+  width: 33.33%;
+  height: 300px;
+  flex-shrink: 0;
   padding: 35px;
   /* border: 1px solid #fff; */
-  background: #2A3039; 
+  background: #2a3039;
 }
 
 .puzzle-card p {
-	font-size: 16px;
-	color: #ccc;
-	transition: all 0.3s ease;
+  font-size: 16px;
+  color: #ccc;
+  transition: all 0.3s ease;
 }
 .puzzle-card h5 {
-	font-size: 22px;
-	color: #ccc;
-	margin-bottom: 20px;
-	transition: all 0.3s ease;
+  font-size: 22px;
+  color: #ccc;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-  .puzzle-shape-1 {
-    /* background: #7b4fff; */
-    clip-path: path('M12,0 H418 Q430,0 430,12 V130 Q430,144 418,153 L405,162 Q390,172 390,184 V288 Q390,300 378,300 H12 Q0,300 0,288 V12 Q0,0 12,0 Z');
-    padding-right: 45px;
-  }
+.puzzle-shape-1 {
+  /* background: #7b4fff; */
+  clip-path: path(
+    "M12,0 H418 Q430,0 430,12 V130 Q430,144 418,153 L405,162 Q390,172 390,184 V288 Q390,300 378,300 H12 Q0,300 0,288 V12 Q0,0 12,0 Z"
+  );
+  padding-right: 45px;
+}
 
 .puzzle-shape-2 {
-	/* background: #5c5cff; */
-	clip-path: path('M44,0 Q32,0 32,12 V140 Q32,150 24,156 Q0,175 0,186 V288 Q0,300 12,300 H418 Q430,300 430,288 V12 Q430,0 418,0 H44 Z');
+  /* background: #5c5cff; */
+  clip-path: path(
+    "M44,0 Q32,0 32,12 V140 Q32,150 24,156 Q0,175 0,186 V288 Q0,300 12,300 H418 Q430,300 430,288 V12 Q430,0 418,0 H44 Z"
+  );
   transform: translateX(-16px);
   padding-left: 55px;
 }
 
-  .puzzle-shape-3 {
-    /* background: #30c18c;  */
-    border-radius: 12px;
-  }
-
-
+.puzzle-shape-3 {
+  /* background: #30c18c;  */
+  border-radius: 12px;
+}
 
 .clip-card-2::before {
   clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 62%, 8% 51%);
@@ -2587,79 +2613,1811 @@ tbody tr:hover {
 
 /* Start shape section css End  */
 
+.puzzle-design-wrapper {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+}
 
+.puzzle-design-card svg {
+  width: 100%;
+  height: 356px;
+  display: block;
+}
 
-    .puzzle-design-wrapper {
-      display: flex; 
-      max-width: 1400px;
-      width: 100%;
-    } 
+.puzzle-design-card {
+  height: 100%;
+  position: relative;
+}
 
-    .puzzle-design-card svg {
-      width: 100%;
-      height: 356px;
-      display: block;
-    }
+.puzzle-design-shape-1 {
+  flex: 0 0 44%;
+}
 
-    .puzzle-design-card { 
-      height: 100%; 
-      position: relative;
-    }
+.puzzle-design-shape-2 {
+  flex: 0 0 28%;
+  transform: translateX(-20px);
+}
 
-    .puzzle-design-shape-1 { 
-      flex: 0 0 44%;
-    }
+.puzzle-design-shape-3 {
+  flex: 0 0 28%;
+  border-radius: 16px;
+  height: auto;
+}
 
-    .puzzle-design-shape-2 {
-      flex: 0 0 28%;
-      transform: translateX(-20px);
-    }
+.puzzle-design-card h5 {
+  color: #ccc;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
 
-    .puzzle-design-shape-3 { 
-      flex: 0 0 28%;
-      border-radius: 16px; 
-      height: auto; 
-    }
+.puzzle-design-card p {
+  color: #ccc;
+  transition: all 0.3s ease;
+}
 
-    .puzzle-design-card h5 { 
-      color: #ccc;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
+.puzzle-text {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  padding: 35px;
+}
 
-    .puzzle-design-card p { 
-      color: #ccc;
-      transition: all 0.3s ease;
-    }
+.puzzle-text:hover .icon img {
+  filter: grayscale(0%);
+  margin-left: 7px;
+  scale: 1.1;
+}
+.puzzle-text:hover .shap-title {
+  color: #ffbe38;
+}
 
-    .puzzle-text {
-      position: absolute;
-      top: 35px;
-      left: 0;
-      padding: 35px;
-    }
+.puzzle-design-shape-2 .puzzle-text {
+  padding-left: 70px;
+}
 
-    .puzzle-text:hover .icon img {
-      filter: grayscale(0%);
-      margin-left: 7px;
-      scale: 1.1;
-    }
-    .puzzle-text:hover .shap-title {
-      color: #ffbe38;
-    }
+.puzzle-design-shape-1 .puzzle-text {
+  padding-right: 50px;
+}
 
-    .puzzle-design-shape-2 .puzzle-text {
-      padding-left: 70px;
-    }
+.puzzle-design-buy .puzzle-text {
+  top: 0px;
+}
 
-    .puzzle-design-shape-1 .puzzle-text {
-      padding-right: 50px;
-    }
+/* Markets CSS  */
 
-    
-    .puzzle-design-buy .puzzle-text { 
-      top: 0px; 
-    } 
+section.market-marquee p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+section.market-marquee {
+  margin-top: 84px;
+  padding: 6px 0;
+  background: #1e2329;
+}
+
+section.market-marquee ul {
+  display: flex;
+  gap: 8px;
+}
+span.red-marquee {
+  color: #ff4d4f;
+}
+
+span.green-marquee {
+  color: #3ccf91;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  animation: scroll-left 80s linear infinite;
+}
+
+.marquee-content li {
+  flex: none;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.market-tabs a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 44px;
+  letter-spacing: 0;
+  color: #666666;
+  transition: 0.3s;
+}
+
+.market-tabs ul {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.market-tabs a.active {
+  color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f7a6007a;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.single-market-card {
+  padding: 16px;
+  border-radius: 8px;
+  position: relative;
+  background: #1e2329;
+}
+
+.market-overview-title h3 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 0;
+}
+
+.market-overview-title a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #fdfdfd99;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.market-overview-title a:hover {
+  color: #fff;
+}
+
+.market-overview-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+table.market-overview-table {
+  width: 100%;
+}
+
+table.market-overview-table tr td {
+  padding: 13.5px 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #fdfdfd;
+}
+
+.market-overview-table tr td:last-child {
+  text-align: end;
+}
+
+table.market-overview-table tbody tr:hover {
+  background: #00000041;
+}
+
+.red-market-text {
+  color: #ff4d4f !important;
+}
+
+td.market-logo-name {
+  display: flex;
+  gap: 8px;
+}
+
+.market-search-box span {
+  color: #666666;
+}
+
+.market-search-box input {
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid #6666;
+  padding: 4px 8px;
+  font-size: 14px;
+  width: 200px;
+  color: #ddd;
+  display: none;
+}
+
+table.dataTable {
+  background-color: transparent;
+  color: #fff;
+}
+
+.btn-trade {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: #f7a6001a;
+  color: #f7a600;
+  letter-spacing: 0;
+  text-align: right;
+  border-radius: 3px;
+  border: 0.5px solid #f7a600;
+  transition: 0.3s;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.btn-trade:hover {
+  border: 0.5px solid transparent;
+  background: #ffbe38;
+  color: #1c1c1e;
+}
+
+.cryptoTable thead tr th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #999999;
+}
+.cryptoTable tr td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fdfdfd;
+}
+
+.cryptoTable tr td span {
+  font-size: 12px;
+  color: #595959;
+}
+
+.cryptoTable tbody tr td {
+  border-top: none !important;
+}
+
+.cryptoTable thead th,
+.cryptoTable tbody td {
+  text-align: right !important;
+}
+
+.cryptoTable thead th:first-child,
+.cryptoTable tbody td:first-child {
+  text-align: left !important;
+}
+
+table.dataTable thead > tr > th:first-child::before {
+  left: 55px;
+}
+
+table.dataTable thead > tr > th:first-child::after {
+  left: 55px;
+}
+
+.cryptoTable,
+.cryptoTable tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border: none !important;
+}
+
+table.dataTable thead > tr > th.sorting_asc:before,
+table.dataTable thead > tr > th.sorting_desc:after,
+table.dataTable thead > tr > td.sorting_asc:before,
+table.dataTable thead > tr > td.sorting_desc:after {
+  opacity: 1;
+  color: #ffbe38;
+}
+
+.green-data-text {
+  color: #3ccf91 !important;
+}
+
+.red-data-text {
+  color: #ff4d4f !important;
+}
+
+td.trade-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
+}
+
+/* Make all odd and even rows transparent by default */
+#cryptoTable tbody tr:nth-child(odd),
+#cryptoTable tbody tr:nth-child(even) {
+  background-color: transparent !important;
+}
+
+/* Change background to black on hover */
+#cryptoTable tbody tr:hover {
+  background-color: #00000041 !important;
+}
+
+.cryptoTable td {
+  box-shadow: none !important;
+}
+
+ul.dtr-details {
+  width: 100%;
+}
+
+.cryptoTable .dtr-details span {
+  font-size: 12px;
+  color: #afafaf;
+}
+
+ul.dtr-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.market-tabs-search .actionTab .nav-link.active {
+  background: #4a4a4a80;
+  border-radius: 3px;
+  border: 1px solid transparent !important;
+}
+
+.market-tabs-search .actionTab .nav-item.show .nav-link {
+  color: #666666;
+}
+
+.market-tabs-search {
+  height: 30px;
+}
+
+.dataTable > tbody > tr.child ul.dtr-details > li {
+  border-bottom: 1px solid #282828 !important;
+}
+
+.top-crypto-table tr td {
+  padding: 5px 0;
+}
+
+.top-cryptos-card-main { 
+  width: 100%;
+  max-width: 400px;
+}
+
+.top-cryptos-card {
+  padding: 23px 20px; 
+  border-radius: 8px;
+  width: 100%; 
+  margin: 0 auto;
+  background: #181a20;
+  position: relative; 
+  border: 1px solid #28292b;
+} 
+
+.crypto-card-title h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #fff;
+  border-left: 3px solid #ffbe38;
+  padding-left: 10px;
+}
+
+.top-cryptos-card .actionTab {
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.top-cryptos-card .actionTab .nav-link.active {
+  color: #ffbe38 !important;
+  background: transparent;
+}
+
+.setting-time {
+  color: #e0e0e0;
+}
+
+.dataTable tbody th,
+.dataTable tbody td {
+  padding: 12px 10px !important;
+}
+
+.crypto-top-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fdfdfd;
+}
+
+.crypto-top-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crypto-top-name span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #666666 !important;
+}
+
+.crypto-top-name-currency {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+}
+
+.crypto-top-value {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #fff;
+}
+
+.crypto-top-number {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #b3b3b3;
+  /* padding: 5px 1px !important; */
+}
+
+.crypto-top-value {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-crypto-table tr td {
+  padding: 4px 6px;
+}
+
+.top-crypto-table tr:hover {
+  background: #00000041;
+}
+
+.market-tabs-search .actionTab {
+  gap: 10px;
+  align-items: center;
+}
+
+.market-tabs-search .actionTab .nav-link {
+  padding: 0 7px !important;
+  padding-bottom: 0 !important;
+  border: 1px solid transparent !important;
+}
+.crypto-top-tabs .actionTab .nav-item {
+  border: none !important;
+}
+.crypto-top-tabs .actionTab .nav-item.show .nav-link,
+.crypto-top-tabs .actionTab .nav-link.active {
+  border: none !important;
+}
+
+.market-overview-area::after {
+  height: 100%;
+  background: url(../images/markets/shape.png) no-repeat;
+}
+
+.market-crypto-tab-area .most-trending-shape {
+  top: 20%;
+}
+
+.market-overview-area .how-to-buy-shape {
+  top: 52%;
+}
+
+.market-search-box span {
+  line-height: 0;
+}
+
+.buy-sel-tabs.limit-buy-form {
+  background: #1e2329;
+  padding: 37px;
+}
+
+.trading-data-select select {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  background: transparent;
+  color: #fdfdfdcc;
+  border: 1px solid #4a4a4a;
+  border-radius: 3px;
+  padding: 3px 10px;
+  outline: none;
+}
+
+.tabs-slide {
+  position: relative;
+}
+
+.tabs-slide .owl-prev {
+  display: none !important; /* Force hide left nav in CSS too */
+}
+
+.tabs-slide .owl-prev i,
+.tabs-slide .owl-next i {
+  font-size: 10px;
+  color: #a3a3a3;
+}
+
+.tabs-slide .nav-item {
+  display: inline-block; /* let width grow naturally */
+  white-space: nowrap;
+}
+
+.tabs-slide .owl-prev,
+.tabs-slide .owl-next {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2); /* transparent bg */
+  backdrop-filter: blur(1.5px); /* <-- blur effect */
+  -webkit-backdrop-filter: blur(1.5px); /* Safari support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.tabs-slide .owl-prev {
+  left: 0;
+}
+
+.tabs-slide .owl-next {
+  right: -1px;
+}
+
+.market-tabs .tabs-slide .owl-next {
+  top: 8px;
+}
+
+.trading-data-content .top-cryptos-card {
+  max-width: 100%;
+  background: #1e2329;
+}
+
+.trading-data-select select {
+  background-color: #1e2329; /* background */
+  color: #fff; /* text color */
+}
+
+#tradingChart {
+  width: 100%;
+  height: 500px !important;
+}
+
+.trading-crypto::after {
+  top: 10%;
+}
+
+.trading-crypto .process-shape-2 {
+  bottom: 41px;
+  right: 109px;
+}
+
+.trading-crypto .most-trending-shape {
+  top: 40%;
+}
+
+/*  ============== Recurring page start ============== */
+
+/* accordion css start   */
+
+.accordion-bcoinmart {
+  background-color: #181a20;
+  padding-top: 120px;
+}
+.accordion-bcoinmart .accordion-title {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.accordion-bcoinmart .accordion-button:after {
+  margin-left: 1px;
+}
+
+/* gradina border start  */
+.border-gradient-2 {
+  border-radius: 8px;
+  background: #0b121c;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  height: 100%;
+  margin-bottom: 15px; /* Add spacing between accordion items */
+}
+
+.border-gradient-2:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #4a4a4a 0%,
+    transparent 25%,
+    transparent 75%,
+    #4a4a4a 100%
+  );
+  z-index: 0;
+}
+/* gradina border End  */
+.accordion-bcoinmart .accordion-item {
+  border: none !important;
+}
+.accordion-bcoinmart .accordion-item,
+.accordion-bcoinmart .accordion-button {
+  background-color: #1e2329;
+  color: #fff;
+  border-radius: 8px !important;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0px;
+}
+
+.accordion-bcoinmart .accordion-button {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  border: 1px solid transparent !important;
+  padding: 30px !important;
+  box-shadow: none !important;
+  align-items: start;
+}
+.accordion-bcoinmart .accordion-header,
+.accordion-bcoinmart .accordion-button.collapsed {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-bcoinmart .accordion-button:focus {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.accordion-bcoinmart .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #1e2329;
+  box-shadow: none !important;
+  border: 1px solid transparent !important;
+  border: none !important;
+  box-shadow: none;
+}
+.accordion-bcoinmart .accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-bcoinmart .accordion-collapse {
+  border: none !important;
+}
+.accordion-bcoinmart .accordion-collapse.collapse {
+  border: none;
+  border-top: none !important;
+}
+
+.accordion-bcoinmart .accordion-body {
+  padding: 30px !important;
+  padding-top: 0 !important;
+}
+.accordion-bcoinmart .accordion-button.collapsed,
+.accordion-bcoinmart .collapsing {
+  border: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.bcoinmart-accordion-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Replace Start */
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewBox='0 0 28 20' fill='none'%3E%3Cpath d='M4 6L13.9 15.9L23.8 6' stroke='%23FFBE38' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  padding-top: 20px;
+  transition: background-image 0.3s ease;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewBox='0 0 28 20' fill='none'%3E%3Cpath d='M4 6L13.9 15.9L23.8 6' stroke='%23FFFFFF' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transition: background-image 0.3s ease;
+}
+
+.accordion-button:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewBox='0 0 28 20' fill='none'%3E%3Cpath d='M4 6L13.9 15.9L23.8 6' stroke='%23FFBE38' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+/* Replace End */
+
+.accordion-bcoinmart .accordion-button.collapsed::after {
+  margin-top: 9px;
+}
+.accordion-bcoinmart .accordion-button {
+  height: auto;
+}
+/* accordion css End   */
+.recurring-page-card .custom-card {
+  padding: 20px;
+  height: 100%;
+}
+/* Learning hub css start  */
+.recurring-learning-hub {
+  padding-bottom: 120px;
+}
+.learning-hub-card {
+  background-color: #1e2329;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.learning-hub-card-img img {
+  width: 100%;
+}
+.learning-hub-card-info {
+  padding: 28px 27px;
+}
+.learning-hub-card-info p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fdfdfd;
+}
+/* Learning hub css End  */
+
+/* DOC Code start  */
+.doc-area {
+  padding-top: 120px;
+}
+.doc-text {
+  padding-top: 30px;
+}
+.doc-text-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.doc-text-content {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+.doc-text-content span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  display: block;
+}
+/* DOC Code End  */
+
+/* buy sell recurring css stat  */
+
+.recurring-exchange-buy-sell-card {
+  max-width: 490px;
+  width: 100%;
+  margin: auto;
+}
+.recurring-exchange-text .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.recurring-exchange-text .header h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.recurring-exchange-text .auto-invest {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 14px;
+  gap: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.auto-invest-icon-angle {
+  width: 6px;
+}
+
+.auto-invest img {
+  max-width: 12px;
+}
+
+.recurring-exchange-text .section {
+  margin-bottom: 24px;
+}
+
+.recurring-exchange-text .section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.recurring-exchange-text .asset-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.recurring-exchange-text .asset-box {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recurring-exchange-text .asset-box:hover {
+  background-color: #525252;
+  border-color: #666;
+}
+
+.recurring-exchange-text .asset-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recurring-exchange-text .asset-symbol {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.recurring-exchange-text .arrow {
+  color: #666;
+  font-size: 16px;
+}
+
+.recurring-exchange-text .to-text {
+  color: #888;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.recurring-exchange-text .amount-input {
+  background-color: transparent;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  padding: 13px 15px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.recurring-exchange-text .amount-input::placeholder {
+  color: #888;
+}
+.currency-suffix {
+  position: relative;
+}
+.currency-suffix::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 20px;
+  left: -10px;
+  top: 56%;
+  transform: translateY(-50%);
+  background-color: #e0e0e033;
+}
+
+.recurring-exchange-text .currency-suffix {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.recurring-exchange-text .input-container {
+  position: relative;
+}
+
+.recurring-exchange-text .repeat-dropdown {
+  background-color: #181a20;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  padding: 13px 15px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.28837 7.657L0.631374 2L2.04537 0.585999L6.99538 5.536L11.9454 0.585999L13.3594 2L7.70237 7.657C7.51485 7.84447 7.26054 7.94978 6.99538 7.94978C6.73021 7.94978 6.4759 7.84447 6.28837 7.657Z' fill='%23E0E0E0'/%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 40px;
+}
+.recurring-exchange-text .repeat-dropdown option {
+  background-color: #181a20;
+  color: #fff;
+}
+.recurring-exchange-text .repeat-dropdown option:hover {
+  background-color: #181a20 !important;
+  color: #fff;
+}
+.recurring-exchange-text .repeat-dropdown option:active {
+  background-color: #181a20 !important;
+  color: #fff;
+}
+.recurring-exchange-text .repeat-dropdown option:checked {
+  background-color: #181a20 !important;
+  color: #fff;
+}
+.asset-box .dropdown-buy-sell {
+  max-width: 100%;
+}
+.recurring-exchange-text .dropdown-buy-sell .custom-select-token {
+  padding: 13px 15px;
+  background-color: #181a20;
+}
+
+.recurring-exchange-text .continue-btn:active {
+  transform: translateY(1px);
+}
+.recurring-exchange-text .select-token::before {
+  transform: rotate(45deg);
+  margin-right: 18px;
+  transform: translateY(-50%) rotate(-47deg);
+  top: 47%;
+}
+.reference-text span {
+  color: #ffbe38;
+}
+/* buy sell recurring css end  */
+
+/*  ============== Recurring page End ============== */
+
+/*  ============== Opportunity page start ============== */
+.opportunities-main {
+  padding: 300px 0;
+}
+.opportunity-card {
+  background: #1e2329;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1.5px solid transparent;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.opportunity-card:hover {
+  border: 1.5px solid #ffbe38;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-details-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+.user-stats {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.stat-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.star-icon {
+  color: #e0e0e0;
+  font-size: 18px;
+}
+/* roi-and-chart start */
+.roi-and-chart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roi-section {
+  margin: 16px 0;
+}
+
+.roi-label p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.roi-label p span {
+  color: #3ccf91;
+}
+.chart-line {
+  color: #3ccf91;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-label {
+  color: #808080;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.stat-value {
+  color: #e0e0e0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.profit-value {
+  color: #00d4aa;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.opportunities-btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.opportunities-btn-row a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+.market-page-area {
+  margin-bottom: 30px;
+}
+
+.trading-data-content .top-crypto-table tr td {
+  padding: 5px 6px;
+}
+
+/*  ============== Recurring page End ============== */
+
+/*  ============== Opportunity page start ============== */
+.opportunities-main {
+  padding: 300px 0;
+} 
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-details-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+.user-stats {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.stat-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.star-icon {
+  color: #808080;
+  font-size: 18px;
+}
+/* roi-and-chart start */
+.roi-and-chart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roi-section {
+  margin: 16px 0;
+}
+
+.roi-label p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808080;
+}
+.roi-label p span {
+  color: #3ccf91;
+}
+.chart-line {
+  color: #3ccf91;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-label {
+  color: #808080;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.stat-value {
+  color: #e0e0e0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.profit-value {
+  color: #00d4aa;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.opportunities-btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.opportunities-btn-row a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+/* Opportunities Live Text Title  */
+.opportunities-live-text-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.opportunities-live-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+.opportunities-nav-tab {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* button  */
+.trading-data-content-text {
+  display: flex;
+  max-width: 361px;
+  width: 100%;
+  justify-content: flex-end;
+}
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.refreshBtn img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.6s ease;
+}
+
+/* Animation class */
+.spin {
+  animation: rotate360 0.6s linear;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#refreshBtn span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #e0e0e0b2;
+}
+/* Auto Trade with Experts  */
+.more-or-less {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fdfdfd99;
+  transition: 0.3s;
+}
+.more-or-less:hover {
+  color: #ffffff;
+}
+.opportunities-card-main {
+  padding-top: 30px;
+}
+
+/* .opportunities accordion  */
+.opportunities-nav-tab-title {
+  padding-bottom: 20px;
+}
+.opportunities-nav-tab-title h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+}
+.accordion-opportunity .accordion-item {
+  position: relative;
+}
+.accordion-opportunity .accordion-button {
+  flex-direction: column;
+  padding-right: 50px !important;
+}
+.accordion-opportunity .accordion-date {
+  order: 9;
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.accordion-opportunity .accordion-button::after {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.accordion-body .primary-btn {
+  display: inline-block;
+  padding: 13px 55px;
+  margin-top: 30px;
+}
+
+.cryptoTable_length {
+  display: none !important;
+}
+/*  ============== opportunity page End ============== */
+
+/* Earn Overview CSS  */
+
+.mt-85 {
+  margin-top: 85px;
+}
+
+.bcoinmart-earn-hero p {
+  font-size: 16px;
+  color: #ffffff99;
+}
+
+.bcoinmart-earn-hero p b {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.bcoinmart-earn-hero a {
+  max-width: 185px;
+  justify-content: center;
+}
+
+.earn-hero-area {
+  padding: 120px 0 71px 0;
+  background: url(../images/earn/bg.png) no-repeat scroll center center / 100%
+    100%;
+}
+
+.earn-overview-img img {
+  width: 80%;
+  margin: 0 0 0 auto;
+}
+
+.earn-overview-img {
+  text-align: right;
+}
+
+.earn-card-info p {
+  font-weight: 400;
+  font-style: 400;
+  font-size: 8.69px;
+  line-height: 14.48px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.earn-info-title {
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+.earn-star-row {
+  margin-top: 31px;
+}
+
+.earn-chart-line canvas {
+  height: 53px !important;
+  width: 65px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.popular-title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  color: #fff;
+}
+
+.popular-search input,
+.popular-select select {
+  border: 0.5px solid #666666;
+  background: #181a20;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.popular-search input:focus {
+  border:  0.5px solid #ddd;
+}
+
+.popular-search {
+  position: relative;
+}
+
+.popular-search input {
+  padding-left: 65px;
+}
+
+.popular-search img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.custom-select {
+  appearance: none; /* Chrome, Safari */
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari */
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Leave space for arrow */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+}
+
+/* Default Arrow */
+.custom-select-wrapper::after {
+  content: url("../images/earn/cavron.png");
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+  color: #555;
+  line-height: 0;
+}
+
+/* When rotated */
+.custom-select-wrapper.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* earn datatable  */
+
+.popular-datatable th{ 
+    text-align: left; 
+    font-weight: 400; 
+    font-size: 12px; 
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #999999;
+    padding: 7px 8px;
+}
+
+.popular-datatable td { 
+    font-weight: 500; 
+    font-size: 16px; 
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #FDFDFD; 
+    padding: 7px 8px;
+    position: relative;
+}
+
+.popular-datatable tr {
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.popular-datatable .coin-name-td {
+  display: flex;
+  align-items: center;
+}
+
+.popular-datatable .coin-close-logo {
+  width: 25px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-right: 6px;
+}
+
+.popular-datatable .coin-close-logo img,
+.popular-datatable .coin-close-logo .close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.popular-datatable .coin-close-logo .close-icon {
+  font-size: 16px;
+  color: #ff6666;
+  display: none;
+  width: 20px;
+  line-height: 0;
+}
+
+.popular-datatable .green-data-text {
+  color: #00ff99;
+}
+
+.popular-datatable .arrow-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.popular-datatable .shown .arrow-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.popular-datatable .subscribe-btn {
+  background-color: #f9aa1a;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popular-datatable .subscribe-btn:hover {
+  background-color: #e2940f;
+}
+
+.popular-datatable .child-row td {
+  background-color: transparent;
+}
+
+.popular-datatable table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+  border-spacing: 0 20px; 
+  border-collapse: separate;
+  table-layout: fixed;
+}
+
+.popular-datatable tbody tr:hover  {
+  background-color:#00000041;
+}
+
+.child-row .coin-close-logo {
+    width: 21px;
+}
+
+.close-icon img {
+    width: 20px !important;
+}
+
+.sub-col-width{
+  width: 150px;
+}
+
+.profit-calculation-box {
+    background: #1E2329;
+    padding: 70px;
+    border-radius: 8px; 
+    box-sizing: border-box;
+    position: relative;
+}
+.profit-calculation-box  .dropdown-buy-sell .custom-select-token { 
+    background-color: transparent;
+}
+
+.profit-calculation-box 
+.dropdown-buy-sell .dropdown-menu.show {
+    background: #1E2329;
+}
+
+.calculate-child {
+  flex: 0 0 46% !important;
+}
+
+.calculate-child-to {
+    flex: 0 0 2% !important;
+  margin-top: -23px;
+}
+
+.profit-calculation-form .asset-selector { 
+    align-items: inherit !important;  
+}
+
+.calculation-checkbox span { 
+    font-weight: 400; 
+    font-size: 18px; 
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #FFFFFF99;
+}
+
+.calculate-child label { 
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px; 
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #FFFFFF99; 
+  margin-bottom: 20px;
+}
  
-    
-/*  */
+.check-wrap input[type="checkbox"] {
+  accent-color: #ffbe38; 
+}
+
+.calculate-profite-report {
+    width: 100%;
+    max-width: 479px;
+    margin: 0 0 0 auto;
+}
+
+.cal-profit-header p { 
+    font-weight: 400; 
+    font-size: 26px; 
+    line-height: 36.5px;
+    letter-spacing: 0;
+    color: #E0E0E0;
+    margin-bottom: 22px;
+}
+
+.cal-profit-header h4 { 
+    font-weight: 500; 
+    font-size: 40px; 
+    line-height: 50.18px;
+    letter-spacing: 0;
+    margin-bottom: 45px;
+    color: #3CCF91;
+}
+
+.profite-report-content p { 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 22.81px;
+    letter-spacing: 0;
+    color: #FFFFFF99;
+} 
+
+.popular-product-area .most-trending-shape { 
+    top: 47%; 
+}
+
+.popular-product-area.connected-section::after { 
+    top: 30%; 
+}
+
+.maintenance-heading h1 {
+    text-shadow: 11px 5px 10px #F7A6003D, /* golden soft shadow */
+    4px 0px 0px #FFBE38;
+}
+
+.maintenance-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.countdown-box span {
+    padding: 19px 14px;
+    background: #FFFFFF26;
+    border-radius: 6px; 
+    font-weight: 700; 
+    font-size: 20px; 
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #fff;
+    width: 68px ;
+    display: block;
+    text-align: center;
+}
+
+.countdown-box p  { 
+  color: #FFFFFF99;
+}
+
+.mt-50 {
+  margin-top: 52px;
+}
+
+.countdown-box{
+  gap: 3px;
+}
+
+.countdown-area{ 
+  font-weight: 400; 
+  font-size: 18px; 
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #FFFFFF99;
+  margin-bottom: 10px;
+}
+
+.maintenance-button{
+  margin: 52px 0 106px 0;
+} 
+
+.maintenance-thumbnails {
+    height: 700px;
+    display: flex;
+    align-items: end;
+}
+
+.maintenance-area 
+.most-trending-shape { 
+    top: 48%; 
+}
+
+.maintenance-area  .connected-section::after { 
+    top: 35%; 
+}

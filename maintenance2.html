@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title></title>
+      <link rel="icon" type="image/x-icon" href="assets/images/favicon.webp">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+         .line-2 {
+            height: 1px;
+            width: 100%;
+            background-color: #FFFFFF1A;
+         }
+         .mt-100 {
+            margin-top: 100px;
+         }
+         .rotation i {
+            transform: rotate(-40deg);
+         }
+         a {
+            text-decoration: none;
+         }
+         @keyframes rotate360 {
+            from {
+               transform: rotate(0deg);
+            }
+
+            to {
+               transform: rotate(360deg);
+            }
+         }
+         .rotating-positive-360 {
+            animation: rotate360 20s linear infinite;
+         }
+         @keyframes rotate-360 {
+            from {
+               transform: rotate(0deg);
+            }
+
+            to {
+               transform: rotate(-360deg);
+            }
+         }
+         .rotating-negative-360 {
+            animation: rotate-360 20s linear infinite;
+         }
+         @keyframes zoomInOut {
+            0% {
+               transform: scale(0.8);
+            }
+
+            50% {
+               transform: scale(1);
+            }
+
+            100% {
+               transform: scale(0.8);
+            }
+         }
+         .zooming-zooming-out {
+            animation: zoomInOut 2s ease-in-out infinite;
+         }
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+         .header-logo img {
+            width: 177px;
+         }
+         .time-label {
+            font-size: 16px;
+            text-align: center;
+            color: #FFFFFFCC;
+         }
+         .time-value {
+            font-weight: 500;
+            font-size: 44px;
+            text-align: center;
+            color: #fff;
+         }
+         .countdown-area ul li:nth-child(even) {
+            margin-top: -25px;
+            font-weight: 500;
+            font-size: 44px;
+            color: #fff;
+         }
+         .countdown-area h5 {
+            font-size: 22px;
+            font-weight: 700;
+         }
+         .maintenance-thumbnails-icon-1 {
+            position: absolute;
+            left: 20%;
+            width: 160px;
+            top: -10px;
+         }
+         .maintenance-thumbnails-icon-2 {
+            position: absolute;
+            right: 33%;
+            width: 120px;
+            top: -10px;
+         }
+         .maintenance-thumbnails-icon-3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100px;
+            bottom: 30px;
+         }
+         .maintenance-section:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('assets/images/bg/maintenance.png');
+            background-size: cover;
+            background-position: center center;
+            z-index: -2;
+         }
+         .payment-method li a img {
+            max-height: 28px;
+            width: auto;
+         }
+         .common-heading-area p {
+            font-size: 18px;
+            line-height: 30px;
+            color: #04151F;
+         }
+         .social-menu ul li a {
+            background-color: #FFFFFF1A;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            transition: 0.5s;
+            border-radius: 50%;
+         }
+         .social-menu ul {
+            gap: 14px;
+         }
+         .primary-btn {
+            font-size: 18px;
+            letter-spacing: -0.005em;
+            padding: 10px 22px;
+            display: inline-block;
+            color: #23262f !important;
+            background: #f5c448;
+            transition: 0.5s;
+            border: 1px solid transparent;
+            border-radius: 10px;
+         }
+         .countdown-area h5 {
+            font-size: 22px;
+            font-weight: 700;
+         }
+         h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 16px;
+         }
+         h1 span {
+            color: #F5C448;
+         }
+         .social-menu ul li a img {
+            margin: 0 !important;
+            width: 38px;
+         }
+         .g-20 {
+            gap: 20px;
+         }
+         .mt-20 {
+            margin-top: 20px;
+         }
+         .mt-40 {
+            margin-top: 40px;
+         }
+         .social-menu ul li a i {
+            font-size: 20px;
+            width: 20px;
+            color: #fff;
+         }
+         .maintenance-thumbnails-icon-2 {
+            position: absolute;
+            right: 33%;
+            width: 120px;
+            top: -10px;
+         }
+         .maintenance-thumbnails-icon-1 {
+            position: absolute;
+            left: 20%;
+            width: 160px;
+            top: -10px;
+         }
+         .maintenance-thumbnails-icon-3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100px;
+            bottom: 30px;
+         }
+         .social-menu ul li a:hover {
+            transform: translateY(-5px);
+            background-color: #f5c448;
+            box-shadow: rgba(233, 199, 9, 0.25) 0px 20px 55px, rgba(228, 155, 19, 0.12) 0px -12px 30px, rgba(202, 206, 5, 0.12) 0px 4px 6px, rgba(229, 233, 11, 0.17) 0px 12px 13px, rgba(230, 178, 8, 0.6) 0px -3px 5px;
+         }
+         @media (min-width: 992px) {
+            .maintenance-section:after {
+               height: 100vh;
+            }
+         }
+         @media (max-width: 1280px) {
+            h1 {
+               font-size: 40px;
+               line-height: 50px;
+            }
+         }
+
+         @media (max-width: 991px) {
+            h1 {
+               font-size: 35px;
+               line-height: 50px;
+            }
+         }
+         @media all and (max-width:767px) {
+            .social-menu ul li a {
+               height: 45px;
+               width: 45px;
+            }
+            .mt-100 {
+               margin-top: 80px;
+            }
+            .maintenance-thumbnails-icon-3 {
+               bottom: 10px;
+            }
+            .maintenance-thumbnails {
+               margin-top: 30px;
+            }
+            .maintenance-thumbnails {
+               padding-bottom: 40px;
+            }
+            .countdown-area .g-20 {
+               gap: 10px;
+            }
+            .social-menu ul li a {
+               height: 45px;
+               width: 45px;
+            }
+            .common-heading-area p {
+               font-size: 15px;
+               line-height: 28px;
+               text-align: center;
+            }
+         }
+         @media (max-width: 575px) {
+            .maintenance-thumbnails-icon-1 {
+               left: 8%;
+               width: 130px;
+               top: -30px;
+            }
+            .primary-btn {
+               font-size: 16px;
+            }
+         }
+      </style>
+   </head>
+   <body style="background:#010C1C;">
+       <div class="maintenance-section position-relative">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="header-logo text-center mt-4">
+                     <a href="index.html">
+                        <img src="assets/images/logo.png" alt="logo">
+                     </a>
+                   </div>
+                   <div class="line-2 mt-20"></div>
+               </div>
+            </div>
+            <div class="maintenance-body mt-100">
+               <div class="row gy-5 align-items-center">
+                  <div class="col-lg-6">
+                     <div class="common-heading-area text-center text-lg-start">
+                        <h1>The Website Under <span class="color-f5">Maintenance</span>
+                         </h1>
+                        <p class="text-white">We are currently performing scheduled updates to enhance our services. The website will be back soon. Thank you for your patience!</p>
+                     </div>
+                     <div class="countdown-area mt-30 text-center text-lg-start">
+                        <h5 class="text-white">Your beloved site will be available in:</h5>
+                        <ul class="d-flex align-items-center g-20 mt-2 justify-content-center justify-content-lg-start">
+                           <li class="d-flex flex-column justify-content-center">
+                              <span class="time-value">03</span>
+                              <span class="time-label">Days</span>
+                           </li>
+                            <li>:</li>
+                            <li class="d-flex flex-column justify-content-center">
+                              <span class="time-value">04</span>
+                              <span class="time-label">Hours</span>
+                           </li>
+                           <li>:</li>
+                           <li class="d-flex flex-column justify-content-center">
+                              <span class="time-value">24</span>
+                              <span class="time-label">Minutes</span>
+                           </li>
+                           <li>:</li>
+                           <li class="d-flex flex-column justify-content-center">
+                              <span class="time-value">32</span>
+                              <span class="time-label">Seconds</span>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="d-flex flex-wrap align-items-center g-20 mt-40 justify-content-center justify-content-lg-start">
+                        <div class="text-start">
+                           <a href="index.html" class="primary-btn">Back to Home <span class="rotation ml-5"><i class="fa-solid fa-arrow-right"></i></span></a>
+                        </div>
+                        <div class="social-menu ms-3">
+                           <ul class="d-flex align-items-center">
+                              <li><a href="https://www.facebook.com/AndroMarkets/"><i class="fa fab fa-facebook"></i></a></li>
+                              <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fandro_markets">
+                                 <i class="fa-brands fa-x-twitter"></i>
+                              </a></li>
+                              <li><a href="https://t.me/AndroMarkets">
+                                 <i class="fa-brands fa-telegram"></i>
+                              </a></li>
+                              <li><a href="https://www.instagram.com/andromarkets/"><i class="fa-brands fa-instagram"></i></a></li>
+                              <li><a href="https://www.tradingview.com/u/AndroMarkets/"><img src="assets/images/icon/tading-view.png" alt="icon"></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 offset-md-2 offset-lg-0 col-md-8">
+                     <div class="maintenance-thumbnails position-relative">
+                        <img src="assets/images/thumbnails/maintenance.png" alt="img" class="w-100">
+                        <img src="assets/images/icon/setting-icon-1.png" alt="icon" class="maintenance-thumbnails-icon-1 rotating-positive-360">
+                        <img src="assets/images/icon/setting-icon-2.png" alt="icon" class="maintenance-thumbnails-icon-2 rotating-negative-360">
+                        <img src="assets/images/icon/gif.png" alt="icon" class="maintenance-thumbnails-icon-3 zooming-zooming-out">
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+         // Set the countdown target date
+         const targetDate = new Date("2025-07-28T00:00:00").getTime(); // Change this date
+         function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+            if (timeLeft <= 0) {
+               document.querySelectorAll(".time-value").forEach(el => el.textContent = "00");
+               clearInterval(countdownInterval);
+               return;
+            }
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.querySelectorAll(".time-value")[0].textContent = days.toString().padStart(2, '0');
+            document.querySelectorAll(".time-value")[1].textContent = hours.toString().padStart(2, '0');
+            document.querySelectorAll(".time-value")[2].textContent = minutes.toString().padStart(2, '0');
+            document.querySelectorAll(".time-value")[3].textContent = seconds.toString().padStart(2, '0');
+         }
+         // Update countdown every second
+         const countdownInterval = setInterval(updateCountdown, 1000);
+         updateCountdown(); // Initial call to set values immediately
+      </script>
+   </body>
+</html>
