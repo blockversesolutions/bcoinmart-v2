@@ -268,21 +268,21 @@
     padding-right: 50px !important;
   }
   .maintenance-left {
-    position: inherit; 
+    position: inherit;
   }
-  .maintenance-button { 
+  .maintenance-button {
     text-align: center;
   }
   .maintenance-body {
     margin-top: 30px;
   }
   .maintenance-thumbnails {
-    height: auto; 
+    height: auto;
   }
-  
+
   .maintenance-heading p {
-      font-size: 16px !important;
-      line-height: 24px !important; 
+    font-size: 16px !important;
+    line-height: 24px !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -299,8 +299,42 @@
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
   }
+  .signup-img {
+    display: none;
+  }
+  .information-form  #scroll-box {
+      max-height: 100% !important;
+  }
+  .signup-content { 
+      padding-bottom: 0;
+  }
+  .signup-content {
+    padding-right: 25px 45px;
+  }
+  .sing-up-social ul li a {
+    padding: 12px;
+  }
+  .sing-up-social ul li a img {
+    width: 25px;
+  }
+  .form-input.checkbox-input {
+    margin: 15px 0 18px 0;
+  }
+  .sign-up-area {
+    margin: 15px;
+    height: auto;
+  }
   .top-cryptos-card-main {
     margin: 0 auto;
+  }
+
+  .form-input label {
+    text-align: left;
+  }
+
+  .signup-content {
+    text-align: center;
+    padding: 25px;
   }
   .puzzle-design-buy .puzzle-text {
     top: -20px;
@@ -750,6 +784,10 @@
   .bcoinmart-accordion-body {
     font-size: 12px;
     padding-top: 0;
+  }
+
+  .signup-content {
+    padding: 15px 0;
   }
   .calculate-child label {
     font-size: 12px;
