@@ -302,11 +302,11 @@
   .signup-img {
     display: none;
   }
-  .information-form  #scroll-box {
-      max-height: 100% !important;
+  .information-form #scroll-box {
+    max-height: 100% !important;
   }
-  .signup-content { 
-      padding-bottom: 0;
+  .signup-content {
+    padding-bottom: 0;
   }
   .signup-content {
     padding-right: 25px 45px;
@@ -320,14 +320,14 @@
   .form-input.checkbox-input {
     margin: 15px 0 18px 0;
   }
-  .sign-up-area { 
+  .sign-up-area {
     padding: 25px;
-    background: url(../images/sign-up/signup.png) no-repeat scroll bottom left / cover ; 
+    background: url(../images/sign-up/signup.png) no-repeat scroll bottom left /
+      cover;
   }
   .top-cryptos-card-main {
     margin: 0 auto;
   }
-  
 
   .form-input label {
     text-align: left;
@@ -635,8 +635,15 @@
     line-height: 23px;
     font-weight: 400;
   }
+  .signup-content h3 {
+    font-size: 22px;
+    line-height: 24px;
+  }
   input::placeholder {
-      font-size: 10px !important;
+    font-size: 10px !important;
+  }
+  .form-input input::placeholder {
+    font-size: 10px;
   }
   .puzzle-design-card {
     flex: 0 0 100%;
