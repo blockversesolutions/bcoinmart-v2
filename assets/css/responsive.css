@@ -30,6 +30,10 @@
   .sign-up-box {
     max-width: 310px;
   }
+  .secondary-btn,
+  .primary-btn {
+    justify-content: center;
+  }
   .calculate-child label {
     font-size: 14px;
   }
@@ -311,7 +315,7 @@
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
   }
-  .common-heading-section p { 
+  .common-heading-section p {
     font-size: 14px;
     padding: 0 15px;
     line-height: 24px;
