@@ -22,6 +22,9 @@
   .sign-up-box {
     max-width: 408px;
   }
+  #navbarText .nav-link {
+    padding: 0 10px !important;
+}
 }
 @media screen and (max-width: 1199px) {
   .sign-up-box {
@@ -97,6 +100,11 @@
 @media screen and (max-width: 991px) {
   .popular-grid {
     justify-content: start !important;
+  }
+
+  .buy-trasection-search-flex {
+    flex-direction: column;
+    gap: 25px;
   }
   .puzzle-design-buy .puzzle-text {
     top: 0;
@@ -294,10 +302,17 @@
     flex-wrap: wrap;
     gap: 30px;
   }
+  .p2p-tabs-area .tabs-slide {
+    gap: 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
+  }
+
+  .sign-up-box-content {
+    background: #181a20f5;
   }
   .signup-img {
     display: none;
@@ -325,6 +340,7 @@
     background: url(../images/sign-up/signup.png) no-repeat scroll bottom left /
       cover;
   }
+
   .top-cryptos-card-main {
     margin: 0 auto;
   }
@@ -635,6 +651,18 @@
     line-height: 23px;
     font-weight: 400;
   }
+  .buy-sell-input .btn.custom-select-token {
+    padding: 6px 10px !important;
+  }
+  .buy-sell-price-select {
+    width: 204px !important;
+  }
+  .buy-sell-search-box {
+    flex-direction: column;
+  }
+  .buy-trasection-search-flex {
+    gap: 10px;
+  }
   .signup-content h3 {
     font-size: 22px;
     line-height: 24px;
@@ -645,9 +673,7 @@
   .form-input input::placeholder {
     font-size: 10px !important;
   }
-  .sign-up-box-content { 
-    background: #181a20f5; 
-  }
+
   .puzzle-design-card {
     flex: 0 0 100%;
   }
