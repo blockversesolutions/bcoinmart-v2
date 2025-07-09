@@ -24,7 +24,7 @@
   }
   #navbarText .nav-link {
     padding: 0 10px !important;
-}
+  }
 }
 @media screen and (max-width: 1199px) {
   .sign-up-box {
@@ -297,6 +297,7 @@
   .tabs-slide .owl-nav {
     display: none !important;
   }
+
   .tabs-slide {
     display: flex !important;
     flex-wrap: wrap;
@@ -310,7 +311,11 @@
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
   }
-
+  .common-heading-section p { 
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 24px;
+  }
   .sign-up-box-content {
     background: #181a20f5;
   }
