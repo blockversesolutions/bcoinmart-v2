@@ -70,8 +70,30 @@
                                                     <a
                                                     class="dropdown-item"
                                                     href="#"
+                                                    data-value="Dubai"
+                                                    data-image="assets/images/sign-up/bd.png"
+                                                    >
+                                                <img src="assets/images/sign-up/bd.png" alt="Card" />
+                                                    Dubai
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                    class="dropdown-item"
+                                                    href="#"
+                                                    data-value="USA"
+                                                    data-image="assets/images/sign-up/bd.png"
+                                                    >
+                                                <img src="assets/images/sign-up/bd.png" alt="Card" />
+                                                    USA
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                    class="dropdown-item"
+                                                    href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -82,7 +104,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -93,7 +115,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -104,7 +126,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -115,29 +137,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
-                                                    >
-                                                <img src="assets/images/sign-up/bd.png" alt="Card" />
-                                                    Bangladesh
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
-                                                    >
-                                                <img src="assets/images/sign-up/bd.png" alt="Card" />
-                                                    Bangladesh
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -166,7 +166,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -177,7 +177,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -188,7 +188,7 @@
                                                     class="dropdown-item"
                                                     href="#"
                                                     data-value="Bangladesh"
-                                                    data-image="assets/images/buy/master.png"
+                                                    data-image="assets/images/sign-up/bd.png"
                                                     >
                                                 <img src="assets/images/sign-up/bd.png" alt="Card" />
                                                     Bangladesh
@@ -282,6 +282,42 @@
             dropdown.style.height = 'auto';
             dropdown.style.overflowY = 'visible';
             }
+        });
+
+
+        // custom select 
+        $(".dropdown-buy-sell").each(function () {
+          const dropdown = $(this);
+          const button = dropdown.find(".custom-select-token");
+          const menu = dropdown.find(".dropdown-menu");
+
+          // Disable Bootstrap default dropdown behavior
+          button.attr("data-bs-toggle", "");
+
+          button.on("click", function (e) {
+            e.preventDefault();
+
+            if (menu.hasClass("show")) {
+              // Hide dropdown
+              menu.removeClass("show");
+              setTimeout(() => menu.css("display", "none"), 200);
+            } else {
+              // Show dropdown
+              menu.css("display", "block");
+              setTimeout(() => menu.addClass("show"), 10);
+            }
+          });
+
+          menu.find(".dropdown-item").on("click", function (e) {
+            e.preventDefault();
+            const value = $(this).data("value");
+            const image = $(this).data("image");
+
+            button.html(`<img src="${image}" alt="${value}"> <span>${value}</span>`);
+
+            menu.removeClass("show");
+            setTimeout(() => menu.css("display", "none"), 200);
+          });
         });
         </script>
 

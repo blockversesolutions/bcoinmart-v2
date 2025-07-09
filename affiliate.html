@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affiliate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+    <!-- datatable cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">
+                          <span>English (us)</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>France</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Espen</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Bangla</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Arabic</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Italy</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Portugal</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div
+              class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
+              id="navbarText"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="buy.html">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="markets.html">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                 <li class="nav-item "><a class="nav-link" href="earn.html">Earn</a></li>
+                 
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">More</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/icon/languages.png"
+                          alt="icon"
+                        />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">
+                            <span>English (us)</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>France</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Espen</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Bangla</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Arabic</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Italy</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Portugal</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span
+              class="icon-bar btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div
+                class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+              >
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="input-shadow"
+                />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="buy.html">Buy Crypto</a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="markets.html">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+               <li class="nav-item "><a class="nav-link" href="earn.html">Earn</a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">More</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-shadow"
+                  />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <main class="main-area mt-85">
+      <!-- start earn hero area  -->
+      <div class="earn-hero-area">
+        <div class="container"> 
+          <div class="row g-4 mt-60">
+            <div class="col-md-6">
+              <div class="bcoinmart-earn-hero">
+                <div class="common-heading-section text-center text-md-start affiliate-hero">
+                  <h2 class="text-primary">JOIN <span>BcoinMart</span> AFFILIATE  PROGRAM</h2>
+                  <p class="text-white">Start earning today with the world's leading crypto platform.</p>
+                  <a href="#" class="primary-btn mt-60">Join Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="earn-overview-img">
+                <img
+                  src="assets/images/affiliate/hero.png"
+                  alt="Bcoinmart Earn Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- start earn hero area  --> 
+
+      <!-- start affiliate benifits area -->
+       <section class="start-process-section mt-120 position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="offset-md-2 col-md-8">
+              <div class="common-heading-section text-center">
+                <h2 class="text-primary">BcoinMart Affiliate’s Benefits</h2>
+                <p>
+                  Earn more with high commissions, exclusive campaigns, and top crypto products. Monetize your network and boost your income effortlessly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4 mt-5">
+            <div class="col-xl-4 col-md-6">
+              <div class="card-gradient-border h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
+                <div class="process-card d-flex flex-column justify-content-between">
+                  <div class="process-card-content text-left">
+                    <h4 class="d-flex align-items-start g-15 flex-column text-white justify-content-left">
+                      <img src="assets/images/icon/create.png" alt="icon"> 
+                      Massive Commissions, Bigger Rewards
+                    </h4>
+                    <p>
+                      Earn up to 50% commission per referral and unlock monthly bonuses up to $72,000—just by sharing.
+                    </p>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="card-gradient-border h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
+                <div class="process-card d-flex flex-column justify-content-between">
+                  <div class="process-card-content text-left">
+                    <h4 class="d-flex align-items-start g-15 flex-column text-white justify-content-left">
+                      <img src="assets/images/icon/deposit.png" alt="icon"> 
+                      Earn More with Every Trade
+                    </h4>
+                    <p>
+                      Tap into industry-leading products like Spot, Futures, Margin, Pool, and Copy Trading all on the top exchange by volume.
+                    </p>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="card-gradient-border h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
+                <div class="process-card d-flex flex-column justify-content-between">
+                  <div class="process-card-content text-left">
+                    <h4 class="d-flex align-items-start g-15 flex-column text-white justify-content-left">
+                      <img src="assets/images/icon/trading.png" alt="icon"> 
+                      Boost Engagement with Exclusive Campaigns
+                    </h4>
+                    <p>
+                      Access affiliate only promotions, both online and offline, to grow your audience and monetize like a pro.
+                    </p>
+                  </div> 
+                </div>
+              </div>
+            </div>
+ 
+
+          </div>
+        </div>
+        <div class="most-trending-shape">
+          <img src="assets/images/buy/bitcoin/bticoin.png" alt="">
+        </div>
+        <div class="process-shape-2">
+          <img src="assets/images/buy/withdraw/2.png" alt="">
+        </div>
+        <div class="process-shape-3">
+          <img src="assets/images/buy/withdraw/3.png" alt="">
+        </div>
+      </section>
+      <!-- end affiliate benifits area -->
+
+      <!-- start popular accordion  -->
+      <section class="accordion-bcoinmart accordion-opportunity mb-120">
+        <div class="container">
+            <div class="common-heading-section text-center text-md-start">
+                <h2 class="text-white">Frequently Asked Questions</h2>
+            </div>
+            <div class="row mt-60">
+                <div class="col-md-12">
+                    <div class="accordion-content">
+                    <div class="accordion" id="accordionExample">
+                        <div class="border-gradient-2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's stand-ard dummy text ever since
+                                 
+                            </button>
+                            
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="bcoinmart-accordion-body">
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default
+                                model text, and a search for 'lorem ipsum' will uncover.
+                                </p>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="border-gradient-2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's stand-ard dummy text ever since
+                                 
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="bcoinmart-accordion-body">
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default
+                                model text, and a search for 'lorem ipsum' will uncover.
+                                </p>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="border-gradient-2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's stand-ard dummy text ever since
+                                 
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="bcoinmart-accordion-body">
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default
+                                model text, and a search for 'lorem ipsum' will uncover.
+                                </p>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="border-gradient-2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's stand-ard dummy text ever since
+                                 
+                            </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="bcoinmart-accordion-body">
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default
+                                model text, and a search for 'lorem ipsum' will uncover.
+                                </p>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="border-gradient-2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's stand-ard dummy text ever since
+                                 
+                            </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="bcoinmart-accordion-body">
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default
+                                model text, and a search for 'lorem ipsum' will uncover.
+                                
+                                </p>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- end popular accordion  -->
+
+
+
+    </main>
+
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo text-center text-sm-start">
+                <a href="index.html">
+                  <img
+                    class="footer-img"
+                    src="assets/images/logo.png"
+                    alt="logo"
+                  />
+                </a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user
+                  experience with fast transactions and top-notch security for
+                  your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  About
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Services
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Platforms
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Product
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row gy-3 align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title text-center text-sm-start">
+                  Follow Us
+                </h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-solid fa-location-arrow"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer text-center text-sm-start">
+                Disclaimer: Bcoinmart provides general information only and does
+                not offer financial or investment advice. Trading cryptoassets
+                involves significant risk and can result in loss of funds. You
+                are responsible for your own tax obligations and should seek
+                independent advice.Some products may be unregulated or
+                restricted in certain regions. Bcoinmart’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- datatable  -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <!-- owl carousel  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    
+    <script>
+
+    // custom dropdown
+      $(document).ready(function () {
+        $(".dropdown-buy-sell").each(function () {
+          const dropdown = $(this);
+          const button = dropdown.find(".custom-select-token");
+          const menu = dropdown.find(".dropdown-menu");
+
+          // Disable Bootstrap default dropdown behavior
+          button.attr("data-bs-toggle", "");
+
+          button.on("click", function (e) {
+            e.preventDefault();
+
+            if (menu.hasClass("show")) {
+              // Hide dropdown
+              menu.removeClass("show");
+              setTimeout(() => menu.css("display", "none"), 200);
+            } else {
+              // Show dropdown
+              menu.css("display", "block");
+              setTimeout(() => menu.addClass("show"), 10);
+            }
+          });
+
+          menu.find(".dropdown-item").on("click", function (e) {
+            e.preventDefault();
+            const value = $(this).data("value");
+            const image = $(this).data("image");
+
+            button.html(`<img src="${image}" alt="${value}"> <span>${value}</span>`);
+
+            menu.removeClass("show");
+            setTimeout(() => menu.css("display", "none"), 200);
+          });
+        });
+
+        // Click outside closes all open dropdowns
+        $(document).on("click", function (e) {
+          $(".dropdown-buy-sell").each(function () {
+            const dropdown = $(this);
+            const menu = dropdown.find(".dropdown-menu");
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0 && menu.hasClass("show")) {
+              menu.removeClass("show");
+              setTimeout(() => menu.css("display", "none"), 200);
+            }
+          });
+        });
+      });
+
+
+        
+      // popular datatable
+      const childData = {
+        1: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        2: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        3: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        4: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        5: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        6: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        7: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        8: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        9: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        10: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+        11: [
+          { type: "Simple Earn", apr: "11.3%", term: "Flexible", duration: "Flexible" },
+          { type: "Dual Investment", apr: "3.65%~138.27%", term: "7 Days",  duration: "Locked"  },
+        ],
+      };
+
+      $(document).on("click", ".main-row", function () {
+        const tr = $(this);
+        const id = tr.data("id");
+
+        if (tr.hasClass("shown")) {
+          // Collapse
+          tr.removeClass("shown");
+          tr.find(".logo-earn-popuplar-logo").show();
+          tr.find(".close-icon").hide();
+          tr.nextUntil(".main-row").remove();
+        } else {
+          // Expand
+          tr.addClass("shown");
+          tr.find(".logo-earn-popuplar-logo").hide();
+          tr.find(".close-icon").show();
+
+          const rows = childData[id]
+            .map(
+              (item) => `
+            <tr class="child-row">
+            <td>
+                <div class="coin-close-logo"><span class="close-icon" style="opacity: 0;">✖</span></div>
+                ${item.type}
+            </td>
+            <td class="green-data-text">${item.apr}</td>
+            <td>${item.duration}</td>
+            <td class="text-end sub-col-width"><button class="subscribe-btn">Subscribe</button></td>
+            </tr>
+        `
+            )
+            .join("");
+
+          tr.after(rows);
+        }
+      });
+
+      
+
+      // spark chart for earn card
+
+      function renderSparkline(id, data, color = "lime") {
+        new Chart(document.getElementById(id), {
+          type: "line",
+          data: {
+            labels: data.map((_, i) => i),
+            datasets: [
+              {
+                data: data,
+                borderColor: color,
+                borderWidth: 1.5,
+                pointRadius: 0,
+                fill: false,
+                tension: 0.3,
+              },
+            ],
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            responsive: false,
+            scales: {
+              x: { display: false },
+              y: { display: false },
+            },
+            elements: {
+              line: { tension: 0.3 },
+            },
+          },
+        });
+      }
+      renderSparkline(
+        "spark-chart1",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart2",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart3",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+      renderSparkline(
+        "spark-chart4",
+        [2, 33, 22, 38, 60, 40, 45, 28, 55, 45],
+        "#1ECB4F"
+      );
+   
+
+      document
+        .querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item")
+        .forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const image = this.dataset.image;
+            const value = this.dataset.value;
+
+            const dropdown = this.closest(".dropdown");
+            const button = dropdown.querySelector(".select-token");
+
+            // Just update button content
+            button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          });
+        });
+    </script> 
+  </body>
+</html>

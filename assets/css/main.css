@@ -2351,7 +2351,7 @@ tbody tr:hover {
 }
 
 .custom-card {
-  background: #1E2329;
+  background: #1e2329;
   padding: 30px;
   color: #fff;
   min-height: 260px;
@@ -2364,11 +2364,11 @@ tbody tr:hover {
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
-  border: 1px solid transparent ;
+  border: 1px solid transparent;
 }
 
 .custom-card:hover {
-  border: 1px solid #ffbe38 ; 
+  border: 1px solid #ffbe38;
 }
 
 .shap-title {
@@ -2445,21 +2445,22 @@ tbody tr:hover {
   clip-path: url(#roundedShape2);
 }
 
-.header-area .navbar-nav .nav-link.active, .header-area .navbar-nav .nav-link.show {
-    color: #ffbe38;
+.header-area .navbar-nav .nav-link.active,
+.header-area .navbar-nav .nav-link.show {
+  color: #ffbe38;
 }
 
-.trading-data-select.custom-select-wrapper { 
-    width: 118px;
+.trading-data-select.custom-select-wrapper {
+  width: 118px;
 }
 
-.trading-data-select.custom-select-wrapper::after { 
-    right: 8px; 
+.trading-data-select.custom-select-wrapper::after {
+  right: 8px;
 }
 
 .opportunity-card .graph canvas {
-    width: 71px !important;
-    height: 42px !important;
+  width: 71px !important;
+  height: 42px !important;
 }
 
 /* puzzle shape design  */
@@ -3001,20 +3002,20 @@ ul.dtr-details li {
   padding: 5px 0;
 }
 
-.top-cryptos-card-main { 
+.top-cryptos-card-main {
   width: 100%;
   max-width: 400px;
 }
 
 .top-cryptos-card {
-  padding: 23px 20px; 
+  padding: 23px 20px;
   border-radius: 8px;
-  width: 100%; 
+  width: 100%;
   margin: 0 auto;
   background: #181a20;
-  position: relative; 
+  position: relative;
   border: 1px solid #28292b;
-} 
+}
 
 .crypto-card-title h3 {
   font-weight: 600;
@@ -3777,7 +3778,7 @@ ul.dtr-details li {
 /*  ============== Opportunity page start ============== */
 .opportunities-main {
   padding: 300px 0;
-} 
+}
 
 .card-header {
   display: flex;
@@ -4091,7 +4092,7 @@ ul.dtr-details li {
 }
 
 .popular-search input:focus {
-  border:  0.5px solid #ddd;
+  border: 0.5px solid #ddd;
 }
 
 .popular-search {
@@ -4147,24 +4148,24 @@ ul.dtr-details li {
 
 /* earn datatable  */
 
-.popular-datatable th{ 
-    text-align: left; 
-    font-weight: 400; 
-    font-size: 12px; 
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #999999;
-    padding: 7px 8px;
+.popular-datatable th {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #999999;
+  padding: 7px 8px;
 }
 
-.popular-datatable td { 
-    font-weight: 500; 
-    font-size: 16px; 
-    line-height: 24px;
-    letter-spacing: 0;
-    color: #FDFDFD; 
-    padding: 7px 8px;
-    position: relative;
+.popular-datatable td {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #fdfdfd;
+  padding: 7px 8px;
+  position: relative;
 }
 
 .popular-datatable tr {
@@ -4241,41 +4242,40 @@ ul.dtr-details li {
   width: 100%;
   border-collapse: collapse;
   background-color: transparent;
-  border-spacing: 0 20px; 
+  border-spacing: 0 20px;
   border-collapse: separate;
   table-layout: fixed;
 }
 
-.popular-datatable tbody tr:hover  {
-  background-color:#00000041;
+.popular-datatable tbody tr:hover {
+  background-color: #00000041;
 }
 
 .child-row .coin-close-logo {
-    width: 21px;
+  width: 21px;
 }
 
 .close-icon img {
-    width: 20px !important;
+  width: 20px !important;
 }
 
-.sub-col-width{
+.sub-col-width {
   width: 150px;
 }
 
 .profit-calculation-box {
-    background: #1E2329;
-    padding: 70px;
-    border-radius: 8px; 
-    box-sizing: border-box;
-    position: relative;
+  background: #1e2329;
+  padding: 70px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
 }
-.profit-calculation-box  .dropdown-buy-sell .custom-select-token { 
-    background-color: transparent;
+.profit-calculation-box .dropdown-buy-sell .custom-select-token {
+  background-color: transparent;
 }
 
-.profit-calculation-box 
-.dropdown-buy-sell .dropdown-menu.show {
-    background: #1E2329;
+.profit-calculation-box .dropdown-buy-sell .dropdown-menu.show {
+  background: #1e2329;
 }
 
 .calculate-child {
@@ -4283,229 +4283,226 @@ ul.dtr-details li {
 }
 
 .calculate-child-to {
-    flex: 0 0 2% !important;
+  flex: 0 0 2% !important;
   margin-top: -23px;
 }
 
-.profit-calculation-form .asset-selector { 
-    align-items: inherit !important;  
+.profit-calculation-form .asset-selector {
+  align-items: inherit !important;
 }
 
-.calculation-checkbox span { 
-    font-weight: 400; 
-    font-size: 18px; 
-    line-height: 30px;
-    letter-spacing: 0;
-    color: #FFFFFF99;
-}
-
-.calculate-child label { 
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 18px; 
+.calculation-checkbox span {
+  font-weight: 400;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: 0;
-  color: #FFFFFF99; 
+  color: #ffffff99;
+}
+
+.calculate-child label {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #ffffff99;
   margin-bottom: 20px;
 }
- 
+
 .check-wrap input[type="checkbox"] {
-  accent-color: #ffbe38; 
+  accent-color: #ffbe38;
 }
 
 .calculate-profite-report {
-    width: 100%;
-    max-width: 479px;
-    margin: 0 0 0 auto;
+  width: 100%;
+  max-width: 479px;
+  margin: 0 0 0 auto;
 }
 
-.cal-profit-header p { 
-    font-weight: 400; 
-    font-size: 26px; 
-    line-height: 36.5px;
-    letter-spacing: 0;
-    color: #E0E0E0;
-    margin-bottom: 22px;
+.cal-profit-header p {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 36.5px;
+  letter-spacing: 0;
+  color: #e0e0e0;
+  margin-bottom: 22px;
 }
 
-.cal-profit-header h4 { 
-    font-weight: 500; 
-    font-size: 40px; 
-    line-height: 50.18px;
-    letter-spacing: 0;
-    margin-bottom: 45px;
-    color: #3CCF91;
+.cal-profit-header h4 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50.18px;
+  letter-spacing: 0;
+  margin-bottom: 45px;
+  color: #3ccf91;
 }
 
-.profite-report-content p { 
-    font-weight: 400; 
-    font-size: 16px; 
-    line-height: 22.81px;
-    letter-spacing: 0;
-    color: #FFFFFF99;
-} 
-
-.popular-product-area .most-trending-shape { 
-    top: 47%; 
+.profite-report-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.81px;
+  letter-spacing: 0;
+  color: #ffffff99;
 }
 
-.popular-product-area.connected-section::after { 
-    top: 30%; 
+.popular-product-area .most-trending-shape {
+  top: 47%;
+}
+
+.popular-product-area.connected-section::after {
+  top: 30%;
 }
 
 .maintenance-heading h1 {
-    text-shadow: 11px 5px 10px #F7A6003D, /* golden soft shadow */
-    4px 0px 0px #FFBE38;
+  text-shadow: 11px 5px 10px #f7a6003d,
+    /* golden soft shadow */ 4px 0px 0px #ffbe38;
 }
 
 .maintenance-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .countdown-box span {
-    padding: 19px 14px;
-    background: #FFFFFF26;
-    border-radius: 6px; 
-    font-weight: 700; 
-    font-size: 20px; 
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #fff;
-    width: 68px ;
-    display: block;
-    text-align: center;
+  padding: 19px 14px;
+  background: #ffffff26;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fff;
+  width: 68px;
+  display: block;
+  text-align: center;
 }
 
-.countdown-box p  { 
-  color: #FFFFFF99;
+.countdown-box p {
+  color: #ffffff99;
 }
 
 .mt-50 {
   margin-top: 52px;
 }
 
-.countdown-box{
+.countdown-box {
   gap: 3px;
 }
 
-.countdown-area{ 
-  font-weight: 400; 
-  font-size: 18px; 
+.countdown-area {
+  font-weight: 400;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: 0%;
-  color: #FFFFFF99;
+  color: #ffffff99;
   margin-bottom: 10px;
 }
 
-.maintenance-button{
+.maintenance-button {
   margin: 52px 0 106px 0;
-} 
+}
 
 .maintenance-thumbnails {
-    height: 700px;
-    display: flex;
-    align-items: end;
+  height: 700px;
+  display: flex;
+  align-items: end;
 }
 
-.maintenance-area 
-.most-trending-shape { 
-    top: 48%; 
+.maintenance-area .most-trending-shape {
+  top: 48%;
 }
 
-.maintenance-area  .connected-section::after { 
-    top: 35%; 
+.maintenance-area .connected-section::after {
+  top: 35%;
 }
 
 /* sign up css  */
 
 .sign-up-box-content {
   width: 100%;
-  max-width: 950px; 
-  background: #181A20;
-  border: 1px solid #FFFFFF33;
+  max-width: 950px;
+  background: #181a20;
+  border: 1px solid #ffffff33;
   box-shadow: 0px 4px 4px 0px #00000040;
   padding: 15px;
   border-radius: 8px;
 }
 
 .sign-up-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.signup-img img{
-    width: 100%;
+.signup-img img {
+  width: 100%;
 }
 
 .sign-up-logo img {
-    width: 158px;
+  width: 158px;
 }
 
 .signup-content {
-    padding: 30px 45px 30px 25px;
+  padding: 30px 45px 30px 25px;
 }
 
-.signup-content h3 { 
-    font-weight: 600; 
-    font-size: 28px; 
-    line-height: 32px;
-    letter-spacing: 0;
-    color: #fff;
-    margin: 20px 0 45px 0;
+.signup-content h3 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 20px 0 45px 0;
 }
 
-.form-input label { 
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 14px; 
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #fff;
-    display: block;
-    margin-bottom: 15px;
+.form-input label {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fff;
+  display: block;
+  margin-bottom: 15px;
 }
 
-.form-input input[type="password"] ,
+.form-input input[type="password"],
 .form-input input[type="text"] {
-    border: 0.5px solid #666666;
-    padding: 12px 18px;
-    background: #181A20;
-    border-radius: 8px;
-    width: 100%; 
-    font-weight: 400; 
-    font-size: 14px; 
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #fff;
-} 
+  border: 0.5px solid #666666;
+  padding: 12px 18px;
+  background: #181a20;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fff;
+}
 
-.form-input input[type="password"]::placeholder ,
+.form-input input[type="password"]::placeholder,
 .form-input input[type="text"]::placeholder {
-  color: #FDFDFD99;
+  color: #fdfdfd99;
 }
 
-.form-input input:focus { 
-  border: 0.5px solid #FFBE38;
-  background: #181A20;
-  color: #FFBE38;
+.form-input input:focus {
+  border: 0.5px solid #ffbe38;
+  background: #181a20;
+  color: #ffbe38;
 }
-
-
 
 .form-input.checkbox-input {
-    display: flex;
-    align-items: start;
-    margin: 30px 0 40px 0;
-    gap: 5px;
-} 
+  display: flex;
+  align-items: start;
+  margin: 30px 0 40px 0;
+  gap: 5px;
+}
 
 .form-input.checkbox-input input {
   accent-color: #ffbe38;
@@ -4515,12 +4512,12 @@ ul.dtr-details li {
 .form-input.checkbox-input label {
   font-weight: 400 !important;
   font-size: 12px;
-  color: #FDFDFD;
-} 
+  color: #fdfdfd;
+}
 
-.form-input.checkbox-input label a{
+.form-input.checkbox-input label a {
   text-decoration: underline;
-  color: #FDFDFD;
+  color: #fdfdfd;
   transition: 0.3s;
 }
 
@@ -4528,69 +4525,68 @@ ul.dtr-details li {
   color: #ffbe38;
 }
 
-p.sign-up-or { 
-    font-weight: 400; 
-    font-size: 12px; 
-    color: #FFFFFF99;
-    line-height: 20px;
-    letter-spacing: 0;
-    margin: 20px 0;
-    text-align: center;
+p.sign-up-or {
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff99;
+  line-height: 20px;
+  letter-spacing: 0;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .sing-up-social ul {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .sing-up-social ul li a {
-    padding: 15px; 
-    background: #1E2329;
-    box-shadow: 0px 0px 3px 0px #A3A3A3 inset;
-    border-radius: 8px;
-    display: block;
-    transition: 0.3s;
+  padding: 15px;
+  background: #1e2329;
+  box-shadow: 0px 0px 3px 0px #a3a3a3 inset;
+  border-radius: 8px;
+  display: block;
+  transition: 0.3s;
 }
 
-.sing-up-social ul li a:hover { 
-    background: #ffbe38;
-    transform: translateY(-5px);
+.sing-up-social ul li a:hover {
+  background: #ffbe38;
+  transform: translateY(-5px);
 }
 
 .sing-up-social ul li a img {
   transition: filter 0.3s ease;
 }
 
-
-.sing-up-social ul li a:hover img { 
-  filter: brightness(0);  
+.sing-up-social ul li a:hover img {
+  filter: brightness(0);
 }
 
-.sign-or-login { 
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 14px; 
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #666666;
-    text-align: center;
+.sign-or-login {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #666666;
+  text-align: center;
 }
 
-.sign-or-login a{  
-    color: #FFBE38; 
-    transition: 0.3s;
+.sign-or-login a {
+  color: #ffbe38;
+  transition: 0.3s;
 }
 
-.sign-or-login a:hover { 
-    color: #666666;
+.sign-or-login a:hover {
+  color: #666666;
 }
 
-.verify-text{
+.verify-text {
   font-size: 12px;
-  color: #FFFFFF99;
+  color: #ffffff99;
   line-height: 20px;
 }
 
@@ -4602,8 +4598,8 @@ p.sign-up-or {
   margin: 20px 0 45px 0;
 }
 .password-wrapper {
-  position: relative; 
-} 
+  position: relative;
+}
 
 .eye-icon {
   position: absolute;
@@ -4611,64 +4607,492 @@ p.sign-up-or {
   right: 12px;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #FDFDFD99;
+  color: #fdfdfd99;
 }
 
 .password-type-check p {
   font-size: 14px;
 }
 
-.text-type-gray{
-  color: #FFFFFF99;
+.text-type-gray {
+  color: #ffffff99;
 }
 
-.text-primary-color{
-   color: #ffbe38;
+.text-primary-color {
+  color: #ffbe38;
 }
 
 .sign-or-login.text-left {
-  text-align: left ;
+  text-align: left;
 }
 
-
 .information-select .payment-select {
-    padding: 12px 18px;
-    background: #181A20;
-    margin-bottom: 0;
-    box-shadow: inherit;
-    border: 0.5px solid #666666;
+  padding: 12px 18px;
+  background: #181a20;
+  margin-bottom: 0;
+  box-shadow: inherit;
+  border: 0.5px solid #666666;
 }
 
 .information-select .select-token::before {
-    transform: translateY(-50%) rotate(45deg);
-    top: 20px;
+  transform: translateY(-50%) rotate(45deg);
+  top: 20px;
 }
 
 .information-select.payment {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .mb-15 {
   margin-bottom: 15px;
 }
 
-
-
-/* DOB  */ 
+/* DOB  */
 
 .dob-inputs {
   display: flex;
   gap: 12px;
 }
- 
+
 .dob-inputs input {
   text-align: center;
-} 
-
-.information-form .simplebar-track.simplebar-vertical {
-    right: -24px;
 }
 
-.information-form .custom-select-token img { 
+.information-form .simplebar-track.simplebar-vertical {
+  right: -24px;
+}
+
+.information-form .custom-select-token img {
+  border-radius: 100%;
+}
+
+.common-heading-section.affiliate-hero h2 {
+  font-size: 62px;
+  line-height: 70px;
+}
+
+.common-heading-section.affiliate-hero h2 span {
+  font-size: 90px;
+  line-height: 90px;
+}
+
+/* buy sell page css  */
+
+.buy-sell-input {
+  position: relative;
+}
+
+.buy-sell-input input {
+  border: 0.5px solid #666666;
+  padding: 7px;
+  background: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0;
+  border-radius: 3px;
+  color: #fff;
+  width: 100%;
+  padding-right: 100px;
+  position: relative;
+}
+
+.buy-sell-input input::placeholder {
+  color: #666666;
+}
+
+.buy-sell-input::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 96px;
+  height: 18px;
+  width: 1px;
+  background: #666666;
+}
+
+.buy-sell-input .dropdown-buy-sell .dropdown-item {
+  gap: 4px;
+  padding: 7px;
+  font-size: 12px;
+}
+
+.buy-sell-input .dropdown-buy-sell {
+  width: 78px;
+}
+
+.buy-sell-input .payment-select {
+  padding: 7px;
+  border: none;
+  background: transparent;
+}
+
+.buy-sell-input .custom-select-token img {
+  margin-right: 0;
+}
+
+.buy-sell-input .payment {
+  position: absolute;
+  top: 3px;
+  right: 18px;
+}
+
+.buy-sell-input .custom-select-token span {
+  font-size: 14px;
+}
+
+.buy-sell-input .payment-select.select-token::before {
+  right: -15px !important;
+  font-size: 9px !important;
+  width: 8px;
+  height: 8px;
+  top: 14px;
+}
+
+.buy-sell-search-box {
+  flex: 0 0 70%;
+}
+
+.buy-sell-price-reload {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buy-sell-price-select,
+.buy-sell-select-normal.trading-data-select select {
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #666666;
+  border-radius: 3px;
+  padding: 9px 13px;
+  background: #181a20;
+  width: 100%;
+}
+
+.buy-sell-select-normal,
+.buy-sell-input {
+  width: 252px !important;
+}
+
+.buy-sell-price-select {
+  width: 166px !important;
+  padding: 6px 13px !important;
+}
+
+.buy-sell-filter button {
+  border: 0.5px solid #666666;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.buy-sell-price-select.trading-data-select select {
+  background-color: #181a20;
+  color: #fff;
+  border: none !important;
+  width: 90px !important;
+}
+
+.buy-sell-price-select span {
+  color: #666666;
+}
+
+.reload-buy-sell button {
+  border: 0.5px solid #666666;
+  padding: 7px;
+  border-radius: 3px;
+  width: 38px;
+  font-size: 20px;
+  color: #fff;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spin class */
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+.buy-sell-help-box .trading-data-select.custom-select-wrapper {
+  width: 136px;
+}
+
+.buy-sell-help-box .trading-data-select.custom-select-wrapper select {
+  border: none;
+  background: #181a20;
+}
+
+.buy-sell-help-box .trading-data-select.custom-select-wrapper i {
+  position: absolute;
+  left: -12px;
+  top: 4px;
+  color: #999999;
+}
+
+.buy-sell-button-box {
+  border: 0.5px solid #666666;
+  padding: 5px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 3px;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buy-sell-button-box a {
+  background: transparent;
+  border-radius: 3px !important;
+  padding: 2px 24px !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #ffffff !important;
+  display: inline-block;
+  flex: 0 0 49%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.buy-sell-btn-link.active {
+  background: #666666 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 2px 24px !important;
+}
+
+/* buy sell tab  */
+
+.p2p-buy-sell-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.p2p-buy-sell-table
+th, .p2p-buy-sell-table
+td {
+    text-align: left;
+    padding: 10px; 
+    font-weight: 500; 
+    font-size: 16px; 
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #fff;
+}
+
+.p2p-buy-sell-table
+th {
+  padding: 10px;
+}
+
+.p2p-buy-sell-table
+td {
+  vertical-align: top;
+}
+
+.p2p-buy-sell-table
+th {
+    background-color: transparent;
+    color: #999999; 
+    font-weight: 400; 
+    font-size: 12px; 
+    line-height: 20px;
+    letter-spacing: 0;
+}
+
+.p2p-buy-sell-table
+td:last-child ,
+.p2p-buy-sell-table
+th:last-child {
+  text-align: right; 
+} 
+
+.p2p-buy-sell-table
+.advertiser {
+  display: flex; 
+  gap: 10px;
+}
+
+.p2p-buy-sell-table
+.advertiser img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.p2p-buy-sell-table
+.advertiser-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.p2p-buy-sell-table
+.advertiser-info small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.p2p-buy-sell-table
+.details {
+    color: #aaa;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0;
+    display: flex;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.p2p-buy-sell-table
+.banks {
+  font-size: 13px;
+  line-height: 1.6;
+}
+ 
+.p2p-buy-sell-table
+.buy-button {
+  background-color: #1de9b6;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.advertiser-info strong { 
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px; 
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.p2p-buy-sell-table
+.advertiser-info small {
+    color: #999999; 
+    font-weight: 400; 
+    font-size: 12px; 
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+
+.advertiser-user span {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: green;
+    display: inline-block;
     border-radius: 100%;
+    transition: color 0.3s ease;
+}
+
+.p2p-buy-sell-table
+.details span:hover {
+  color: #fff !important;
+  cursor: pointer; 
+  transition: color 0.3s ease;
+}
+ 
+.buy-sell-order-limit { 
+    font-weight: 400; 
+    font-size: 12px; 
+    line-height: 24px;
+    letter-spacing: 0; 
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.buy-sell-banks span  { 
+    font-weight: 400; 
+    font-size: 12px; 
+    line-height: 12px;
+    letter-spacing: 0;  
+    color: #fff;  
+    position: relative;
+    padding-left: 6px;
+}
+
+.buy-sell-banks span::after {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%; 
+}
+
+.tbc-bank::after {
+  background: #0F8FF8;
+}
+
+.georgia-bank::after {
+  background: #F7A600;
+}
+
+.buy-sell-banks {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.buy-sell-trade-btn {
+  background-color: #3CCF91;
+  padding: 8px 20px;
+  border-radius: 3px; 
+  font-weight: 500; 
+  font-size: 14px; 
+  line-height: 20px;
+  letter-spacing: 0; 
+  color: #fff;
+  transition: 0.3s;
+}
+
+.buy-sell-trade-btn:hover {
+  opacity: 0.83;
+}
+
+.p2p-buy-sell-table tr:hover {
+  background: #FFFFFF1A;
+    border-radius: 3px;
+}
+
+
+.p2p-buy-sell-table-area {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.p2p-buy-sell-table {
+  min-width: 800px; /* table will scroll horizontally on small screen */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mt-200 {
+  margin-top: 200px;
 }
