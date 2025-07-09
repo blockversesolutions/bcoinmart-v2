@@ -5096,3 +5096,19 @@ th:last-child {
 .mt-200 {
   margin-top: 200px;
 }
+
+.p2p-tabs-area .actionTab .nav-item.show .nav-link, .p2p-tabs-area .actionTab .nav-link.active {
+    background-color: transparent;
+    color: #ffbe38 !important;
+    border: none;
+    border-bottom: none;
+    padding-bottom:0 !important;
+}
+
+.p2p-tabs-area .actionTab .nav-link:hover { 
+    padding-bottom: 0 !important;
+}
+
+.p2p-tabs-area .tabs-slide .nav-item { 
+    display: flex;
+}
