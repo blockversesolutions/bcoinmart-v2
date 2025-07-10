@@ -430,14 +430,14 @@
           <div class="p2p-tabs-area">
             <div class="main-action-tabs">
               <ul
-                class="nav nav-tabs actionTab tabs-slide owl-carousel owl-theme"
+                class="nav nav-tabs actionTab tabs-slide owl-carousel owl-theme "
                 id="actionTab"
                 role="tablist"
               >
                 <li class="nav-item" role="presentation">
                   <div class="buy-sell-button-box">
                     <a href="p2p-buy.html" class="buy-sell-btn-link">Buy</a>
-                    <a href="p2p-sell.html" class="active buy-sell-btn-link">Sell</a>
+                    <a href="p2p-sell.html" class="buy-sell-btn-link active">Sell</a>
                   </div>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -574,7 +574,7 @@
                 </li>
               </ul>
 
-              <div class="buy-search-filter-area my-4">
+              <div class="buy-search-filter-area  my-4">
                 <div class="buy-trasection-search">
                   <div
                     class="buy-trasection-search-flex d-flex justify-content-between align-items-center"
@@ -672,7 +672,7 @@
                 </div>
               </div>
 
-              <div class="tab-content mb-60 mt-60" id="actionTabContent">
+              <div class="tab-content mb-60 mt-60 sell-search-filter-area" id="actionTabContent">
                 <div
                   class="tab-pane fade active show"
                   id="USDT"
@@ -4332,28 +4332,14 @@
           <div class="embark-text">
             <!-- Default gradient borders -->
             <div class="text-center row">
-              <div class="col-md-8 offset-md-2">
+              <div class="col-md-10 offset-md-1">
                 <div class="common-heading-section">
                   <h2 class="text-primary">
-                    Embark on Your Crypto Journey Today!
+                    Trade USDT Easily with Your Preferred Payment Method
                   </h2>
-                  <p>
-                    Start your crypto journey with BCoinMart today! Access
-                    powerful tools, secure trading, and real-time updates—all at
-                    your fingertips.
-                  </p>
-                  <div class="d-inline-block mt-5">
-                    <a
-                      href="#"
-                      class="primary-btn aos-init aos-animate"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                      data-aos-duration="600"
-                    >
-                      Sign Up Now
-                      <i class="fa-solid fa-user-plus"></i>
-                    </a>
-                  </div>
+                  <p class="p2p-buy-sell-prefer">
+                    Trade Tether (USDT) on Binance P2P. Explore top deals below to securely buy and sell USDT with ease.
+                  </p> 
                 </div>
               </div>
             </div>
@@ -4365,14 +4351,35 @@
       <!-- How to buy Area End  -->
       <section class="how-to-buy-area position-relative mt-120 mt-200">
         <div class="container">
-          <div class="common-heading-section text-center text-md-start">
+          <div class="common-heading-section text-center text-md-start d-flex justify-content-between align-items-center">
             <h2 class="text-primary">
               How P2P Works
             </h2>
+            <div class="how-p2p-tabs">
+              <ul class="actionTab d-flex gap-2" id="actionTab" role="tablist">
+                <li role="presentation"><button class="active" id="buy-crypto-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#buy-crypto"
+                    type="button"
+                    role="tab">Buy Crypto</button></li>
+                <li role="presentation"><button id="sell-crypto-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#sell-crypto"
+                    type="button"
+                    role="tab">Sell Crypto</button></li>
+              </ul>
+            </div>
           </div>
 
-          <div
-            class="puzzle-design-wrapper puzzle-design-buy mt-60" 
+          <div class="tab-content mt-60" id="actionTabContent">
+                <div
+                  class="tab-pane fade active show"
+                  id="buy-crypto"
+                  role="tabpanel"
+                  aria-labelledby="buy-crypto-tab"
+                > 
+                  <div
+            class="puzzle-design-wrapper puzzle-design-buy " 
           >
             <div class="puzzle-design-card puzzle-design-shape-1">
               <svg
@@ -4474,14 +4481,14 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g filter="url(#filter0_d_384_33712)">
+                <g filter="url(#filter0_d_384_3371212)">
                   <path
                     d="M44 12C44 5.37259 49.3726 0 56 0H355C361.627 0 367 5.37258 367 12V342C367 348.627 361.627 354 355 354H16C9.37259 354 4 348.627 4 342V221.684C4 217.804 5.8764 214.163 9.0367 211.911L38.9633 190.589C42.1236 188.337 44 184.696 44 180.816V12Z"
                     fill="#1E2329"
                   />
                   <path
                     d="M56 1H355C361.075 1 366 5.92487 366 12V342C366 348.075 361.075 353 355 353H16C9.92487 353 5 348.075 5 342V221.685C5 218.128 6.72025 214.79 9.61719 212.726L39.5439 191.403C42.9675 188.964 45 185.019 45 180.815V12C45 5.92487 49.9249 1 56 1Z"
-                    stroke="url(#paint0_linear_384_33731)"
+                    stroke="url(#paint0_linear_384_3373121)"
                     stroke-opacity="0.6"
                     stroke-width="2"
                   />
@@ -4494,7 +4501,7 @@
                 </g>
                 <defs>
                   <filter
-                    id="filter0_d_384_33712"
+                    id="filter0_d_384_3371212"
                     x="0"
                     y="0"
                     filterUnits="userSpaceOnUse"
@@ -4527,7 +4534,303 @@
                     />
                   </filter>
                   <linearGradient
-                    id="paint0_linear_384_33731"
+                    id="paint0_linear_384_3373121"
+                    x1="-94.4734"
+                    y1="-119.717"
+                    x2="179.926"
+                    y2="566.43"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.126517" stop-color="white" />
+                    <stop
+                      offset="0.41336"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop
+                      offset="0.701226"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop offset="1" stop-color="white" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <div class="puzzle-text">
+                <div class="icon">
+                  <img src="./assets/images/icon/orderlist.png" alt="Step 2" />
+                </div>
+                <h5 class="shap-title">Make the Payment</h5>
+                <p class="shap-content">
+                  Send payment using the seller’s method and tap “Transferred.”
+                </p>
+              </div>
+            </div>
+
+            <div class="puzzle-design-card puzzle-design-shape-3">
+              <svg
+                preserveAspectRatio="none"
+                viewBox="0 0 373 362"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_384_3387721)">
+                  <rect x="4" width="365" height="354" rx="12" fill="#1E2329" />
+                  <rect
+                    x="5"
+                    y="1"
+                    width="363"
+                    height="352"
+                    rx="11"
+                    stroke="url(#paint0_linear_384_3387821)"
+                    stroke-opacity="0.6"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="5"
+                    y="1"
+                    width="363"
+                    height="352"
+                    rx="11"
+                    stroke="white"
+                    stroke-opacity="0.1"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_384_3387721"
+                    x="0"
+                    y="0"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_384_338"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_384_338"
+                      result="shape"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_384_3387821"
+                    x1="502.003"
+                    y1="-118.545"
+                    x2="-203.421"
+                    y2="202.899"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.126517" stop-color="white" />
+                    <stop
+                      offset="0.41336"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop
+                      offset="0.701226"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop offset="1" stop-color="white" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <div class="puzzle-text">
+                <div class="icon">
+                  <img src="./assets/images/icon/receive.png" alt="Step 3" />
+                </div>
+                <h5 class="shap-title">Get Your Crypto</h5>
+                <p class="shap-content">
+                  Once the seller confirms they’ve received the payment, your crypto will be released to your wallet.
+                </p>
+              </div>
+            </div>
+          </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="sell-crypto"
+                  role="tabpanel"
+                  aria-labelledby="sell-crypto-tab"
+                > 
+                <div
+            class="puzzle-design-wrapper puzzle-design-buy " 
+          >
+            <div class="puzzle-design-card puzzle-design-shape-1">
+              <svg
+                preserveAspectRatio="none"
+                viewBox="0 0 599 362"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_384_3364421)">
+                  <path
+                    d="M4 12C4 5.37258 9.37258 0 16 0H583C589.627 0 595 5.37258 595 12V170.816C595 174.696 593.124 178.337 589.963 180.589L560.037 201.911C556.876 204.163 555 207.804 555 211.684V342C555 348.627 549.627 354 543 354H16C9.37258 354 4 348.627 4 342V12Z"
+                    fill="#1E2329"
+                  />
+                  <path
+                    d="M16 1H583C589.075 1 594 5.92487 594 12V170.815C594 174.372 592.28 177.71 589.383 179.774L559.456 201.097C556.032 203.536 554 207.481 554 211.685V342C554 348.075 549.075 353 543 353H16C9.92487 353 5 348.075 5 342V12C5 5.92487 9.92487 1 16 1Z"
+                    stroke="url(#paint0_linear_384_3361121)"
+                    stroke-opacity="0.6"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M16 1H583C589.075 1 594 5.92487 594 12V170.815C594 174.372 592.28 177.71 589.383 179.774L559.456 201.097C556.032 203.536 554 207.481 554 211.685V342C554 348.075 549.075 353 543 353H16C9.92487 353 5 348.075 5 342V12C5 5.92487 9.92487 1 16 1Z"
+                    stroke="white"
+                    stroke-opacity="0.1"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_384_3364421"
+                    x="0"
+                    y="0"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_384_336"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_384_336"
+                      result="shape"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_384_3361121"
+                    x1="781"
+                    y1="-136.5"
+                    x2="-129"
+                    y2="456"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.126517" stop-color="white" />
+                    <stop
+                      offset="0.41336"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop
+                      offset="0.701226"
+                      stop-color="white"
+                      stop-opacity="0"
+                    />
+                    <stop offset="1" stop-color="white" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="puzzle-text">
+                <div class="icon">
+                  <img src="./assets/images/icon/card.png" alt="Step 1" />
+                </div>
+                <h5 class="shap-title">Create an Order</h5>
+                <p class="shap-content">
+                  Start by placing a P2P order. Your crypto will be held securely in Binance P2P escrow.
+                </p>
+              </div>
+            </div>
+
+            <div class="puzzle-design-card puzzle-design-shape-2">
+              <svg
+                preserveAspectRatio="none"
+                viewBox="0 0 371 362"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_384_3371211)">
+                  <path
+                    d="M44 12C44 5.37259 49.3726 0 56 0H355C361.627 0 367 5.37258 367 12V342C367 348.627 361.627 354 355 354H16C9.37259 354 4 348.627 4 342V221.684C4 217.804 5.8764 214.163 9.0367 211.911L38.9633 190.589C42.1236 188.337 44 184.696 44 180.816V12Z"
+                    fill="#1E2329"
+                  />
+                  <path
+                    d="M56 1H355C361.075 1 366 5.92487 366 12V342C366 348.075 361.075 353 355 353H16C9.92487 353 5 348.075 5 342V221.685C5 218.128 6.72025 214.79 9.61719 212.726L39.5439 191.403C42.9675 188.964 45 185.019 45 180.815V12C45 5.92487 49.9249 1 56 1Z"
+                    stroke="url(#paint0_linear_384_3373111)"
+                    stroke-opacity="0.6"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M56 1H355C361.075 1 366 5.92487 366 12V342C366 348.075 361.075 353 355 353H16C9.92487 353 5 348.075 5 342V221.685C5 218.128 6.72025 214.79 9.61719 212.726L39.5439 191.403C42.9675 188.964 45 185.019 45 180.815V12C45 5.92487 49.9249 1 56 1Z"
+                    stroke="white"
+                    stroke-opacity="0.1"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_384_3371211"
+                    x="0"
+                    y="0"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_384_337"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_384_337"
+                      result="shape"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_384_3373111"
                     x1="-94.4734"
                     y1="-119.717"
                     x2="179.926"
@@ -4660,6 +4963,13 @@
               </div>
             </div>
           </div>
+                </div>
+              </div>
+
+
+          
+
+
         </div>
         <div class="how-to-buy-shape">
           <img src="assets/images/buy/buy-crypto/shape.png" alt="" />
@@ -4667,8 +4977,67 @@
       </section>
       <!-- How to buy Area End  -->
 
+      <!-- start trading tips area -->
+      <section class="p2p-trading-area mt-120"> 
+        <div class="container">
+          <!-- common title area  -->
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="common-heading-section text-center text-lg-start">
+                <h2 class="text-primary">P2P Trading Tips & Updates</h2> 
+                <p>
+                  Stay updated with P2P trading tips, trends, and safety guides to trade smarter and safer.
+                </p> 
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-end"> 
+                    <a href="#" class="more-btn-p2p">More <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- common title area End  -->
+          <div class="row g-4 mt-60 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="learning-hub-card">
+                <div class="learning-hub-card-img">
+                  <img src="assets/images/buy-sell/tips-1.png" alt="img">
+                </div>
+                <div class="learning-hub-card-info">
+                  <span>June 16, 2025</span>
+                  <p>Fake Proof of Payment Scams in P2P Crypto Trading.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="learning-hub-card">
+                <div class="learning-hub-card-img">
+                  <img src="assets/images/buy-sell/tips-2.png" alt="img">
+                </div>
+                <div class="learning-hub-card-info">
+                  <span>June 16, 2025</span>
+                  <p>Buy Trending Tokens Fast With Bcoinmart</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="learning-hub-card">
+                <div class="learning-hub-card-img">
+                  <img src="assets/images/buy-sell/tips-3.png" alt="img">
+                </div>
+                <div class="learning-hub-card-info">
+                  <span>June 16, 2025</span>
+                  <p>What Is P2P Crypto Trading, And How to Trade Safely on Bcoinmart</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+      <!-- end trading tips area  -->
+
         <!-- Accordion start  -->
-        <section class="accordion-bcoinmart accordion-opportunity mb-120">
+        <section class="accordion-bcoinmart accordion-opportunity  mb-120" >
             <div class="container">
                 <div class="common-heading-section text-center text-md-start">
                 <h2 class="text-white">FAQs – BcoinMart P2P Beginner Guide</h2>
@@ -4707,8 +5076,7 @@
                                 'Content here, content here', making it look like readable English. Many desktop
                                 publishing packages and web page editors now use Lorem Ipsum as their default
                                 model text, and a search for 'lorem ipsum' will uncover.
-                                </p>
-                                <a href="#" class="primary-btn me-2">Lorem Ipsum is simply text</a>
+                                </p> 
                             </div>
                             </div>
                         </div>
@@ -4743,8 +5111,7 @@
                                 'Content here, content here', making it look like readable English. Many desktop
                                 publishing packages and web page editors now use Lorem Ipsum as their default
                                 model text, and a search for 'lorem ipsum' will uncover.
-                                </p>
-                                <a href="#" class="primary-btn me-2">Lorem Ipsum is simply text</a>
+                                </p> 
                             </div>
                             </div>
                         </div>
@@ -4779,8 +5146,7 @@
                                 'Content here, content here', making it look like readable English. Many desktop
                                 publishing packages and web page editors now use Lorem Ipsum as their default
                                 model text, and a search for 'lorem ipsum' will uncover.
-                                </p>
-                                <a href="#" class="primary-btn me-2">Lorem Ipsum is simply text</a>
+                                </p> 
                             </div>
                             </div>
                         </div>
@@ -4814,8 +5180,7 @@
                                 'Content here, content here', making it look like readable English. Many desktop
                                 publishing packages and web page editors now use Lorem Ipsum as their default
                                 model text, and a search for 'lorem ipsum' will uncover.
-                                </p>
-                                <a href="#" class="primary-btn me-2">Lorem Ipsum is simply text</a>
+                                </p> 
                             </div>
                             </div>
                         </div>
@@ -4850,8 +5215,7 @@
                                 publishing packages and web page editors now use Lorem Ipsum as their default
                                 model text, and a search for 'lorem ipsum' will uncover.
                                 
-                                </p>
-                                <a href="#" class="primary-btn me-2">Lorem Ipsum is simply text</a>
+                                </p> 
                             </div>
                             </div>
                         </div>
@@ -5184,6 +5548,30 @@
           setTimeout(() => menu.css("display", "none"), 200);
         });
       });
+
+
+
+
+
+
+      function centerItemsVertically() {
+        $('.owl-carousel .item').each(function () {
+          const $item = $(this);
+          const $content = $item.find('.item-content');
+
+          // Reset margin first in case of resize
+          $content.css('margin-top', '0');
+
+          const itemHeight = $item.height();
+          const contentHeight = $content.outerHeight();
+
+          const topMargin = (itemHeight - contentHeight) / 2;
+
+          if (topMargin > 0) {
+            $content.css('margin-top', topMargin + 'px');
+          }
+        });
+      }
     </script>
   </body>
 </html>

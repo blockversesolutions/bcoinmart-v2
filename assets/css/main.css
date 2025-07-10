@@ -4746,7 +4746,7 @@ p.sign-up-or {
   font-size: 9px !important;
   width: 8px;
   height: 8px;
-  top: 14px;
+  top: 15px;
 }
 
 .buy-sell-search-box {
@@ -5129,4 +5129,46 @@ th:last-child {
 .how-p2p-tabs button.active {
   color: #fff;
   background: #66666680;
+}
+
+.more-btn-p2p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #fdfdfd99;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.more-btn-p2p:hover {
+    color: #fff;
+}
+
+.learning-hub-card-info span {
+  display: inline-block; 
+  font-weight: 500; 
+  font-size: 14px; 
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #E0E0E0;
+  margin-bottom: 37px;
+}
+
+.p2p-trading-area .learning-hub-card-info {
+  padding-top: 20px !important;
+}
+
+.p2p-buy-sell-prefer{
+  width: 100%;
+  max-width: 667px;
+  margin: 0 auto;
+}
+
+
+.sell-search-filter-area .buy-sell-trade-btn {
+    background-color: #FF4D4F !important; 
 }
