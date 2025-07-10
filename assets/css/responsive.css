@@ -891,6 +891,15 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .p2p-how-works-title {
+    flex-direction: column;
+    justify-content: left !important;
+    text-align: left;
+    align-items: flex-start !important;
+  }
+}
+
 @media screen and (max-width: 430px) {
   .calculate-child label {
     font-size: 11px;
