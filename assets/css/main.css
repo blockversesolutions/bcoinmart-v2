@@ -5112,3 +5112,21 @@ th:last-child {
 .p2p-tabs-area .tabs-slide .nav-item { 
     display: flex;
 }
+
+.how-p2p-tabs button { 
+  font-weight: 400; 
+  font-size: 16px; 
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #666666;
+  padding: 8px 20px;
+  background: transparent;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.how-p2p-tabs button:hover,
+.how-p2p-tabs button.active {
+  color: #fff;
+  background: #66666680;
+}
