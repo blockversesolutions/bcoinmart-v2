@@ -4353,8 +4353,8 @@ ul.dtr-details li {
   top: 30%;
 }
 
-.maintenance-heading h1 { 
-    color: #ffbe38;
+.maintenance-heading h1 {
+  color: #ffbe38;
 }
 
 .maintenance-left {
@@ -4881,91 +4881,78 @@ p.sign-up-or {
   border-spacing: 0 10px;
 }
 
-.p2p-buy-sell-table
-th, .p2p-buy-sell-table
-td {
-    text-align: left;
-    padding: 10px; 
-    font-weight: 500; 
-    font-size: 16px; 
-    line-height: 24px;
-    letter-spacing: 0;
-    color: #fff;
+.p2p-buy-sell-table th,
+.p2p-buy-sell-table td {
+  text-align: left;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #fff;
 }
 
-.p2p-buy-sell-table
-th {
+.p2p-buy-sell-table th {
   padding: 10px;
 }
 
-.p2p-buy-sell-table
-td {
+.p2p-buy-sell-table td {
   vertical-align: top;
 }
 
-.p2p-buy-sell-table
-th {
-    background-color: transparent;
-    color: #999999; 
-    font-weight: 400; 
-    font-size: 12px; 
-    line-height: 20px;
-    letter-spacing: 0;
+.p2p-buy-sell-table th {
+  background-color: transparent;
+  color: #999999;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
 }
 
-.p2p-buy-sell-table
-td:last-child ,
-.p2p-buy-sell-table
-th:last-child {
-  text-align: right; 
-} 
+.p2p-buy-sell-table td:last-child,
+.p2p-buy-sell-table th:last-child {
+  text-align: right;
+}
 
-.p2p-buy-sell-table
-.advertiser {
-  display: flex; 
+.p2p-buy-sell-table .advertiser {
+  display: flex;
   gap: 10px;
 }
 
-.p2p-buy-sell-table
-.advertiser img {
+.p2p-buy-sell-table .advertiser img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
 
-.p2p-buy-sell-table
-.advertiser-info {
+.p2p-buy-sell-table .advertiser-info {
   display: flex;
   flex-direction: column;
 }
 
-.p2p-buy-sell-table
-.advertiser-info small {
+.p2p-buy-sell-table .advertiser-info small {
   color: #aaa;
   font-size: 12px;
 }
 
-.p2p-buy-sell-table
-.details {
-    color: #aaa;
-    margin-top: 5px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
-    letter-spacing: 0;
-    display: flex;
-    gap: 10px;
-    transition: color 0.3s ease;
+.p2p-buy-sell-table .details {
+  color: #aaa;
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  gap: 10px;
+  transition: color 0.3s ease;
 }
 
-.p2p-buy-sell-table
-.banks {
+.p2p-buy-sell-table .banks {
   font-size: 13px;
   line-height: 1.6;
 }
- 
-.p2p-buy-sell-table
-.buy-button {
+
+.p2p-buy-sell-table .buy-button {
   background-color: #1de9b6;
   color: #000;
   padding: 8px 16px;
@@ -4975,80 +4962,77 @@ th:last-child {
   cursor: pointer;
 }
 
-.advertiser-info strong { 
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 16px; 
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: #fff;
-    margin-bottom: 5px;
+.advertiser-info strong {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.p2p-buy-sell-table
-.advertiser-info small {
-    color: #999999; 
-    font-weight: 400; 
-    font-size: 12px; 
-    line-height: 24px;
-    letter-spacing: 0;
+.p2p-buy-sell-table .advertiser-info small {
+  color: #999999;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0;
 }
-
 
 .advertiser-user span {
-    position: absolute;
-    top: 22px;
-    right: 0;
-    width: 8px;
-    height: 8px;
-    background: green;
-    display: inline-block;
-    border-radius: 100%;
-    transition: color 0.3s ease;
-}
-
-.p2p-buy-sell-table
-.details span:hover {
-  color: #fff !important;
-  cursor: pointer; 
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background: green;
+  display: inline-block;
+  border-radius: 100%;
   transition: color 0.3s ease;
 }
- 
-.buy-sell-order-limit { 
-    font-weight: 400; 
-    font-size: 12px; 
-    line-height: 24px;
-    letter-spacing: 0; 
-    display: flex;
-    flex-direction: column;
-    color: #fff;
+
+.p2p-buy-sell-table .details span:hover {
+  color: #fff !important;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.buy-sell-banks span  { 
-    font-weight: 400; 
-    font-size: 12px; 
-    line-height: 12px;
-    letter-spacing: 0;  
-    color: #fff;  
-    position: relative;
-    padding-left: 6px;
+.buy-sell-order-limit {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.buy-sell-banks span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+  color: #fff;
+  position: relative;
+  padding-left: 6px;
 }
 
 .buy-sell-banks span::after {
   content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
 }
 
 .tbc-bank::after {
-  background: #0F8FF8;
+  background: #0f8ff8;
 }
 
 .georgia-bank::after {
-  background: #F7A600;
+  background: #f7a600;
 }
 
 .buy-sell-banks {
@@ -5058,13 +5042,13 @@ th:last-child {
 }
 
 .buy-sell-trade-btn {
-  background-color: #3CCF91;
+  background-color: #3ccf91;
   padding: 8px 20px;
-  border-radius: 3px; 
-  font-weight: 500; 
-  font-size: 14px; 
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0; 
+  letter-spacing: 0;
   color: #fff;
   transition: 0.3s;
 }
@@ -5074,10 +5058,9 @@ th:last-child {
 }
 
 .p2p-buy-sell-table tr:hover {
-  background: #FFFFFF1A;
-    border-radius: 3px;
+  background: #ffffff1a;
+  border-radius: 3px;
 }
-
 
 .p2p-buy-sell-table-area {
   width: 100%;
@@ -5096,25 +5079,26 @@ th:last-child {
   margin-top: 200px;
 }
 
-.p2p-tabs-area .actionTab .nav-item.show .nav-link, .p2p-tabs-area .actionTab .nav-link.active {
-    background-color: transparent;
-    color: #ffbe38 !important;
-    border: none;
-    border-bottom: none;
-    padding-bottom:0 !important;
+.p2p-tabs-area .actionTab .nav-item.show .nav-link,
+.p2p-tabs-area .actionTab .nav-link.active {
+  background-color: transparent;
+  color: #ffbe38 !important;
+  border: none;
+  border-bottom: none;
+  padding-bottom: 0 !important;
 }
 
-.p2p-tabs-area .actionTab .nav-link:hover { 
-    padding-bottom: 0 !important;
+.p2p-tabs-area .actionTab .nav-link:hover {
+  padding-bottom: 0 !important;
 }
 
-.p2p-tabs-area .tabs-slide .nav-item { 
-    display: flex;
+.p2p-tabs-area .tabs-slide .nav-item {
+  display: flex;
 }
 
-.how-p2p-tabs button { 
-  font-weight: 400; 
-  font-size: 16px; 
+.how-p2p-tabs button {
+  font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 0;
   color: #666666;
@@ -5131,29 +5115,29 @@ th:last-child {
 }
 
 .more-btn-p2p {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0;
-    text-align: right;
-    color: #fdfdfd99;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #fdfdfd99;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .more-btn-p2p:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .learning-hub-card-info span {
-  display: inline-block; 
-  font-weight: 500; 
-  font-size: 14px; 
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #E0E0E0;
+  color: #e0e0e0;
   margin-bottom: 37px;
 }
 
@@ -5161,13 +5145,16 @@ th:last-child {
   padding-top: 20px !important;
 }
 
-.p2p-buy-sell-prefer{
+.p2p-buy-sell-prefer {
   width: 100%;
   max-width: 667px;
   margin: 0 auto;
 }
 
-
 .sell-search-filter-area .buy-sell-trade-btn {
-    background-color: #FF4D4F !important; 
+  background-color: #ff4d4f !important;
+}
+
+.mt-lg-30 {
+  margin-top: 30px;
 }
