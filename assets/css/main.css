@@ -4353,9 +4353,8 @@ ul.dtr-details li {
   top: 30%;
 }
 
-.maintenance-heading h1 {
-  text-shadow: 11px 5px 10px #f7a6003d,
-    /* golden soft shadow */ 4px 0px 0px #ffbe38;
+.maintenance-heading h1 { 
+    color: #ffbe38;
 }
 
 .maintenance-left {
