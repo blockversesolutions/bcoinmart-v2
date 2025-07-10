@@ -652,6 +652,17 @@
     width: 50px;
     height: 50px;
   }
+  .p2p-tabs-area .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+  .p2p-tabs-area .tabs-slide .owl-prev,
+  .p2p-tabs-area .tabs-slide .owl-next {
+    top: 6px;
+  }
+  .learning-hub-card-info span { 
+    margin-bottom: 10px;
+}
 }
 @media screen and (max-width: 575px) {
   .accordion-bcoinmart .accordion-button {
@@ -664,10 +675,19 @@
     padding: 6px 10px !important;
   }
   .buy-sell-price-select {
-    width: 204px !important;
+    width: 92% !important;
   }
+
   .buy-sell-search-box {
     flex-direction: column;
+    width: 100%;
+  }
+  .buy-sell-select-normal,
+  .buy-sell-input {
+    width: 100% !important;
+  }
+  .buy-sell-price-reload {
+    width: 100%;
   }
   .buy-trasection-search-flex {
     gap: 10px;
