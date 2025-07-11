@@ -2228,6 +2228,7 @@ tbody tr:hover {
   padding: 40px;
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 .process-card:hover .process-card-content h4 img,
 .coin-pair-card:hover .pair-icon ul li img {
@@ -2264,6 +2265,15 @@ tbody tr:hover {
 .coin-pair-card:hover:after {
   opacity: 1;
   left: 100%;
+}
+
+.benifit-process-card{
+    padding: 32px;
+}
+
+.benifit-process-card h4 { 
+    width: 100%;
+    max-width: 300px;
 }
 
 /* coin pair css Start */
@@ -2877,7 +2887,8 @@ table.dataTable {
   line-height: 20px;
   letter-spacing: 0;
   color: #999999;
-}
+} 
+
 .cryptoTable tr td {
   font-weight: 400;
   font-size: 14px;
@@ -5158,3 +5169,129 @@ p.sign-up-or {
 .mt-lg-30 {
   margin-top: 30px;
 }
+
+
+.learning-hub-card-info h6 { 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: justify;
+    color: #E0E0E0;
+    margin-top: 40px;
+}
+
+.affiliate-update-area .process-card-content p,
+.affiliate-update-area .process-card-content h4 {
+    text-align: left;
+}
+ 
+
+.reffer-hero-btn { 
+    font-weight: 500; 
+    font-size: 14px; 
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #FFBE38;
+    width: 100%;
+    display: inline-block;
+} 
+
+.reffer-name-td {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+span.refer-coin-name { 
+    font-weight: 400; 
+    font-size: 14px !important; 
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #FDFDFD !important;
+}
+
+.reffer-name-td span {
+    line-height: 20px;
+}
+
+ .token-bars.custom-progress {
+    background-color: #666666;
+    height: 4px;
+    width: 100px;
+    margin: 10px 0 0 auto;
+  }
+
+  .token-bars.custom-progress .progress-bar {
+    background-color: #FFBE38;
+    font-size: 0.75rem;
+    line-height: 1;
+    height: 100%;
+  }
+ 
+
+.token-data-text  {
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fdfdfd !important;
+}
+
+.data-font-size{
+  font-size: 14px !important;
+}
+
+p.count-down {
+    border: 0.5px solid #4A4A4A; 
+    padding: 5px;
+    border-radius: 5px;
+    background: #1E2329;
+    display: flex;
+    gap: 5px;
+    width: 158px;
+    justify-content: center;
+    margin: 0 0 0 auto;
+}
+
+p.count-down span { 
+    font-weight: 400; 
+    font-size: 14px; 
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #FDFDFD !important;
+}
+
+.token-desclimer-text p { 
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 14px; 
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #FFFFFF99;
+}
+
+.token-desclimer-text p span {  
+  color: #fff;
+}
+
+.token-desclimer-text p a {
+  color: #FFBE38;
+}
+ 
+.lotti-indicator {
+    position: absolute;
+    top: 111px;
+    left: 18%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    z-index: 1000; 
+    display: none;
+    width: 80px !important;
+    height: 80px !important;
+} 
+
+
+
+
