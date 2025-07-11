@@ -888,6 +888,13 @@
   .accordion-opportunity .accordion-button::after {
     right: 14px;
   }
+  
+  .custom-mega-dropdown {
+    width: 100vw;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   .bcoinmart-accordion-body {
