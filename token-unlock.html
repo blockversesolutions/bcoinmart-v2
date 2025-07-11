@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Unlock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/play-animation.css" />
+    <!-- datatable cdn  --> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="trading-loader">
+        <div class="candlesticks">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
+        </div>
+        <div class="ticker">
+          <span class="pair color-f9">BTC/USD</span>
+        </div>
+        <p class="loading-text">Analyzing Bcoinmart...</p>
+      </div>
+    </div>
+    <!-- Header Start-->
+    <header class="header-area position-relative">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+
+            <!-- Mobile Right Controls -->
+            <div class="d-flex align-items-center g-10 d-xl-none">
+              <!-- Search Icon -->
+              <!-- <div
+                class="search-icon cursor mobile-search-view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div> -->
+
+              <!-- Language Dropdown (Mobile View) -->
+              <div class="mobile-language-view">
+                <ul class="d-flex align-items-center">
+                  <li class="nav-item dropdown country-menu-parent">
+                    <a
+                      class="dropdown-toggle d-flex align-items-center g-5"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/images/icon/languages.png" alt="icon" />
+                      EN
+                    </a>
+                    <ul
+                      class="dropdown-menu country-menu"
+                      data-simplebar
+                      style="max-height: 360px"
+                      data-bs-popper="static"
+                      id="scrollbar"
+                    >
+                      <li>
+                        <a class="dropdown-item active" href="#">
+                          <span>English (us)</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>France</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Espen</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Bangla</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Arabic</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Italy</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Portugal</span>
+                          <span class="float-end icon-check"
+                            ><i class="fa-solid fa-circle-check fs-6"></i
+                          ></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mobile Toggle Button -->
+              <button
+                class="navbar-toggler icon"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="icon-bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <div
+              class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
+              id="navbarText"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="buy.html">Buy Crypto</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link active" href="markets.html">Markets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Futures</a>
+                </li>
+                 <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
+                 
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+              </ul>
+
+              <div class="header-right d-flex align-items-center">
+                <div
+                  class="search-icon pointer desktop-view me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <a href="#" class="primary-btn me-2">Sign Up</a>
+                <a href="#" class="secondary-btn">Sign In</a>
+
+                <!-- Desktop Language View -->
+                <div class="desktop-language-view">
+                  <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown country-menu-parent">
+                      <a
+                        class="dropdown-toggle d-flex align-items-center g-5"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/icon/languages.png"
+                          alt="icon"
+                        />
+                        EN
+                      </a>
+                      <ul
+                        class="dropdown-menu country-menu"
+                        data-simplebar
+                        style="max-height: 360px"
+                        data-bs-popper="static"
+                        id="scrollbar"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">
+                            <span>English (us)</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>France</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Espen</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Bangla</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Arabic</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Italy</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <span>Portugal</span>
+                            <span class="float-end icon-check"
+                              ><i class="fa-solid fa-circle-check fs-6"></i
+                            ></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Offcanvas Mobile Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+            <span
+              class="icon-bar btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+          </div>
+          <div class="header-searching-box">
+            <form action="">
+              <div
+                class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+              >
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="input-shadow"
+                />
+                <!-- <button class="primary-btn-sm">Search</button> -->
+              </div>
+            </form>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="buy.html">Buy Crypto</a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="markets.html">Markets</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
+               <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+            </ul>
+            <hr />
+            <!-- Sign Buttons -->
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body">
+            <div class="header-searching-box">
+              <form action="">
+                <div
+                  class="searching-box g-20 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-shadow"
+                  />
+                  <button class="primary-btn-sm">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+     
+    <main class="main-area">  
+        <!-- start market marquee -->  
+         <section class="market-marquee">
+            <div class="marquee-wrapper" id="marquee">
+                <ul class="marquee-content"> 
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="red-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                    <li><p>BTC / USDT <span class="green-marquee"> 105,655.57 (+0.61%)</span></p></li>
+                </ul>
+            </div>
+         </section>
+        <!-- end market marquee  -->
+
+        <!-- start market pages area  -->
+        <section class="market-page-area mt-60 mb-60  ">
+            <div class="container">
+                <div class="market-tabs">
+                    <ul class="tabs-slide owl-carousel owl-theme">
+                        <li><a href="markets.html">Markets Overview</a></li>
+                        <li><a href="trading.html">Trading DataX</a></li>
+                        <li><a href="opportunity.html">Opportunity</a></li>
+                        <li><a href="token-unloack.html" class="active">Token Unlock</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </section>
+        <!-- end market pages area  -->
+ 
+
+        <!-- start market crypto tabs area  -->
+        <section class="market-crypto-tab-area mb-120 position-relative">
+          <div class="container">
+             <div class="main-action-tabs"> 
+                
+                <div class="market-table-tabs mt-4"> 
+                    <div class="market-tabs-search d-flex justify-content-between align-items-center mb-60">
+                      <ul class="nav nav-tabs actionTab tabs-slide owl-carousel owl-theme" id="actionTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="market-all-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#market-all"
+                            type="button"
+                            role="tab"
+                          >
+                            All
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Solana-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Solana"
+                            type="button"
+                            role="tab"
+                          >
+                            Solana
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="RWA-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#RWA"
+                            type="button"
+                            role="tab"
+                          >
+                            RWA
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Meme-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Meme"
+                            type="button"
+                            role="tab"
+                          >
+                            Meme
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Alpha-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Alpha"
+                            type="button"
+                            role="tab"
+                          >
+                            Alpha
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Payments-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Payments"
+                            type="button"
+                            role="tab"
+                          >
+                            Payments
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="AI-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#AI"
+                            type="button"
+                            role="tab"
+                          >
+                            AI
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Layer-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Layer"
+                            type="button"
+                            role="tab"
+                          >
+                            Layer 1 / Layer 2
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Metaverse-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Metaverse"
+                            type="button"
+                            role="tab"
+                          >
+                            Metaverse
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="Others-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#Others"
+                            type="button"
+                            role="tab"
+                          >
+                            Others
+                          </button>
+                        </li>
+                      </ul> 
+                      <div class="market-search-box pointer d-flex g-5 align-items-center">
+                        <input type="search" name="market-search" id="market-search" placeholder="Search Coin Name">
+                        <span class="market-search-button"><i class="fas fa-search"></i></span>
+                      </div>
+                    </div>
+                    
+
+                    <div class="tab-content" id="actionTabContent">
+                      <div class="tab-pane fade show active" id="market-all" role="tabpanel" aria-labelledby="market-all-tab">  
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
+                      </div>
+                      <div class="tab-pane fade " id="Solana" role="tabpanel" aria-labelledby="Solana-tab">
+                        another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="RWA" role="tabpanel" aria-labelledby="RWA-tab">
+                        another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Meme" role="tabpanel" aria-labelledby="Meme-tab">
+                        another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Alpha" role="tabpanel" aria-labelledby="Alpha-tab">
+                        another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Payments" role="tabpanel" aria-labelledby="Payments-tab">
+                         another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="AI" role="tabpanel" aria-labelledby="AI-tab">
+                         another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Layer" role="tabpanel" aria-labelledby="Layer-tab">
+                         another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Metaverse" role="tabpanel" aria-labelledby="Metaverse-tab">
+                         another tabs content here 
+                      </div>
+                      <div class="tab-pane fade" id="Others" role="tabpanel" aria-labelledby="Others-tab">
+                        another tabs content here 
+                      </div>
+                    </div> 
+                  </div> 
+            </div>
+          </div>
+          <div class="most-trending-shape">
+            <img src="assets/images/buy/bitcoin/bticoin.png" alt="">
+          </div>
+          <div class="process-shape-2">
+            <img src="assets/images/buy/withdraw/2.png" alt="">
+          </div> 
+        </section>
+        <!-- end market crypto tabs area  -->
+
+        <!-- start token desclimer area  -->
+        <section class="token-desclimer-area mt-60 mb-60">
+          <div class="container">
+            <div class="token-desclimer-text">
+              <p><span>Disclaimer:</span> This content is for informational purposes only and not financial advice. Digital assets are volatile, and you are solely responsible for your investment decisions. Binance is not liable for any losses. Please refer to our <a href="#">Terms of Use</a> and <a href="#">Risk Warning</a> for details.</p>
+            </div>
+          </div>
+        </section>
+        <!-- end token desclimer area  -->
+ 
+
+    </main>
+
+
+    <footer class="footer-main">
+      <div class="footer-top-main">
+        <div class="container">
+          <div class="row footer-top">
+            <!-- single item  -->
+            <div class="col-md-12 col-xl-4">
+              <div class="footer-logo text-center text-sm-start">
+                <a href="index.html">
+                  <img
+                    class="footer-img"
+                    src="assets/images/logo.png"
+                    alt="logo"
+                  />
+                </a>
+                <p class="footer-text">
+                  Makes crypto trading simple and secure, offering a smooth user
+                  experience with fast transactions and top-notch security for
+                  your investments.
+                </p>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  About
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">About BcoinMart</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Press Room</a></li>
+                  <li><a class="footer-menu-link" href="#">Communities</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Services
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">One-Click Buy</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">P2P Trading</a></li>
+                  <li><a class="footer-menu-link" href="#">VIP Program</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Platforms
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li>
+                    <a class="footer-menu-link" href="#">Submit a Request</a>
+                  </li>
+                  <li><a class="footer-menu-link" href="#">Help Center</a></li>
+                  <li><a class="footer-menu-link" href="#">Support Hub</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item  -->
+            <div class="col-sm-6 col-md-3 col-xl-2">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title text-center text-sm-start">
+                  Product
+                </h3>
+                <ul class="text-center text-sm-start">
+                  <li><a class="footer-menu-link" href="#">Trade</a></li>
+                  <li><a class="footer-menu-link" href="#">Derivatives</a></li>
+                  <li><a class="footer-menu-link" href="#">Launchpad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-icon">
+            <div class="row gy-3 align-items-end">
+              <div class="col-md-6">
+                <h2 class="footer-icon-title text-center text-sm-start">
+                  Follow Us
+                </h2>
+                <div class="d-flex social-icon-main">
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-solid fa-location-arrow"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-md-end">
+                <ul class="d-flex footer-privacy">
+                  <li><a href="#">Terms of conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-disclaimer-main">
+              <p class="footer-disclaimer text-center text-sm-start">
+                Disclaimer: Bcoinmart provides general information only and does
+                not offer financial or investment advice. Trading cryptoassets
+                involves significant risk and can result in loss of funds. You
+                are responsible for your own tax obligations and should seek
+                independent advice.Some products may be unregulated or
+                restricted in certain regions. Bcoinmart’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-text">
+            <p class="footer-bottom-copyright">
+              Copyright &copy; 2025 by
+              <a href="#">BcoinMart</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- datatable  -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script> 
+    <!-- owl carousel  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+    <script src="assets/js/main.js"></script> 
+
+    <script> 
+
+      // table indicator 
+      const tapIndicator = document.querySelector('.lotti-indicator');
+      setTimeout(() => {
+        tapIndicator?.remove();
+      }, 6000);
+
+      // Market search box js 
+      $(document).on('click', '.lotti-indicator', function (e) { 
+        $(this).css('display', 'none');
+      });
+ 
+
+
+      // Market search box js 
+      $(document).on('click', '.market-search-button', function (e) {
+        const $input = $(this).closest('.market-search-box').find('input[type="search"]');
+        $input.css('display', 'inline-block').focus();
+      });
+
+      // Hide input when clicking outside
+      $(document).on('click', function (e) {
+        const $target = $(e.target);
+        const isInside = $target.closest('.market-search-box').length > 0;
+
+        if (!isInside) {
+          $('.market-search-box input[type="search"]').css('display', 'none');
+        }
+      });
+
+
+
+      document
+        .querySelectorAll(".dropdown-custom .dropdown-menu .dropdown-item")
+        .forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const image = this.dataset.image;
+            const value = this.dataset.value;
+
+            const dropdown = this.closest(".dropdown");
+            const button = dropdown.querySelector(".select-token");
+
+            // Just update button content
+            button.innerHTML = `<img src="${image}" alt="${value}"> <span>${value}</span>`;
+          });
+        });
+
+       
+    </script>
+    <script>
+        
+        // market marquee headline js 
+
+        const marquee = document.getElementById("marquee");
+        const content = document.querySelector(".marquee-content");
+
+        marquee.addEventListener("mouseenter", () => {
+        content.style.animationPlayState = "paused";
+        });
+
+        marquee.addEventListener("mouseleave", () => {
+        content.style.animationPlayState = "running";
+        });
+
+         
+
+      AOS.init();  
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+          new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+
+    // Progress script 
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      const value = parseInt(bar.getAttribute('data-progress')) || 0;
+      bar.style.width = value + '%'; 
+    });
+
+    
+    // Set your countdown target date here
+      const countdowns = document.querySelectorAll(".count-down");
+
+  function updateAllCountdowns() {
+    countdowns.forEach(countdown => {
+      const endDateStr = countdown.getAttribute("data-end");
+      const endDate = new Date(endDateStr).getTime();
+      const now = new Date().getTime();
+      const diff = endDate - now;
+
+      const daysEl = countdown.querySelector(".days");
+      const hoursEl = countdown.querySelector(".hours");
+      const minutesEl = countdown.querySelector(".minutes");
+      const secondsEl = countdown.querySelector(".seconds");
+
+      if (diff <= 0) {
+        daysEl.textContent = "00D";
+        hoursEl.textContent = "00H";
+        minutesEl.textContent = "00M";
+        secondsEl.textContent = "00S";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      daysEl.textContent = `${days.toString().padStart(2, "0")}D`;
+      hoursEl.textContent = `${hours.toString().padStart(2, "0")}H`;
+      minutesEl.textContent = `${minutes.toString().padStart(2, "0")}M`;
+      secondsEl.textContent = `${seconds.toString().padStart(2, "0")}S`;
+    });
+  }
+
+  updateAllCountdowns(); // Initial load
+  setInterval(updateAllCountdowns, 1000); // Update every second
+
+
+
+    </script>
+
+  </body>
+</html>

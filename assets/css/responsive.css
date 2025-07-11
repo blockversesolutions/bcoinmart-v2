@@ -25,6 +25,14 @@
   #navbarText .nav-link {
     padding: 0 10px !important;
   }
+  .common-heading-section.affiliate-hero h2 {
+    font-size: 42px;
+    line-height: 55px;
+  }
+  .common-heading-section.affiliate-hero h2 span {
+    font-size: 60px;
+    line-height: 72px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .sign-up-box {
@@ -100,8 +108,20 @@
   .puzzle-design-card p {
     font-size: 14px;
   }
+  .earn-hero-area {
+    background: url(../images/earn/bg.png) no-repeat scroll center center /
+      cover;
+  }
 }
 @media screen and (max-width: 991px) {
+  .common-heading-section.affiliate-hero h2 span {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .common-heading-section.affiliate-hero h2 span {
+    font-size: 48px;
+    line-height: 60px;
+  }
   .popular-grid {
     justify-content: start !important;
   }
@@ -320,6 +340,16 @@
 @media screen and (max-width: 767px) {
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
+  }
+  .lotti-indicator { 
+    left: 26%; 
+    display: block;
+}
+  table.dataTable > tbody > tr.child span.dtr-title {
+    text-align: left;
+  }
+  .cryptoTable .dtr-details span {
+    text-align: right;
   }
   .common-heading-section p {
     font-size: 14px;
@@ -676,6 +706,10 @@
     padding: 20px !important;
     line-height: 23px;
     font-weight: 400;
+  }
+  .common-heading-section.affiliate-hero h2 {
+    font-size: 34px;
+    line-height: 55px;
   }
   .buy-sell-input .btn.custom-select-token {
     padding: 6px 10px !important;
