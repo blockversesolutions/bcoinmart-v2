@@ -173,8 +173,11 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="markets.html">Markets</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trade</a>
+                <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trade
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                  </a>
                   
                   <!-- Custom Dropdown Menu -->
                   <div class="dropdown-menu custom-mega-dropdown p-4 shadow-lg border-0 rounded-3" aria-labelledby="moreDropdown">
@@ -207,8 +210,9 @@
                 </li>
                  <li class="nav-item dropdown"> 
                   
-                  <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Earn
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
                   </a>
                   
                   <!-- Custom Dropdown Menu -->
@@ -242,8 +246,9 @@
                 
                 <!-- More Dropdown -->
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     More
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
                   </a>
                   <!-- Custom Dropdown Menu -->
                   <div class="dropdown-menu custom-mega-dropdown p-4 shadow-lg border-0 rounded-3" aria-labelledby="moreDropdown">
@@ -405,18 +410,65 @@
               </div>
             </form>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+<div class="offcanvas-body offcanvas-menu">  
+            <ul class="navbar-nav ms-auto">
+
               <li class="nav-item">
                 <a class="nav-link" href="buy.html">Buy Crypto</a>
               </li>
-              <li class="nav-item"> <a class="nav-link" href="markets.html">Markets</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
-               <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
-               
-                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="markets.html">Markets</a>
+              </li>
+
+              <!-- Trade accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#tradeSubmenu" role="button" aria-expanded="false" aria-controls="tradeSubmenu">
+                  Trade 
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="tradeSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="p2p-buy.html">P2P</a></li> 
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Futures</a>
+              </li>
+
+              <!-- Earn accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#earnSubmenu" role="button" aria-expanded="false" aria-controls="earnSubmenu">
+                  Earn
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="earnSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="earn.html">Overview</a></li> 
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Square</a>
+              </li>
+
+              <!-- More accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#moreSubmenu" role="button" aria-expanded="false" aria-controls="moreSubmenu">
+                  More
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="moreSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="affiliate.html">Affiliate</a></li>
+                    <li><a class="nav-link" href="refer.html">Referr</a></li>
+                  </ul>
+                </div>
+              </li>
+
             </ul>
             <hr />
             <!-- Sign Buttons -->
@@ -887,31 +939,2281 @@
                         </div>
                       </div>
                       <div class="tab-pane fade " id="Solana" role="tabpanel" aria-labelledby="Solana-tab">
-                        another tabs content here 
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="RWA" role="tabpanel" aria-labelledby="RWA-tab">
-                        another tabs content here 
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Meme" role="tabpanel" aria-labelledby="Meme-tab">
-                        another tabs content here 
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Alpha" role="tabpanel" aria-labelledby="Alpha-tab">
-                        another tabs content here 
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Payments" role="tabpanel" aria-labelledby="Payments-tab">
-                         another tabs content here 
+                         <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="AI" role="tabpanel" aria-labelledby="AI-tab">
-                         another tabs content here 
+                         <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Layer" role="tabpanel" aria-labelledby="Layer-tab">
-                         another tabs content here 
+                         <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Metaverse" role="tabpanel" aria-labelledby="Metaverse-tab">
-                         another tabs content here 
+                         <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="Others" role="tabpanel" aria-labelledby="Others-tab">
-                        another tabs content here 
+                        <div class="market-datatable">
+                          <table id="cryptoTable" class="display cryptoTable token-table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Market Cap</th>
+                                <th>Cir Supply</th>
+                                <th>Total Unlocked</th>
+                                <th>Next Unlock</th>
+                                <th>Next Unlock Date</th> 
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/1.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="green-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/2.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/3.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-08-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/4.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/5.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-10-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/6.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-11-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              <tr>
+                                <td>
+                                  <div class="d-flex gap-2 align-items-center"> 
+                                    <img src="assets/images/markets/7.png" width="20"> <p class="reffer-name-td"><span class="refer-coin-name">BTC</span> <span>Bitcoin</span></p> 
+                                  </div>
+                                </td>
+                                <td><p class="d-flex align-items-end justify-content-end flex-column"><span class="token-data-text">$103,951.15</span> <span class="red-data-text">-1.21%</span></p></td>
+                                <td>$41.41B</td>
+                                <td>$2.09T</td>
+                                <td>
+                                    91.94% 
+                                    <div class="token-bars progress custom-progress" > 
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" data-progress="90"> 
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-end justify-content-end flex-column">
+                                    <span class="token-data-text">625000001000CAT</span><span class="data-font-size">$375,000(0.69% )</span>
+                                    </div>
+                                </td> 
+                                <td>
+                                    <p class="count-down" data-end="2025-09-01T00:00:00">
+                                      <span class="days">00D</span>
+                                      <span>:</span>
+                                      <span class="hours">00H</span>
+                                      <span>:</span>
+                                      <span class="minutes">00M</span>
+                                      <span>:</span>
+                                      <span class="seconds">00S</span>
+                                    </p>
+                                </td>
+                              </tr> 
+                              
+                              <!-- Add more rows here... -->
+                            </tbody>
+                          </table>  
+                          <dotlottie-wc class="lotti-indicator" src="https://lottie.host/4c512f99-8b9c-4e28-92bd-fd5f021e6365/PMiCRVVBax.lottie" speed="1" autoplay loop></dotlottie-wc> 
+                        </div>
                       </div>
                     </div> 
                   </div> 

@@ -341,10 +341,10 @@
   .puzzle-design-shape-2 .puzzle-text {
     padding-left: 66px !important;
   }
-  .lotti-indicator { 
-    left: 26%; 
+  .lotti-indicator {
+    left: 26%;
     display: block;
-}
+  }
   table.dataTable > tbody > tr.child span.dtr-title {
     text-align: left;
   }
@@ -699,6 +699,13 @@
   .learning-hub-card-info span {
     margin-bottom: 10px;
   }
+  .auto-signup ul li img {
+    width: 14px;
+  }
+  .auto-signup {
+    padding: 8px;
+    border-radius: 3px;
+  }
 }
 @media screen and (max-width: 575px) {
   .accordion-bcoinmart .accordion-button {
@@ -888,7 +895,7 @@
   .accordion-opportunity .accordion-button::after {
     right: 14px;
   }
-  
+
   .custom-mega-dropdown {
     width: 100vw;
     left: 0 !important;

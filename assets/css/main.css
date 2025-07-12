@@ -5283,7 +5283,7 @@ p.count-down span {
   left: 18%;
   transform: translateX(-50%);
   font-size: 2rem;
-  z-index: 1000;
+  z-index: 1;
   display: none;
   width: 80px !important;
   height: 80px !important;
@@ -5331,4 +5331,63 @@ p.count-down span {
 .custom-mega-dropdown .col a.active:hover strong ,
 .custom-mega-dropdown .col a:hover strong {
   color: #ffbe38  !important;
+}
+
+
+
+
+.offcanvas-menu .nav-link i {
+  transition: transform 0.3s ease;
+  color: #ffff !important;
+}
+
+.offcanvas-menu .nav-link i  {
+  transform: rotate(-90deg);
+  opacity: 0.44;
+}
+
+.offcanvas-menu .collapse.show + .nav-link i,
+.offcanvas-menu .nav-link[aria-expanded="true"] i {
+  transform: rotate(0deg);
+  color: #ffbe38 !important ;
+  opacity: 1;
+}
+/* Optional: adjust submenu link padding */
+.offcanvas-menu .list-unstyled .nav-link {
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+.custom-mega-dropdown.dropdown-menu { 
+    box-shadow: 0 2px 10px #ffc10738 !important;
+}
+
+.offcanvas-menu  .list-unstyled {
+    position: relative;
+}
+
+.offcanvas-menu  .list-unstyled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 2px; 
+    height: 100%;
+    background: #3e3e3e;
+    margin-left: 0;
+}
+
+.mega-menu-link.dropdown-toggle::after {
+    display: none !important;
+}
+
+.mega-menu-link i {
+  font-size: 15px; 
+  transition: transform 0.3s ease;
+}
+
+/* CORRECT: .dropdown.show is the parent of .mega-menu-link */
+.dropdown-toggle.show.mega-menu-link i {
+  transform: rotate(180deg);
 }
