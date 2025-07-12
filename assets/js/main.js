@@ -124,6 +124,33 @@ $(document).ready(function () {
 
 
 // datatable adjust 
+// $(document).ready(function () {
+//   const table = $('.cryptoTable').DataTable({
+//     paging: false,
+//     searching: false,
+//     info: false,
+//     ordering: true,
+//     autoWidth: false,
+//     responsive: {
+//       details: {
+//         type: 'column',
+//         target: 'tr'
+//       }
+//     },
+//     columnDefs: [
+//       { responsivePriority: 1, targets: 0 },  
+//       { responsivePriority: 2, targets: -1 } 
+//     ],
+//     dom: 't'  
+//   });
+  
+ 
+//   $(window).on('resize', function () {
+//     table.columns.adjust().responsive.recalc();
+//   });
+// });
+
+
 $(document).ready(function () {
   const table = $('.cryptoTable').DataTable({
     paging: false,
@@ -133,19 +160,29 @@ $(document).ready(function () {
     autoWidth: false,
     responsive: {
       details: {
-        type: 'column', // 'column' or 'inline'
+        type: 'column',  
         target: 'tr'
       }
     },
     columnDefs: [
-      { responsivePriority: 1, targets: 0 },   // always show first column
-      { responsivePriority: 2, targets: -1 }   // always show last column
+      { responsivePriority: 1, targets: 0 },    
+      { responsivePriority: 2, targets: -1 }    
     ],
-    dom: 't' // Only show table, no search/pagination/info
+    dom: 't'  
   });
-
-  // ✅ On window resize, adjust column layout
+ 
   $(window).on('resize', function () {
     table.columns.adjust().responsive.recalc();
   });
+ 
+  table.on('draw.dt', function() { 
+    const firstRow = $('.cryptoTable tbody tr:first-child');
+    if (firstRow.length && !firstRow.hasClass('parent')) { 
+      firstRow.click();
+    }
+  }).draw();  
+
 });
+ 
+
+ 

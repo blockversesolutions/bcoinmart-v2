@@ -202,14 +202,7 @@
 
             <!-- Mobile Right Controls -->
             <div class="d-flex align-items-center g-10 d-xl-none">
-              <!-- Search Icon -->
-              <!-- <div
-                class="search-icon cursor mobile-search-view"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                <span><i class="fa-solid fa-magnifying-glass"></i></span>
-              </div> -->
+              <!-- Search Icon --> 
 
               <!-- Language Dropdown (Mobile View) -->
               <div class="mobile-language-view">
@@ -312,21 +305,117 @@
               class="collapse navbar-collapse d-none d-xl-flex justify-content-between"
               id="navbarText"
             >
-              <ul class="navbar-nav mx-auto">
+              <ul class="navbar-nav mx-auto main-navs">
                 <li class="nav-item">
                   <a class="nav-link" href="buy.html">Buy Crypto</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="markets.html">Markets</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
+                <li class="nav-item dropdown"> 
+
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trade
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                  </a>
+                  
+                  <!-- Custom Dropdown Menu -->
+                  <div class="dropdown-menu custom-mega-dropdown p-4 shadow-lg border-0 rounded-3" aria-labelledby="moreDropdown">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <div class="col">
+                        <a href="p2p-buy.html" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">P2P</strong>
+                            <div class="text-muted small">Get up to 50% commission per trade.</div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col">
+                        <a href="#" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">Crypto for Good</strong>
+                            <div class="text-muted small">Fast, easy crypto payments.</div>
+                          </div>
+                        </a>
+                      </div> 
+                    </div>
+
+                  </div>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Futures</a>
                 </li>
-                 <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
+                 <li class="nav-item dropdown"> 
+                   
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Earn
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                  </a>
+                  
+                  <!-- Custom Dropdown Menu -->
+                  <div class="dropdown-menu custom-mega-dropdown p-4 shadow-lg border-0 rounded-3" aria-labelledby="moreDropdown">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <div class="col">
+                        <a href="earn.html" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">Overview</strong>
+                            <div class="text-muted small">Get up to 50% commission per trade.</div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col">
+                        <a href="#" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">Crypto for Good</strong>
+                            <div class="text-muted small">Fast, easy crypto payments.</div>
+                          </div>
+                        </a>
+                      </div> 
+                    </div>
+
+                  </div>
+                </li>
                  
                 <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+                
+                <!-- More Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mega-menu-link" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                  </a>
+                  <!-- Custom Dropdown Menu -->
+                  <div class="dropdown-menu custom-mega-dropdown p-4 shadow-lg border-0 rounded-3" aria-labelledby="moreDropdown">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <div class="col">
+                        <a href="affiliate.html" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">Affiliate</strong>
+                            <div class="text-muted small">Get up to 50% commission per trade.</div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col">
+                        <a href="refer.html" class="text-decoration-none d-flex align-items-start">
+                          <div class="icon-box bg-white rounded me-3"></div>
+                          <div>
+                            <strong class="text-white">Referr</strong>
+                            <div class="text-muted small">Fast, easy crypto payments.</div>
+                          </div>
+                        </a>
+                      </div> 
+                    </div>
+
+                  </div>
+                </li>
               </ul>
 
               <div class="header-right d-flex align-items-center">
@@ -337,8 +426,8 @@
                 >
                   <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
-                <a href="#" class="primary-btn me-2">Sign Up</a>
-                <a href="#" class="secondary-btn">Sign In</a>
+                <a href="sign-up.html" class="primary-btn me-2">Sign Up</a>
+                <a href="sign-in.html" class="secondary-btn">Sign In</a>
 
                 <!-- Desktop Language View -->
                 <div class="desktop-language-view">
@@ -461,24 +550,71 @@
               </div>
             </form>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <div class="offcanvas-body offcanvas-menu">  
+            <ul class="navbar-nav ms-auto">
+
               <li class="nav-item">
                 <a class="nav-link" href="buy.html">Buy Crypto</a>
               </li>
-              <li class="nav-item"> <a class="nav-link" href="markets.html">Markets</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Trade</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Futures</a></li>
-               <li class="nav-item"><a class="nav-link" href="earn.html">Earn</a></li>
-               
-                <li class="nav-item"><a class="nav-link" href="#">Square</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="markets.html">Markets</a>
+              </li>
+
+              <!-- Trade accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#tradeSubmenu" role="button" aria-expanded="false" aria-controls="tradeSubmenu">
+                  Trade 
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="tradeSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="p2p-buy.html">P2P</a></li> 
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Futures</a>
+              </li>
+
+              <!-- Earn accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#earnSubmenu" role="button" aria-expanded="false" aria-controls="earnSubmenu">
+                  Earn
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="earnSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="earn.html">Overview</a></li> 
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Square</a>
+              </li>
+
+              <!-- More accordion -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#moreSubmenu" role="button" aria-expanded="false" aria-controls="moreSubmenu">
+                  More
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="moreSubmenu" data-bs-parent="#navbarNav">
+                  <ul class="list-unstyled ps-3">
+                    <li><a class="nav-link" href="affiliate.html">Affiliate</a></li>
+                    <li><a class="nav-link" href="refer.html">Referr</a></li>
+                  </ul>
+                </div>
+              </li>
+
             </ul>
             <hr />
             <!-- Sign Buttons -->
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="primary-btn w-100 text-center">Sign Up</a>
-              <a href="#" class="secondary-btn w-100 text-center">Sign In</a>
+              <a href="sign-up.html" class="primary-btn w-100 text-center">Sign Up</a>
+              <a href="sign-in.html" class="secondary-btn w-100 text-center">Sign In</a>
             </div>
           </div>
         </div>
