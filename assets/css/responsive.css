@@ -34,6 +34,11 @@
     line-height: 72px;
   }
 }
+@media screen and (max-width: 1270px) {
+  .header-area .navbar-brand img {
+    width: 130px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .sign-up-box {
     max-width: 310px;
