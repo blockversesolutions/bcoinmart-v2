@@ -39,9 +39,19 @@
     width: 130px;
   }
 }
+@media screen and (min-width: 1199px) {
+  .offcanvas-backdrop,
+  .offcanvas {
+    display: none;
+  }
+}
 @media screen and (max-width: 1199px) {
   .sign-up-box {
     max-width: 310px;
+  }
+  .offcanvas-backdrop,
+  .offcanvas {
+    display: block;
   }
   .secondary-btn,
   .primary-btn {
